@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pick the Game — Simplifying Pool Management</title>
+  <meta name="description" content="Football pools made easy for family, friends, and coworkers." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#222B5C',
+              50: '#eef0f8',
+              100: '#d9ddeb',
+              200: '#b3b8d1',
+              300: '#8c93b7',
+              400: '#666e9d',
+              500: '#404883',
+              600: '#2e3665',
+              700: '#1c2447',
+              800: '#0e1229',
+              900: '#05060f'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    .container-tight { max-width: 1120px; }
+    /* Hover animation for buttons */
+    .btn-hover:hover { transform: translateY(-2px); transition: all 0.2s ease-in-out; }
+  </style>
+  <!-- CSS tweaks for smooth open and hover effects -->
+<style>
+  details summary {
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  details summary:hover {
+    color: #222B5C;
+    transform: translateX(2px);
+  }
+  details[open] summary {
+    font-weight: 600;
+    color: #222B5C;
+  }
+  details > *:not(summary) {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+  details[open] > *:not(summary) {
+    max-height: 500px;
+  }
+</style>
+</head>
+<body class="text-slate-900 bg-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto container-tight px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 font-extrabold text-xl">
+          <img src="/assets/helmet-logo.png" alt="Pick the Game Logo" class="h-10 w-auto">
+          <span class="sr-only sm:not-sr-only">Pick the Game</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-brand-700">Services</a>
+          <a href="#about" class="hover:text-brand-700">About</a>
+          <a href="#faqs" class="hover:text-brand-700">FAQs</a>
+          <a href="#contact" class="hover:text-brand-700">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="https://pools.pickthegame.com" class="hidden sm:inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold hover:bg-slate-50 btn-hover">Login</a>
+          <a href="https://pools.pickthegame.com" class="inline-flex items-center justify-center rounded-lg bg-brand text-white px-3.5 py-2.5 text-sm font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create Pool</a>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white transition-all duration-300 ease-in-out">
+      <div class="mx-auto container-tight px-4 py-3 grid gap-2 text-sm">
+        <a href="#services" class="py-2">Services</a>
+        <a href="#about" class="py-2">About</a>
+        <a href="#faqs" class="py-2">FAQs</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="https://pools.pickthegame.com" class="py-2 font-semibold">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto container-tight px-4">
+      <div class="grid lg:grid-cols-2 gap-10 items-center py-16 sm:py-20">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight" data-aos="fade-up">Simplifying Pool Management</h1>
+          <p class="mt-4 text-lg text-slate-700" data-aos="fade-up" data-aos-delay="100">Run football pools for friends, family, and coworkers without spreadsheets. Track picks and standings automatically and keep the season fun and organized.</p>
+          <div class="mt-6 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://pools.pickthegame.com" class="inline-flex items-center rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create Pool</a>
+            <a href="#trial" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-50 btn-hover">Learn more</a>
+          </div>
+          <p class="mt-3 text-sm text-slate-500">Free 2‑week trial • No credit card required</p>
+        </div>
+        <div class="relative">
+          <!-- <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-50 to-slate-50 border border-slate-200 shadow-soft p-6 flex items-center justify-center"> -->
+            <img src="/assets/hero-image.png" alt="Pick the Game interface preview" class="rounded-xl shadow-md"/>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trial CTA -->
+  <section id="trial" class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto container-tight px-4 py-12">
+      <div class="grid lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-2xl sm:text-3xl font-bold">Kick off your season with a FREE 2‑week trial</h2>
+          <p class="mt-2 text-slate-700">Try the full platform at no cost: manage entries, track results, and keep everyone engaged all season. Continue afterward for an affordable per‑player price.</p>
+        </div>
+        <div class="lg:col-span-4 flex lg:justify-end">
+          <a href="https://pools.pickthegame.com" class="inline-flex items-center rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-soft hover:bg-brand-700 w-full sm:w-auto justify-center btn-hover">Start your free trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Pool Types -->
+  <section id="services" class="scroll-mt-20">
+    <div class="mx-auto container-tight px-4 py-16">
+      <h2 class="text-3xl font-extrabold tracking-tight">Pool Types Offered</h2>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+        <!-- Pick'Em -->
+        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold">Pick’em Pools</h3>
+            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
+          </div>
+          <p class="mt-3 text-slate-700">Predict every game each week. Earn a point for every correct pick—highest total wins.</p>
+          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Start Pool</a>
+        </article>
+
+        <!-- Confidence -->
+        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold">Confidence Pools</h3>
+            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
+          </div>
+          <p class="mt-3 text-slate-700">Rank your picks by confidence. Higher points on surer games—score big when you’re right.</p>
+          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Start Pool</a>
+        </article>
+
+        <!-- Survivor Pools -->
+        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold">Survivor Pools</h3>
+            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
+          </div>
+          <p class="mt-3 text-slate-700">Pick one team per week. Once a team is used, it can’t be picked again. Last player standing wins.</p>
+          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Start Pool</a>
+        </article>
+
+        <!-- Squares -->
+        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold">Squares</h3>
+            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$10 per board</span>
+          </div>
+          <p class="mt-3 text-slate-700">Participate in game squares for NFL, college football, or your favorite events. Win based on score outcomes each quarter or final score.</p>
+          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Start Pool</a>
+        </article>
+      </div>
+
+      <!-- Add‑ons -->
+      <div class="mt-12">
+        <h3 class="text-2xl font-bold">Add‑ons</h3>
+        <p class="mt-1 text-slate-700">Enhance any pool with optional game modes and modifiers.</p>
+        <div class="mt-6 grid md:grid-cols-3 gap-6" data-aos="fade-up">
+          <article class="rounded-2xl border border-slate-200 p-6">
+            <div class="flex items-center justify-between">
+              <h4 class="text-lg font-semibold">Survivor</h4>
+              <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">+$0.50 / player</span>
+            </div>
+            <p class="mt-2 text-slate-700">Choose one team per week—use each team once. Last player standing wins.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6">
+            <h4 class="text-lg font-semibold">Spreads</h4>
+            <p class="mt-2 text-slate-700">Apply point spreads to level the field. Picks must beat the spread to count.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6">
+            <h4 class="text-lg font-semibold">Total Points Tiebreaker</h4>
+            <p class="mt-2 text-slate-700">Guess total points of the final game of the week to break ties cleanly.</p>
+          </article>
+        </div>
+        <div class="mt-6 grid md:grid-cols-3 gap-6" data-aos="fade-up">
+          <article class="rounded-2xl border border-slate-200 p-6">
+            <h4 class="text-lg font-semibold">Skip First Week (Survivor)</h4>
+            <p class="mt-2 text-slate-700">Optional head start: begin survivor pools in Week 2.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6">
+            <h4 class="text-lg font-semibold">Custom Scoring</h4>
+            <p class="mt-2 text-slate-700">Tailor scoring rules to your group’s style and preferences.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6">
+            <h4 class="text-lg font-semibold">Notifications</h4>
+            <p class="mt-2 text-slate-700">Email reminders for pick deadlines and results.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white">
+    <div class="mx-auto container-tight px-4 py-16">
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7" data-aos="fade-up">
+          <h2 class="text-3xl font-extrabold tracking-tight">Who We Are</h2>
+          <p class="mt-4 text-slate-700">
+            Welcome to Pick the Game—the easiest way to manage your football pools and make the season more fun!
+            If you’ve ever found yourself buried in spreadsheets, chasing down picks, and just trying to keep
+            everything organized, we’re here to change that.
+          </p>
+          <p class="mt-4 text-slate-700">
+            The idea for Pick the Game came from a personal experience. My dad used to run our family football pool
+            using Excel—filling out lines, emailing sheets, and chasing down everyone’s picks. As the pool grew,
+            it became more time-consuming than enjoyable. That’s when I decided there had to be a better way to
+            handle it—and Pick the Game was born.
+          </p>
+          <p class="mt-4 text-slate-700">
+            What started as a simple website to collect picks has turned into a full-fledged platform designed
+            to make organizing your football pool easy, enjoyable, and stress-free. We take care of the logistics,
+            so you can focus on what really matters: the competition, the camaraderie, and, of course, the game.
+          </p>
+          <p class="mt-4 text-slate-700">
+            Whether you’re running a pool for family, friends, or coworkers, Pick the Game helps you keep
+            everything organized and on track—no spreadsheets required. It’s all about making football season
+            more fun, with less hassle.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
+            <h3 class="text-lg font-semibold">Get in Touch</h3>
+            <p class="mt-3 text-slate-700">
+              Interested in working together? Fill out some info and we will be in touch shortly. We can’t wait
+              to hear from you!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section with Categories and Friendly Tone -->
+<section id="faqs" class="bg-slate-50 border-y border-slate-200">
+  <div class="mx-auto container-tight px-4 py-16">
+    <h2 class="text-3xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
+
+    <!-- Pricing -->
+    <h3 class="text-2xl font-bold mt-10">Pricing</h3>
+    <div class="mt-4 grid md:grid-cols-2 gap-6">
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up">
+        <summary class="font-semibold cursor-pointer">How much does it cost to join a pool?</summary>
+        <p class="mt-2 text-slate-700">Most pools are just $1 per player for Pick’em, Confidence, or Survivor. Want to try Squares? That’s $10 per board. Super easy, right?</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100">
+        <summary class="font-semibold cursor-pointer">When do I need to pay?</summary>
+        <p class="mt-2 text-slate-700">You usually pay by the start of week 3, and your pool admin will handle everything through the app. No awkward cash collection needed!</p>
+      </details>
+    </div>
+
+    <!-- Gameplay -->
+    <h3 class="text-2xl font-bold mt-10">Gameplay</h3>
+    <div class="mt-4 grid md:grid-cols-2 gap-6">
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up">
+        <summary class="font-semibold cursor-pointer">How does a pool actually work?</summary>
+        <p class="mt-2 text-slate-700">It’s simple. Everyone makes their picks right in the app, you get reminders before picks are due, and the platform keeps track of scores and standings automatically. No spreadsheets. No stress.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100">
+        <summary class="font-semibold cursor-pointer">Can I change my picks after submitting?</summary>
+        <p class="mt-2 text-slate-700">
+          It depends on what the pool admin sets. They can choose to close picks before the week starts, before Sunday games, or even before each individual game. So check the pool rules—they’ll let you know when you can make changes.
+        </p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="200">
+        <summary class="font-semibold cursor-pointer">Can I join more than one pool?</summary>
+        <p class="mt-2 text-slate-700">Absolutely! You can be in multiple pools with the same account. Switch between them easily whenever you want.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="300">
+        <summary class="font-semibold cursor-pointer">What if I pick the wrong team?</summary>
+        <p class="mt-2 text-slate-700">Don’t worry—everyone has bad weeks. The app tracks everything, so even if your picks flop, your standing is updated automatically. Just have fun!</p>
+      </details>
+    </div>
+
+    <!-- Admin & Account -->
+    <h3 class="text-2xl font-bold mt-10">Admin & Account</h3>
+    <div class="mt-4 grid md:grid-cols-2 gap-6">
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up">
+        <summary class="font-semibold cursor-pointer">How many people can I add to a pool?</summary>
+        <p class="mt-2 text-slate-700">As many as you want! Whether it’s a small family pool or a big office league, Pick the Game can handle it.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100">
+        <summary class="font-semibold cursor-pointer">Can I have multiple admins?</summary>
+        <p class="mt-2 text-slate-700">Yep! You can promote friends or colleagues to admin so they can help manage picks and keep everything running smoothly.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="200">
+        <summary class="font-semibold cursor-pointer">How do I invite people?</summary>
+        <p class="mt-2 text-slate-700">Super easy! Share an invite link, a QR code, or send them an email right from the app. No printing, no fuss.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="300">
+        <summary class="font-semibold cursor-pointer">Can friends from other cities join?</summary>
+        <p class="mt-2 text-slate-700">Absolutely! Pick the Game works anywhere, so long-distance friends or family can join in the fun too.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- App Download Section with Official Badges -->
+<section id="download" class="bg-white border-y border-slate-200">
+  <div class="mx-auto container-tight px-4 py-16">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+      <!-- Text Content -->
+      <div data-aos="fade-up">
+        <h2 class="text-3xl font-extrabold tracking-tight">Get the Pick the Game App</h2>
+        <p class="mt-4 text-slate-700">Take your pools on the go! Make picks, track standings, and get notifications right from your phone. Available for both iOS and Android.</p>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <!-- Apple App Store Badge -->
+          <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" class="inline-block">
+            <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store" class="h-12">
+          </a>
+
+          <!-- Google Play Store Badge -->
+          <a href="https://play.google.com/store/apps/details?id=YOUR_APP_PACKAGE" target="_blank" class="inline-block">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
+          </a>
+        </div>
+      </div>
+
+      <!-- Image / App Screenshot -->
+      <div class="relative" data-aos="zoom-in">
+        <div class="aspect-[3/4] rounded-2xl bg-gradient-to-br from-brand-50 to-slate-50 border border-slate-200 shadow-soft p-4 flex items-center justify-center">
+          <img src="/assets/apple-store.png" alt="Pick the Game App Screenshot" class="rounded-xl object-cover">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="scroll-mt-20">
+    <div class="mx-auto container-tight px-4 py-16">
+      <h2 class="text-3xl font-extrabold tracking-tight">Contact Us</h2>
+      <p class="mt-2 text-slate-700">Questions? Send a message and we’ll get back to you shortly.</p>
+      <form class="mt-6 grid gap-4 md:grid-cols-2" action="https://formspree.io/f/xwvvedwz" method="POST">
+        <div>
+          <label class="block text-sm font-medium">First Name</label>
+          <input type="text" name="first_name" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Last Name</label>
+          <input type="text" name="last_name" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" required />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium">Email</label>
+          <input type="email" name="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium">Message</label>
+          <textarea rows="5" name="message" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Tell us about your group or ask anything…"></textarea>
+        </div>
+        <div class="md:col-span-2">
+          <button type="submit" class="inline-flex items-center rounded-xl bg-brand-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-brand-700">Send message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer (unchanged) -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto container-tight px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <p>&copy; <span id="year"></span> Pick the Game</p>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" href="https://app.termly.io/document/terms-of-service/">Terms of Service</a>
+        <a class="hover:underline" href="https://app.termly.io/document/privacy-policy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  </script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: 'ease-out',
+      once: true,    // animate only once
+    });
+  </script>
+</body>
+</html>

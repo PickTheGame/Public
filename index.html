@@ -450,7 +450,7 @@
       const payload = Object.fromEntries(formData.entries());
 
       try {
-        const response = await fetch("https://backend.pickthegame.com/api/v1/public/formSubmission", {
+        const response = await fetch("https://zsdnhkk0u9.execute-api.us-east-1.amazonaws.com/submit", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)

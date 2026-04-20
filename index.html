@@ -120,7 +120,9 @@
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden bg-gradient-to-b from-brand-50/70 via-white to-white">
+    <div class="pointer-events-none absolute -top-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-brand-100 blur-3xl opacity-60"></div>
+    <div class="pointer-events-none absolute -bottom-40 -right-24 h-[32rem] w-[32rem] rounded-full bg-sky-100 blur-3xl opacity-70"></div>
     <div class="mx-auto container-tight px-4">
       <div class="grid lg:grid-cols-2 gap-10 items-center py-16 sm:py-20">
         <div>
@@ -131,6 +133,44 @@
             <a href="#trial" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-50 btn-hover">Learn more</a>
           </div>
           <p class="mt-3 text-sm text-slate-500">Free 2‑week trial • No credit card required</p>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-3" data-aos="fade-up" data-aos-delay="250">
+            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636 5.636 18.364" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-sm font-bold">Ad-free</p>
+                <p class="text-xs text-slate-600">No ads, no distractions</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3 19.5 7.5v6c0 5.25-3.75 9-7.5 10.5C8.25 22.5 4.5 18.75 4.5 13.5v-6L12 3Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-sm font-bold">No sportsbook affiliation</p>
+                <p class="text-xs text-slate-600">Just pools, no promos</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-sm font-bold">Deadline reminders</p>
+                <p class="text-xs text-slate-600">Never miss a pick</p>
+              </div>
+            </div>
+          </div>
         </div>
         <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="block relative group">
           <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-50 to-slate-50 border border-slate-200 shadow-soft p-6 flex items-center justify-center transition group-hover:shadow-lg">
@@ -161,12 +201,13 @@
   </section>
 
   <!-- Services / Pool Types -->
-  <section id="services" class="scroll-mt-20">
+  <section id="services" class="scroll-mt-20 bg-slate-50">
     <div class="mx-auto container-tight px-4 py-16">
       <h2 class="text-3xl font-extrabold tracking-tight">Pool Types Offered</h2>
+      <p class="mt-2 text-slate-700">Choose a format your group already understands — or add extras for more strategy.</p>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-2 gap-6" data-aos="fade-up">
         <!-- Pick'Em -->
-        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-bold">Pick’em Pools</h3>
             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
@@ -176,7 +217,7 @@
         </article>
 
         <!-- Confidence -->
-        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-bold">Confidence Pools</h3>
             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
@@ -186,7 +227,7 @@
         </article>
 
         <!-- Survivor Pools -->
-        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-bold">Survivor Pools</h3>
             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
@@ -196,7 +237,7 @@
         </article>
 
         <!-- Squares -->
-        <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-bold">Squares</h3>
             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$10 per board</span>
@@ -436,12 +477,17 @@
 
   <!-- Footer (unchanged) -->
   <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto container-tight px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <p>&copy; <span id="year"></span> Pick the Game</p>
-      <div class="flex items-center gap-4">
-        <a class="hover:underline" href="terms-of-service.html">Terms of Service</a>
-        <a class="hover:underline" href="privacy-policy.html">Privacy Policy</a>
+    <div class="mx-auto container-tight px-4 py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+        <p>&copy; <span id="year"></span> Pick the Game</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:underline" href="terms-of-service.html">Terms of Service</a>
+          <a class="hover:underline" href="privacy-policy.html">Privacy Policy</a>
+        </div>
       </div>
+      <p class="mt-3 text-xs text-slate-500 leading-relaxed">
+        Disclaimer: Pick the Game is not a gambling app and is for entertainment purposes only. Pick the Game is not affiliated with the NFL, UFL, or any college football organization.
+      </p>
     </div>
   </footer>
 

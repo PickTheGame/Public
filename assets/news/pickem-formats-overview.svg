@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Diagram: how a Pick'em pool works from join to standings">
+  <defs>
+    <style>
+      .bg{fill:#ffffff}
+      .title{font:700 44px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#0f172a}
+      .sub{font:500 22px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#334155}
+      .box{fill:#f8fafc; stroke:#cbd5e1; stroke-width:2}
+      .box2{fill:#eef2ff; stroke:#c7d2fe; stroke-width:2}
+      .h{font:700 24px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#0f172a}
+      .p{font:500 20px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#334155}
+      .small{font:500 18px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#475569}
+      .arrow{stroke:#1e293b; stroke-width:3; fill:none; marker-end:url(#m)}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="700"/>
+
+  <text class="title" x="70" y="95">Pick&apos;em Pool: The Big Picture</text>
+  <text class="sub" x="70" y="135">Everyone picks winners each week. Points add up. Highest score wins.</text>
+
+  <rect class="box2" x="70" y="190" width="500" height="120" rx="18"/>
+  <text class="h" x="105" y="235">1) Join the pool</text>
+  <text class="p" x="105" y="270">Get an invite link, create an account, and you&apos;re in.</text>
+
+  <rect class="box" x="70" y="350" width="500" height="140" rx="18"/>
+  <text class="h" x="105" y="395">2) Make weekly picks</text>
+  <text class="p" x="105" y="430">Pick winners for each game (or a set of games).</text>
+  <text class="small" x="105" y="462">Some pools add spreads or confidence points.</text>
+
+  <rect class="box" x="70" y="530" width="500" height="120" rx="18"/>
+  <text class="h" x="105" y="575">3) Hit the deadline</text>
+  <text class="p" x="105" y="610">Usually due by the first game.</text>
+  <text class="small" x="105" y="638">Some pools lock before each kickoff.</text>
+
+  <path class="arrow" d="M 320 310 L 320 350"/>
+  <path class="arrow" d="M 320 490 L 320 530"/>
+
+  <rect class="box2" x="640" y="270" width="490" height="150" rx="18"/>
+  <text class="h" x="675" y="315">4) Watch the games</text>
+  <text class="p" x="675" y="350">Wins/losses come from real game results.</text>
+  <text class="small" x="675" y="382">No spreadsheets, no manual math.</text>
+
+  <rect class="box" x="640" y="460" width="490" height="190" rx="18"/>
+  <text class="h" x="675" y="505">5) Scores &amp; standings update</text>
+  <text class="p" x="675" y="540">Correct pick = points.</text>
+  <text class="p" x="675" y="572">Points roll up weekly and season-long.</text>
+  <text class="small" x="675" y="604">Ties are often broken by a tiebreaker question.</text>
+
+  <path class="arrow" d="M 570 590 L 640 345"/>
+  <path class="arrow" d="M 885 420 L 885 460"/>
+</svg>

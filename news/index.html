@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-42W4RTSVGF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,119 +12,90 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://pickthegame.github.io/Public/news/" />
-  <title>News &amp; Updates | Pick the Game</title>
-  <meta name="description" content="Product news, feature announcements, and release notes for Pick the Game." />
+  <title>News &amp; Updates | PickTheGame</title>
+  <meta name="description" content="Product news, feature announcements, and release notes for PickTheGame." />
 
   <link rel="icon" type="image/png" href="../assets/favicons/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg" />
   <link rel="shortcut icon" href="../assets/favicons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#222B5C',
-              50: '#eef0f8',
-              100: '#d9ddeb',
-              200: '#b3b8d1',
-              300: '#8c93b7',
-              400: '#666e9d',
-              500: '#404883',
-              600: '#2e3665',
-              700: '#1c2447',
-              800: '#0e1229',
-              900: '#05060f'
-            }
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.08)'
-          }
-        }
-      }
-    }
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial; }
-    .container-tight { max-width: 1120px; }
-    .btn-hover:hover { transform: translateY(-2px); transition: all 0.2s ease-in-out; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/site.css" />
 </head>
-<body class="text-slate-900 bg-white">
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
-    <div class="mx-auto container-tight px-4">
-      <div class="flex items-center justify-between h-16">
-        <a href="../" class="flex items-center gap-2 font-extrabold text-xl" aria-label="Pick the Game home">
-          <img src="../assets/logo-wide.png" alt="Pick the Game Logo" class="h-10 w-auto" />
+<body>
+  <header class="site-header">
+    <div class="container-tight">
+      <div class="site-header__row">
+        <a href="../" class="site-logo" aria-label="PickTheGame home">
+          <img src="../assets/logo-wide.png" alt="PickTheGame logo" />
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="../#services" class="hover:text-brand-700">Services</a>
-          <a href="../#about" class="hover:text-brand-700">About</a>
-          <a href="../#faqs" class="hover:text-brand-700">FAQs</a>
-          <a href="../#contact" class="hover:text-brand-700">Contact</a>
+        <nav class="site-nav">
+          <a href="../#services">Pool Types</a>
+          <a href="../#about">About</a>
+          <a href="../#faqs">FAQs</a>
+          <a href="../#contact">Contact</a>
         </nav>
-        <div class="flex items-center gap-3">
-          <a href="https://pools.pickthegame.com" class="hidden sm:inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold hover:bg-slate-50 btn-hover">Login</a>
-          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex items-center justify-center rounded-lg bg-brand text-white px-3.5 py-2.5 text-sm font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create Pool</a>
+        <div class="site-header__actions">
+          <a href="https://pools.pickthegame.com" class="btn btn-secondary">Login</a>
+          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="btn btn-primary">Create Pool</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="bg-gradient-to-br from-brand-50 to-white border-b border-slate-200">
-    <div class="mx-auto container-tight px-4 py-14 sm:py-16">
-      <p class="text-sm font-semibold tracking-wide text-brand-700">Updates</p>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight">News &amp; Product Updates</h1>
-      <p class="mt-4 text-lg text-slate-700">Announcements, new features, and release notes for Pick the Game.</p>
+  <section class="page-hero">
+    <div class="container-tight page-hero__content">
+      <p class="eyebrow">Updates</p>
+      <h1>News &amp; Product Updates</h1>
+      <p class="page-hero__lede">Announcements, new features, strategy explainers, and release notes from PickTheGame.</p>
     </div>
   </section>
 
-  <main class="bg-white">
-    <div class="mx-auto container-tight px-4 py-14">
-      <div class="grid gap-6">
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-          <p class="text-sm text-slate-500">April 26, 2026</p>
-          <h2 class="mt-2 text-2xl font-extrabold tracking-tight">Confidence Pools: Formats Explained</h2>
-          <p class="mt-3 text-slate-700">Learn what a confidence pool is, how confidence points work, and the most common formats (classic 1&ndash;N and with spreads).</p>
-          <a href="confidence-formats/" class="mt-4 inline-flex rounded-lg bg-brand text-white px-4 py-2 font-semibold shadow-soft hover:bg-brand-700 btn-hover">Read update</a>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-          <p class="text-sm text-slate-500">April 20, 2026</p>
-          <h2 class="mt-2 text-2xl font-extrabold tracking-tight">Pick&apos;em Pools: Formats Explained</h2>
-          <p class="mt-3 text-slate-700">New to pools? Learn what Pick&apos;em is, why people love it, and the most common formats: Straight Up and Against the Spread.</p>
-          <a href="pickem-formats/" class="mt-4 inline-flex rounded-lg bg-brand text-white px-4 py-2 font-semibold shadow-soft hover:bg-brand-700 btn-hover">Read update</a>
-        </article>
-
-        <!-- <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <p class="text-sm text-slate-500">Template</p>
-          <h2 class="mt-2 text-xl font-bold">New feature announcement</h2>
-          <p class="mt-2 text-slate-700">Duplicate this card (and create a matching HTML file) whenever you ship something new.</p>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <span class="inline-flex items-center rounded-full bg-white px-3 py-1 border border-slate-200">Changelog</span>
-            <span class="inline-flex items-center rounded-full bg-white px-3 py-1 border border-slate-200">Release notes</span>
-            <span class="inline-flex items-center rounded-full bg-white px-3 py-1 border border-slate-200">Tips</span>
+  <main class="section-block">
+    <div class="container-tight news-grid">
+      <article class="news-card">
+        <div class="news-card__body">
+          <p class="news-card__date">April 26, 2026</p>
+          <h2>Confidence Pools: Formats Explained</h2>
+          <p>Learn what a confidence pool is, how confidence points work, and the most common formats, from classic 1&ndash;N scoring to confidence with spreads.</p>
+          <div class="chip-row">
+            <span class="chip">Strategy</span>
+            <span class="chip">Beginner-Friendly</span>
+            <span class="chip">Weighted Picks</span>
           </div>
-        </article> -->
-      </div>
+          <p>
+            <a href="confidence-formats/" class="btn btn-primary" style="margin-top: 1.35rem;">Read Update</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card__body">
+          <p class="news-card__date">April 20, 2026</p>
+          <h2>Pick'em Pools: Formats Explained</h2>
+          <p>New to football pools? Start here with the most common Pick'em formats, including straight up and against the spread.</p>
+          <div class="chip-row">
+            <span class="chip">Pool Basics</span>
+            <span class="chip">Straight Up</span>
+            <span class="chip">ATS</span>
+          </div>
+          <p>
+            <a href="pickem-formats/" class="btn btn-primary" style="margin-top: 1.35rem;">Read Update</a>
+          </p>
+        </div>
+      </article>
     </div>
   </main>
 
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto container-tight px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <p>&copy; <span id="year"></span> Pick the Game</p>
-      <div class="flex items-center gap-4">
-        <a class="hover:underline" href="../terms-of-service.html">Terms of Service</a>
-        <a class="hover:underline" href="../privacy-policy.html">Privacy Policy</a>
+  <footer class="site-footer">
+    <div class="container-tight site-footer__row">
+      <p>&copy; <span id="year"></span> PickTheGame</p>
+      <div class="site-footer__links">
+        <a href="../terms-of-service.html">Terms of Service</a>
+        <a href="../privacy-policy.html">Privacy Policy</a>
       </div>
     </div>
   </footer>
@@ -133,5 +103,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>

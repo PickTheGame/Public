@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-42W4RTSVGF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,7 +12,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://pickthegame.github.io/Public/news/pickem-formats/" />
-  <title>Pick'em Pools: Formats Explained | Pick the Game</title>
+  <title>Pick'em Pools: Formats Explained | PickTheGame</title>
   <meta name="description" content="New to football pools? Learn what a Pick'em pool is, why people love it, and the most common Pick'em formats (straight up and against the spread)." />
 
   <link rel="icon" type="image/png" href="../../assets/favicons/favicon-96x96.png" sizes="96x96" />
@@ -21,44 +20,10 @@
   <link rel="shortcut icon" href="../../assets/favicons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#222B5C',
-              50: '#eef0f8',
-              100: '#d9ddeb',
-              200: '#b3b8d1',
-              300: '#8c93b7',
-              400: '#666e9d',
-              500: '#404883',
-              600: '#2e3665',
-              700: '#1c2447',
-              800: '#0e1229',
-              900: '#05060f'
-            }
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.08)'
-          }
-        }
-      }
-    }
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial; }
-    .container-tight { max-width: 880px; }
-    .btn-hover:hover { transform: translateY(-2px); transition: all 0.2s ease-in-out; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/site.css" />
 
   <script type="application/ld+json">
     {
@@ -74,130 +39,125 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Pick the Game"
+        "name": "PickTheGame"
       }
     }
   </script>
 </head>
-<body class="text-slate-900 bg-white">
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
-    <div class="mx-auto container-tight px-4">
-      <div class="flex items-center justify-between h-16">
-        <a href="../../" class="flex items-center gap-2 font-extrabold text-xl" aria-label="Pick the Game home">
-          <img src="../../assets/logo-wide.png" alt="Pick the Game Logo" class="h-10 w-auto" />
+<body>
+  <header class="site-header">
+    <div class="container-tight">
+      <div class="site-header__row">
+        <a href="../../" class="site-logo" aria-label="PickTheGame home">
+          <img src="../../assets/logo-wide.png" alt="PickTheGame logo" />
         </a>
-        <div class="flex items-center gap-3">
-          <a href="../" class="hidden sm:inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold hover:bg-slate-50 btn-hover">All updates</a>
-          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex items-center justify-center rounded-lg bg-brand text-white px-3.5 py-2.5 text-sm font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create Pool</a>
+        <div class="site-header__actions">
+          <a href="../" class="btn btn-secondary">All Updates</a>
+          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="btn btn-primary">Create Pool</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="mx-auto container-tight px-4 py-12">
-    <a href="../" class="text-sm font-semibold text-brand-700 hover:text-brand-800">&larr; Back to News</a>
+  <section class="page-hero">
+    <div class="container-article page-hero__content">
+      <p class="eyebrow">Pool Basics</p>
+      <h1>Pick'em Pools: Formats Explained</h1>
+      <p class="page-hero__lede">If you follow football but you have never joined a pool before, Pick'em is the easiest place to start. The idea is simple: each week, you pick who you think will win, and you earn points when you are right.</p>
+      <div class="chip-row">
+        <span class="chip">Straight Up</span>
+        <span class="chip">Against the Spread</span>
+        <span class="chip">Group Play</span>
+      </div>
+    </div>
+  </section>
 
-    <article class="mt-6">
-      <p class="text-sm text-slate-500">April 20, 2026</p>
-      <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Pick&apos;em Pools: Formats Explained</h1>
-      <p class="mt-4 text-lg text-slate-700">
-        If you follow football but you&apos;ve never joined a pool before, Pick&apos;em is the easiest place to start.
-        The idea is simple: each week, you pick who you think will win, and you earn points when you&apos;re right.
-      </p>
+  <main class="article-shell">
+    <article class="container-article">
+      <a href="../" class="back-link">&larr; Back to News</a>
 
-      <section class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h2 class="text-xl font-bold">What is a Pick&apos;em pool?</h2>
-        <p class="mt-3 text-slate-700">
-          A Pick&apos;em pool is a group game where everyone predicts winners for a set of games (usually every NFL game that week).
-          You can play for bragging rights, a small buy-in, or just for fun with friends, family, or coworkers.
-        </p>
-        <div class="mt-4 grid gap-3 text-slate-700">
-          <p><span class="font-semibold">You do:</span> choose teams before kickoff.</p>
-          <p><span class="font-semibold">The pool does:</span> track results, points, and standings automatically.</p>
-          <p><span class="font-semibold">The season does:</span> give you a fresh shot every week.</p>
-        </div>
+      <p class="article-meta" style="margin-top: 1rem;">April 20, 2026</p>
+
+      <section class="article-section article-section--muted">
+        <h2>What is a Pick'em pool?</h2>
+        <p>A Pick'em pool is a group game where everyone predicts winners for a set of games, usually every NFL game that week. You can play for bragging rights, a small buy-in, or just for fun with friends, family, or coworkers.</p>
+        <ul>
+          <li><strong>You do:</strong> choose teams before kickoff.</li>
+          <li><strong>The pool does:</strong> track results, points, and standings automatically.</li>
+          <li><strong>The season does:</strong> give you a fresh shot every week.</li>
+        </ul>
       </section>
 
-      <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <p class="text-sm font-semibold text-brand-700">Related</p>
-          <p class="mt-1 text-slate-700">Want more strategy? Confidence pools add weighted points to your picks.</p>
-        </div>
-        <a href="../confidence-formats/" class="inline-flex items-center justify-center rounded-lg bg-brand text-white px-4 py-2 font-semibold shadow-soft hover:bg-brand-700 btn-hover">Confidence formats</a>
+      <section class="article-section">
+        <p class="legal-kicker">Related</p>
+        <p>Want more strategy? Confidence pools add weighted points to your picks.</p>
+        <p><a href="../confidence-formats/" class="btn btn-primary">Confidence Formats</a></p>
       </section>
 
-      <section class="mt-10">
-        <h2 class="text-2xl font-extrabold tracking-tight">Why people love Pick&apos;em</h2>
-        <div class="mt-4 grid gap-3 text-slate-700">
-          <p><span class="font-semibold">It makes every game matter.</span> Even a random afternoon matchup becomes something you care about.</p>
-          <p><span class="font-semibold">It&apos;s beginner-friendly.</span> You don&apos;t need to know point spreads, fantasy projections, or advanced stats.</p>
-          <p><span class="font-semibold">It&apos;s social.</span> Picks spark friendly trash talk, group chats, and weekly debates.</p>
-          <p><span class="font-semibold">You can recover.</span> A bad week hurts, but it doesn&apos;t eliminate you for the season.</p>
-        </div>
+      <section class="article-section">
+        <h2>Why people love Pick'em</h2>
+        <ul>
+          <li><strong>It makes every game matter.</strong> Even a random afternoon matchup becomes something you care about.</li>
+          <li><strong>It's beginner-friendly.</strong> You do not need to know point spreads, fantasy projections, or advanced stats.</li>
+          <li><strong>It's social.</strong> Picks spark friendly trash talk, group chats, and weekly debates.</li>
+          <li><strong>You can recover.</strong> A bad week hurts, but it does not eliminate you for the season.</li>
+        </ul>
       </section>
 
-      <section class="mt-10">
-        <h2 class="text-2xl font-extrabold tracking-tight">How it works (diagram)</h2>
-        <p class="mt-3 text-slate-700">Here&apos;s the basic loop you&apos;ll repeat all season:</p>
-        <figure class="mt-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
-          <img src="../../assets/news/pickem-formats-overview.svg" alt="Diagram showing the steps of a pick'em pool from joining, making picks, hitting the deadline, watching games, and standings updating." class="w-full h-auto" loading="lazy" />
-          <figcaption class="mt-3 text-sm text-slate-500">Pick&apos;em at a glance: pick winners, score points, climb the standings.</figcaption>
+      <section class="article-section">
+        <h2>How it works</h2>
+        <p>Here is the basic loop you will repeat all season:</p>
+        <figure class="article-figure">
+          <img src="../../assets/news/pickem-formats-overview.svg" alt="Diagram showing the steps of a Pick'em pool from joining, making picks, hitting the deadline, watching games, and standings updating." loading="lazy" />
+          <figcaption>Pick'em at a glance: pick winners, score points, climb the standings.</figcaption>
         </figure>
       </section>
 
-      <section class="mt-10">
-        <h2 class="text-2xl font-extrabold tracking-tight">The 2 most common Pick&apos;em formats</h2>
+      <section class="article-section">
+        <h2>The 2 most common Pick'em formats</h2>
 
-        <div class="mt-6 grid gap-6">
-          <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h3 class="text-xl font-bold">1) Straight Up (Winner Only)</h3>
-            <p class="mt-3 text-slate-700">
-              The classic: pick the team that will win the game. Each correct pick is worth 1 point.
-              This is the best format for first-timers.
-            </p>
-            <figure class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-              <img src="../../assets/news/pickem-week.png" alt="Pick the Game Pick'em home page showing a weekly grid of matchups and results." class="w-full h-auto" loading="lazy" />
-              <figcaption class="mt-3 text-sm text-slate-500">A week of Pick&apos;em matchups in the Pick the Game app.</figcaption>
-            </figure>
-          </section>
+        <div class="article-section article-section--muted" style="margin-top: 1.25rem;">
+          <h3>1) Straight Up (Winner Only)</h3>
+          <p>The classic: pick the team that will win the game. Each correct pick is worth 1 point. This is the best format for first-timers.</p>
+          <figure class="article-figure">
+            <img src="../../assets/news/pickem-week.png" alt="PickTheGame Pick'em home page showing a weekly grid of matchups and results." loading="lazy" />
+            <figcaption>A week of Pick'em matchups in the PickTheGame app.</figcaption>
+          </figure>
+        </div>
 
-          <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h3 class="text-xl font-bold">2) Against the Spread (ATS)</h3>
-            <p class="mt-3 text-slate-700">
-              Instead of picking the outright winner, you&apos;re picking whether a team will cover the point spread.
-              ATS levels the playing field because favorites aren&apos;t automatic picks &mdash; they have to win by enough.
-            </p>
-            <div class="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-700">
-              <p class="font-semibold">Quick example</p>
-              <p class="mt-2"><span class="font-semibold">KC -6.5</span> vs <span class="font-semibold">DEN +6.5</span></p>
-              <p class="mt-2">If KC wins by 7+, KC covers. If KC wins by 6 or less (or loses), DEN covers.</p>
-            </div>
-          </section>
+        <div class="article-section" style="margin-top: 1.25rem;">
+          <h3>2) Against the Spread (ATS)</h3>
+          <p>Instead of picking the outright winner, you are picking whether a team will cover the point spread. ATS levels the playing field because favorites are not automatic picks. They have to win by enough.</p>
+          <div class="article-section article-section--muted" style="margin-top: 1.2rem;">
+            <p><strong>Quick example</strong></p>
+            <p><strong>KC -6.5</strong> vs <strong>DEN +6.5</strong></p>
+            <p>If KC wins by 7+, KC covers. If KC wins by 6 or less, or loses, DEN covers.</p>
+          </div>
         </div>
       </section>
 
-      <section class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h2 class="text-xl font-bold">Beginner tips (so you don&apos;t feel lost)</h2>
-        <div class="mt-4 grid gap-3 text-slate-700">
-          <p><span class="font-semibold">Start simple:</span> Straight Up is the easiest format to learn.</p>
-          <p><span class="font-semibold">Respect the deadline:</span> picks are usually due by the first game, but some pools lock before each game&apos;s kickoff.</p>
-          <p><span class="font-semibold">Don&apos;t overthink it:</span> your goal isn&apos;t perfect picks &mdash; it&apos;s beating your friends.</p>
-        </div>
+      <section class="article-section article-section--muted">
+        <h2>Beginner tips</h2>
+        <ul>
+          <li><strong>Start simple:</strong> Straight Up is the easiest format to learn.</li>
+          <li><strong>Respect the deadline:</strong> picks are usually due by the first game, but some pools lock before each game's kickoff.</li>
+          <li><strong>Do not overthink it:</strong> your goal is not perfect picks. It is beating your friends.</li>
+        </ul>
       </section>
 
-      <section class="mt-10 text-center">
-        <p class="text-slate-600 mb-4">Ready to try it with your group?</p>
-        <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex items-center rounded-xl bg-brand text-white px-6 py-3 font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create a Pool</a>
+      <section class="article-section text-center">
+        <p>Ready to try it with your group?</p>
+        <p><a href="https://pools.pickthegame.com/pool-setup/create-pool" class="btn btn-primary">Create a Pool</a></p>
       </section>
     </article>
   </main>
 
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto container-tight px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <p>&copy; <span id="year"></span> Pick the Game</p>
-      <div class="flex items-center gap-4">
-        <a class="hover:underline" href="../../terms-of-service.html">Terms of Service</a>
-        <a class="hover:underline" href="../../privacy-policy.html">Privacy Policy</a>
+  <footer class="site-footer">
+    <div class="container-tight site-footer__row">
+      <p>&copy; <span id="year"></span> PickTheGame</p>
+      <div class="site-footer__links">
+        <a href="../../terms-of-service.html">Terms of Service</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
       </div>
     </div>
   </footer>
@@ -205,5 +165,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="../../assets/site.js"></script>
 </body>
 </html>

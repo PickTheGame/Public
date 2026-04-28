@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-42W4RTSVGF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-42W4RTSVGF');
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://pickthegame.github.io/Public">
-  <title>Pick the Game — Simplifying Pool Management</title>
+  <title>PickTheGame | Football Pools Without the Spreadsheet</title>
   <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
   <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
-  <meta name="description" content="Football pools made easy for family, friends, and coworkers." />
+  <meta name="description" content="PickTheGame helps friends, families, and workplaces run football pools without spreadsheets, confusion, or missed picks." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
+            ink: '#0d1b2a',
+            cream: '#f8f9fe',
+            gold: '#EFB71E',
+            field: '#202B5F',
+            smoke: '#EEF0F8',
+            secondary: {
+              100: '#F9E7B2',
+              300: '#F3C549',
+              500: '#EFB71E',
+              700: '#C79719'
+            },
             brand: {
-              DEFAULT: '#222B5C',
-              50: '#eef0f8',
-              100: '#d9ddeb',
-              200: '#b3b8d1',
-              300: '#8c93b7',
-              400: '#666e9d',
-              500: '#404883',
-              600: '#2e3665',
-              700: '#1c2447',
-              800: '#0e1229',
-              900: '#05060f'
+              DEFAULT: '#202B5F',
+              50: '#EEF0F8',
+              100: '#D7DBEE',
+              200: '#9EA9D0',
+              300: '#5E6AA0',
+              400: '#414D80',
+              500: '#202B5F',
+              600: '#1D2857',
+              700: '#1A224F',
+              800: '#161D47',
+              900: '#131A3F'
             }
           },
           boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.08)'
+            soft: '0 18px 50px rgba(7, 18, 32, 0.16)'
           }
         }
       }
@@ -48,480 +57,624 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- AOS CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    :root {
+      --page-bg: #f8f9fe;
+      --page-ink: #0d1b2a;
+      --brand-deep: #202b5f;
+      --brand-gold: #efb71e;
+      --brand-gold-soft: #f9e7b2;
+      --brand-field: #1a224f;
+      --brand-smoke: #eef0f8;
+      --section-line: rgba(32, 43, 95, 0.12);
+    }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
-    .container-tight { max-width: 1120px; }
-    /* Hover animation for buttons */
-    .btn-hover:hover { transform: translateY(-2px); transition: all 0.2s ease-in-out; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', 'Segoe UI', sans-serif;
+      color: var(--page-ink);
+      background:
+        radial-gradient(circle at top left, rgba(239, 183, 30, 0.14), transparent 26%),
+        radial-gradient(circle at top right, rgba(94, 106, 160, 0.14), transparent 34%),
+        var(--page-bg);
+    }
+    h1, h2, h3, .display-face {
+      font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+      letter-spacing: 0.02em;
+    }
+    .container-tight { max-width: 1160px; }
+    .btn-rise,
+    .nav-link,
+    .feature-line,
+    .store-badge,
+    details summary {
+      transition: transform 0.25s ease, color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+    }
+    .btn-rise:hover,
+    .store-badge:hover {
+      transform: translateY(-2px);
+    }
+    .nav-link:hover,
+    details summary:hover {
+      color: var(--brand-gold);
+    }
+    details summary {
+      cursor: pointer;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details > *:not(summary) {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+    details[open] > *:not(summary) {
+      max-height: 320px;
+    }
+    .hero-shell {
+      position: relative;
+      min-height: calc(100vh - 4.5rem);
+      isolation: isolate;
+      background: linear-gradient(110deg, rgba(19, 26, 63, 0.94) 0%, rgba(32, 43, 95, 0.84) 44%, rgba(32, 43, 95, 0.32) 68%, rgba(32, 43, 95, 0.14) 100%);
+    }
+    .hero-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/hero-image.png');
+      background-size: cover;
+      background-position: center right;
+      transform: scale(1.04);
+      animation: heroDrift 18s ease-in-out infinite alternate;
+      z-index: -2;
+    }
+    .hero-shell::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(19, 26, 63, 0.22), rgba(19, 26, 63, 0.58)),
+        radial-gradient(circle at right center, rgba(239, 183, 30, 0.2), transparent 28%);
+      z-index: -1;
+    }
+    .brand-mark {
+      animation: brandPulse 4.6s ease-in-out infinite;
+    }
+    .cta-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .feature-line:hover {
+      transform: translateX(6px);
+      border-color: rgba(239, 183, 30, 0.45);
+    }
+    .section-divider {
+      border-color: var(--section-line);
+    }
+    .field-strip {
+      background:
+        linear-gradient(180deg, rgba(32, 43, 95, 0.03), rgba(32, 43, 95, 0.08)),
+        repeating-linear-gradient(90deg, rgba(239, 183, 30, 0.08) 0 4px, transparent 4px 16px);
+    }
+    .app-shot {
+      box-shadow: 0 28px 60px rgba(7, 18, 32, 0.22);
+    }
+    .hero-stage {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34rem;
+      padding: 2rem 0;
+    }
+    .hero-card {
+      position: relative;
+      width: min(34rem, 100%);
+      border-radius: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: linear-gradient(180deg, rgba(26, 34, 79, 0.92), rgba(19, 26, 63, 0.82));
+      box-shadow: 0 34px 90px rgba(3, 10, 20, 0.42);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(140deg, rgba(255, 255, 255, 0.12), transparent 45%);
+      pointer-events: none;
+    }
+    .hero-card-glow {
+      position: absolute;
+      inset: auto auto 10% -8%;
+      width: 11rem;
+      height: 11rem;
+      border-radius: 9999px;
+      background: rgba(239, 183, 30, 0.26);
+      filter: blur(28px);
+      pointer-events: none;
+    }
+    .hero-card-inner {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2.5rem 1.5rem 1.25rem;
+    }
+    .hero-phone-primary,
+    .hero-phone-secondary {
+      border-radius: 1.8rem;
+      border: 8px solid rgba(244, 244, 245, 0.9);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    }
+    .hero-phone-primary {
+      position: relative;
+      z-index: 2;
+      width: min(17rem, 52vw);
+      transform: rotate(-4deg);
+    }
+    .hero-phone-secondary {
+      position: absolute;
+      right: 2%;
+      top: 3.2rem;
+      z-index: 1;
+      width: min(12rem, 38vw);
+      transform: rotate(8deg);
+      opacity: 0.96;
+    }
+    .hero-phone-primary img,
+    .hero-phone-secondary img {
+      width: 100%;
+      display: block;
+      border-radius: 1.2rem;
+    }
+    .hero-card-caption {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 1.5rem 1.4rem;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .header-cta {
+      min-height: 2.75rem;
+      padding-inline: 1rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    @keyframes heroDrift {
+      from { transform: scale(1.04) translate3d(0, 0, 0); }
+      to { transform: scale(1.1) translate3d(-1.5%, 1%, 0); }
+    }
+    @keyframes brandPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    @media (max-width: 1024px) {
+      .hero-shell {
+        min-height: auto;
+        background: linear-gradient(180deg, rgba(19, 26, 63, 0.92) 0%, rgba(32, 43, 95, 0.82) 48%, rgba(19, 26, 63, 0.9) 100%);
+      }
+      .hero-shell::before {
+        background-position: center;
+      }
+      .hero-stage {
+        min-height: 0;
+        padding-top: 0;
+      }
+      .hero-card {
+        width: min(30rem, 100%);
+      }
+      .hero-phone-secondary {
+        right: 4%;
+      }
+    }
+    @media (max-width: 640px) {
+      .header-actions {
+        gap: 0.5rem;
+      }
+      .header-cta {
+        min-height: 2.5rem;
+        padding-inline: 0.85rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+      }
+      .hero-shell {
+        overflow: visible;
+      }
+      .hero-shell .container-tight,
+      .hero-shell > div {
+        gap: 2rem;
+      }
+      .hero-stage {
+        padding: 0.25rem 0 0.75rem;
+      }
+      .hero-card {
+        border-radius: 1.5rem;
+      }
+      .hero-card-inner {
+        padding: 2rem 1rem 1rem;
+      }
+      .hero-phone-primary {
+        width: min(13.5rem, 58vw);
+      }
+      .hero-phone-secondary {
+        width: min(9.5rem, 40vw);
+        top: 2.6rem;
+        right: 1%;
+      }
+      .hero-card-caption {
+        flex-direction: column;
+        gap: 0.35rem;
+        font-size: 0.64rem;
+      }
+      .hero-card-caption span:last-child {
+        opacity: 0.8;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-shell::before,
+      .brand-mark,
+      .btn-rise,
+      .nav-link,
+      .feature-line,
+      .store-badge,
+      details summary {
+        animation: none;
+        transition: none;
+      }
+    }
   </style>
-  <!-- CSS tweaks for smooth open and hover effects -->
-<style>
-  details summary {
-    cursor: pointer;
-    transition: color 0.2s ease, transform 0.2s ease;
-  }
-  details summary:hover {
-    color: #222B5C;
-    transform: translateX(2px);
-  }
-  details[open] summary {
-    font-weight: 600;
-    color: #222B5C;
-  }
-  details > *:not(summary) {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
-  details[open] > *:not(summary) {
-    max-height: 500px;
-  }
-</style>
 </head>
-<body class="text-slate-900 bg-white">
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+<body>
+  <header id="siteHeader" class="sticky top-0 z-40 border-b border-[rgba(32,43,95,0.10)] bg-[rgba(248,249,254,0.82)] text-brand-900 backdrop-blur-[14px] shadow-[0_10px_30px_rgba(19,26,63,0.08)] transition-[background-color,box-shadow,border-color] duration-200">
     <div class="mx-auto container-tight px-4">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-2 font-extrabold text-xl">
-          <img src="assets/logo-wide.png" alt="Pick the Game Logo" class="h-10 w-auto">
+      <div class="flex h-[4.5rem] items-center justify-between gap-4">
+        <a href="#top" class="flex items-center gap-3" aria-label="PickTheGame home">
+          <img src="assets/logo-wide.png" alt="PickTheGame logo" class="h-10 w-auto brand-mark">
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#services" class="hover:text-brand-700">Services</a>
-          <a href="#about" class="hover:text-brand-700">About</a>
-          <a href="news/" class="hover:text-brand-700">News</a>
-          <a href="#faqs" class="hover:text-brand-700">FAQs</a>
-          <a href="#contact" class="hover:text-brand-700">Contact</a>
+        <nav class="hidden items-center gap-7 text-sm font-semibold md:flex">
+          <a href="#services" class="nav-link text-brand-900/82">Pool Types</a>
+          <a href="#about" class="nav-link text-brand-900/82">About</a>
+          <a href="news/" class="nav-link text-brand-900/82">News</a>
+          <a href="#faqs" class="nav-link text-brand-900/82">FAQs</a>
+          <a href="#contact" class="nav-link text-brand-900/82">Contact</a>
         </nav>
-        <div class="flex items-center gap-3">
-          <a href="https://pools.pickthegame.com" class="hidden sm:inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold hover:bg-slate-50 btn-hover">Login</a>
-          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex items-center justify-center rounded-lg bg-brand text-white px-3.5 py-2.5 text-sm font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create Pool</a>
-          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2" aria-label="Open menu">
+        <div class="header-actions flex items-center gap-3">
+          <a href="https://pools.pickthegame.com" class="hidden rounded-full border border-brand-900/15 bg-white/80 px-4 py-2 text-sm font-semibold text-brand-700 md:inline-flex btn-rise">Login</a>
+          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="header-cta inline-flex items-center justify-center rounded-full bg-gold text-sm font-extrabold uppercase tracking-[0.14em] text-brand-900 btn-rise">Create Pool</a>
+          <button id="menuBtn" class="inline-flex items-center justify-center rounded-full border border-brand-900/15 bg-white/80 px-3 py-2 text-brand-900 md:hidden" aria-label="Open menu">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
           </button>
         </div>
       </div>
     </div>
-    <!-- Mobile nav -->
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white transition-all duration-300 ease-in-out">
-      <div class="mx-auto container-tight px-4 py-3 grid gap-2 text-sm">
-        <a href="#services" class="py-2">Services</a>
+    <div id="mobileNav" class="hidden border-t border-brand-900/10 bg-[rgba(248,249,254,0.96)] md:hidden">
+      <div class="mx-auto grid container-tight gap-1 px-4 py-3 text-sm font-semibold text-brand-900/84">
+        <a href="#services" class="py-2">Pool Types</a>
         <a href="#about" class="py-2">About</a>
         <a href="news/" class="py-2">News</a>
         <a href="#faqs" class="py-2">FAQs</a>
         <a href="#contact" class="py-2">Contact</a>
-        <a href="https://pools.pickthegame.com" class="py-2 font-semibold">Login</a>
+        <a href="https://pools.pickthegame.com" class="py-2">Login</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-brand-50/70 via-white to-white">
-    <div class="pointer-events-none absolute -top-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-brand-100 blur-3xl opacity-60"></div>
-    <div class="pointer-events-none absolute -bottom-40 -right-24 h-[32rem] w-[32rem] rounded-full bg-sky-100 blur-3xl opacity-70"></div>
-    <div class="mx-auto container-tight px-4">
-      <div class="grid lg:grid-cols-2 gap-10 items-center py-16 sm:py-20">
-        <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight" data-aos="fade-up">The Easiest Way to Run Football Pools</h1>
-          <p class="mt-4 text-lg text-slate-700" data-aos="fade-up" data-aos-delay="100">Run football pools for friends, family, and coworkers without spreadsheets. Track picks and standings automatically and keep the season fun and organized.</p>
-          <div class="mt-6 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="200">
-            <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex items-center rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-soft hover:bg-brand-700 btn-hover">Create Pool</a>
-            <a href="#trial" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-50 btn-hover">Learn more</a>
+  <main id="top">
+    <section class="hero-shell overflow-hidden text-white">
+      <div class="mx-auto grid min-h-[calc(100vh-4.5rem)] container-tight items-center gap-10 px-4 py-14 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(21rem,32rem)]">
+        <div class="max-w-2xl">
+          <p class="display-face text-[0.85rem] font-bold uppercase tracking-[0.28em] text-gold" data-aos="fade-up">PickTheGame</p>
+          <h1 class="mt-3 max-w-[11ch] text-6xl font-extrabold uppercase leading-[0.9] sm:text-7xl lg:text-8xl" data-aos="fade-up" data-aos-delay="80">Football pools without the spreadsheet.</h1>
+          <p class="mt-6 max-w-xl text-base leading-7 text-white/82 sm:text-lg" data-aos="fade-up" data-aos-delay="160">Run weekly picks, standings, reminders, and pool setup from one place so your group spends game day competing, not chasing emails.</p>
+          <div class="mt-8 flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="240">
+            <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex rounded-full bg-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-900 btn-rise">Start Free Trial</a>
+            <a href="#services" class="cta-secondary inline-flex rounded-full border border-white/22 px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white btn-rise">See Pool Types</a>
           </div>
-          <p class="mt-3 text-sm text-slate-500">Free 2‑week trial • No credit card required</p>
+          <p class="mt-4 text-sm font-medium text-white/66" data-aos="fade-up" data-aos-delay="300">Free 2-week trial. No credit card required.</p>
+        </div>
+      </div>
+    </section>
 
-          <div class="mt-8 grid sm:grid-cols-3 gap-3" data-aos="fade-up" data-aos-delay="250">
-            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636 5.636 18.364" />
-                </svg>
-              </span>
-              <div>
-                <p class="text-sm font-bold">Ad-free</p>
-                <p class="text-xs text-slate-600">No ads, no distractions</p>
-              </div>
+    <section id="trial" class="border-y section-divider field-strip">
+      <div class="mx-auto container-tight px-4 py-10 sm:py-12">
+        <div class="grid gap-5 lg:grid-cols-[1.4fr_auto] lg:items-center">
+          <div>
+            <h2 class="text-3xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Start the season with less admin work.</h2>
+            <p class="mt-3 max-w-3xl text-slate-700">Create a pool, invite your group, and let PickTheGame handle picks, reminders, and standings from kickoff through the final whistle.</p>
+          </div>
+          <div>
+            <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex rounded-full bg-brand px-6 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-white shadow-soft btn-rise">Start Your Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="scroll-mt-20">
+      <div class="mx-auto container-tight px-4 py-16 sm:py-20">
+        <h2 class="text-4xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Choose the way your group plays.</h2>
+        <p class="mt-3 max-w-2xl text-slate-700">Each format keeps the rules clear and the competition moving, whether your pool wants simple weekly picks or more strategy.</p>
+
+        <div class="mt-10 divide-y section-divider border-y section-divider" data-aos="fade-up">
+          <article class="feature-line grid gap-5 py-6 md:grid-cols-[1.1fr_1fr_auto] md:items-center">
+            <div>
+              <h3 class="text-3xl font-extrabold uppercase text-brand-800">Pick'em Pools</h3>
+              <p class="mt-2 text-slate-700">Everyone picks every game. The platform tallies results automatically and keeps standings current all week.</p>
             </div>
-            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3 19.5 7.5v6c0 5.25-3.75 9-7.5 10.5C8.25 22.5 4.5 18.75 4.5 13.5v-6L12 3Z" />
-                </svg>
-              </span>
-              <div>
-                <p class="text-sm font-bold">No sportsbook affiliation</p>
-                <p class="text-xs text-slate-600">Just pools, no promos</p>
-              </div>
+            <p class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">From $1 per player</p>
+            <a href="https://pools.pickthegame.com" class="inline-flex rounded-full border border-brand-200 px-5 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-800 btn-rise">Create Pool</a>
+          </article>
+          <article class="feature-line grid gap-5 py-6 md:grid-cols-[1.1fr_1fr_auto] md:items-center">
+            <div>
+              <h3 class="text-3xl font-extrabold uppercase text-brand-800">Confidence Pools</h3>
+              <p class="mt-2 text-slate-700">Rank each pick by confidence so every game carries a little more pressure and a lot more swing.</p>
             </div>
-            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-              </span>
-              <div>
-                <p class="text-sm font-bold">Deadline reminders</p>
-                <p class="text-xs text-slate-600">Never miss a pick</p>
-              </div>
+            <p class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">From $1 per player</p>
+            <a href="https://pools.pickthegame.com" class="inline-flex rounded-full border border-brand-200 px-5 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-800 btn-rise">Create Pool</a>
+          </article>
+          <article class="feature-line grid gap-5 py-6 md:grid-cols-[1.1fr_1fr_auto] md:items-center">
+            <div>
+              <h3 class="text-3xl font-extrabold uppercase text-brand-800">Survivor Pools</h3>
+              <p class="mt-2 text-slate-700">Pick one team each week, use each team only once, and see who can outlast the field.</p>
+            </div>
+            <p class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">From $1 per player</p>
+            <a href="https://pools.pickthegame.com" class="inline-flex rounded-full border border-brand-200 px-5 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-800 btn-rise">Create Pool</a>
+          </article>
+          <article class="feature-line grid gap-5 py-6 md:grid-cols-[1.1fr_1fr_auto] md:items-center">
+            <div>
+              <h3 class="text-3xl font-extrabold uppercase text-brand-800">Squares</h3>
+              <p class="mt-2 text-slate-700">Run boards for football weekends and big events with simple setup and score-based winners.</p>
+            </div>
+            <p class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">$10 per board</p>
+            <a href="https://pools.pickthegame.com" class="inline-flex rounded-full border border-brand-200 px-5 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-800 btn-rise">Create Pool</a>
+          </article>
+        </div>
+
+        <div class="mt-14">
+          <h3 class="text-3xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Add only what makes the pool better.</h3>
+          <p class="mt-3 max-w-2xl text-slate-700">Optional features stay out of the way until your group wants them.</p>
+          <div class="mt-8 grid gap-x-10 gap-y-4 md:grid-cols-2" data-aos="fade-up" data-aos-delay="80">
+            <div class="border-b section-divider pb-4">
+              <p class="font-bold text-brand-800">Spreads</p>
+              <p class="mt-1 text-slate-700">Apply point spreads when your group wants tighter competition.</p>
+            </div>
+            <div class="border-b section-divider pb-4">
+              <p class="font-bold text-brand-800">Survivor Add-on</p>
+              <p class="mt-1 text-slate-700">Layer survivor rules into other pools for extra weekly pressure.</p>
+            </div>
+            <div class="border-b section-divider pb-4">
+              <p class="font-bold text-brand-800">Total Points Tiebreaker</p>
+              <p class="mt-1 text-slate-700">Break ties cleanly with one final-game prediction.</p>
+            </div>
+            <div class="border-b section-divider pb-4">
+              <p class="font-bold text-brand-800">Custom Scoring</p>
+              <p class="mt-1 text-slate-700">Tune the rules to match the way your group already plays.</p>
+            </div>
+            <div class="border-b section-divider pb-4">
+              <p class="font-bold text-brand-800">Deadline Reminders</p>
+              <p class="mt-1 text-slate-700">Keep players from missing picks without sending manual follow-ups.</p>
+            </div>
+            <div class="border-b section-divider pb-4">
+              <p class="font-bold text-brand-800">Skip Week One</p>
+              <p class="mt-1 text-slate-700">Start survivor pools later if your season needs a softer launch.</p>
             </div>
           </div>
         </div>
-        <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="block relative group">
-          <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-50 to-slate-50 border border-slate-200 shadow-soft p-6 flex items-center justify-center transition group-hover:shadow-lg">
-            <img
-              src="assets/hero-image.png"
-              alt="Pick the Game interface preview"
-              class="rounded-xl shadow-md transition group-hover:scale-[1.02]"
-            />
-          </div>
-        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Trial CTA -->
-  <section id="trial" class="bg-slate-50 border-y border-slate-200">
-    <div class="mx-auto container-tight px-4 py-12">
-      <div class="grid lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-8">
-          <h2 class="text-2xl sm:text-3xl font-bold">Kick off your season with a FREE 2‑week trial</h2>
-          <p class="mt-2 text-slate-700">Try the full platform at no cost: manage entries, track results, and keep everyone engaged all season. Continue afterward for an affordable per‑player price.</p>
-        </div>
-        <div class="lg:col-span-4 flex lg:justify-end">
-          <a href="https://pools.pickthegame.com/pool-setup/create-pool" class="inline-flex items-center rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-soft hover:bg-brand-700 w-full sm:w-auto justify-center btn-hover">Start your free trial</a>
+    <section id="about" class="border-y section-divider bg-white/55">
+      <div class="mx-auto container-tight px-4 py-16 sm:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div>
+            <h2 class="text-4xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Built because football pools should feel fun, not clerical.</h2>
+            <p class="mt-4 text-slate-700">PickTheGame started with the familiar routine of emailed spreadsheets, missed picks, and one organizer doing all the cleanup. The platform was built to remove that friction and keep the season centered on the people playing.</p>
+            <p class="mt-4 text-slate-700">Today it gives families, friend groups, and workplaces a cleaner way to run football pools, from invites and weekly picks to standings and reminders.</p>
+          </div>
+          <div class="lg:justify-self-end" data-aos="zoom-in">
+            <img src="assets/app-light-matrix.png" alt="PickTheGame matrix view comparing pool picks across the week." class="app-shot w-full max-w-2xl rounded-[1.6rem] border border-brand-100 object-cover" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services / Pool Types -->
-  <section id="services" class="scroll-mt-20 bg-slate-50">
-    <div class="mx-auto container-tight px-4 py-16">
-      <h2 class="text-3xl font-extrabold tracking-tight">Pool Types Offered</h2>
-      <p class="mt-2 text-slate-700">Choose a format your group already understands — or add extras for more strategy.</p>
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-2 gap-6" data-aos="fade-up">
-        <!-- Pick'Em -->
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl font-bold">Pick’em Pools</h3>
-            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
-          </div>
-          <p class="mt-3 text-slate-700">Predict every game each week. Earn a point for every correct pick—highest total wins.</p>
-          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Create Pool</a>
-        </article>
+    <section id="faqs" class="bg-brand-900 text-white">
+      <div class="mx-auto container-tight px-4 py-16 sm:py-20">
+        <h2 class="text-4xl font-extrabold uppercase tracking-[0.03em]">Common questions, answered plainly.</h2>
+        <p class="mt-3 max-w-2xl text-white/72">Everything here is designed to help someone decide quickly whether PickTheGame fits their pool.</p>
 
-        <!-- Confidence -->
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl font-bold">Confidence Pools</h3>
-            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
-          </div>
-          <p class="mt-3 text-slate-700">Rank your picks by confidence. Higher points on surer games—score big when you’re right.</p>
-          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Create Pool</a>
-        </article>
-
-        <!-- Survivor Pools -->
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl font-bold">Survivor Pools</h3>
-            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$1 per player</span>
-          </div>
-          <p class="mt-3 text-slate-700">Pick one team per week. Once a team is used, it can’t be picked again. Last player standing wins.</p>
-          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Create Pool</a>
-        </article>
-
-        <!-- Squares -->
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl font-bold">Squares</h3>
-            <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">$10 per board</span>
-          </div>
-          <p class="mt-3 text-slate-700">Participate in game squares for NFL, college football, or your favorite events. Win based on score outcomes each quarter or final score.</p>
-          <a href="https://pools.pickthegame.com" class="mt-4 inline-flex rounded-lg border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50 btn-hover">Create Pool</a>
-        </article>
-      </div>
-
-      <!-- Add‑ons -->
-      <div class="mt-12">
-        <h3 class="text-2xl font-bold">Add‑ons</h3>
-        <p class="mt-1 text-slate-700">Enhance any pool with optional game modes and modifiers.</p>
-        <div class="mt-6 grid md:grid-cols-3 gap-6" data-aos="fade-up">
-          <article class="rounded-2xl border border-slate-200 p-6">
-            <div class="flex items-center justify-between">
-              <h4 class="text-lg font-semibold">Survivor</h4>
-              <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm">+$0.50 / player</span>
+        <div class="mt-10 grid gap-10 lg:grid-cols-3">
+          <div>
+            <h3 class="text-2xl font-extrabold uppercase text-gold">Pricing</h3>
+            <div class="mt-5 space-y-4">
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up">
+                <summary class="font-semibold">How much does it cost to join a pool?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">Most Pick'em, Confidence, and Survivor pools start at $1 per player. Squares are $10 per board.</p>
+              </details>
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up" data-aos-delay="60">
+                <summary class="font-semibold">When does PickTheGame charge for a pool?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">PickTheGame charges the pool commissioner for the full pool starting in week 3. Individual players do not pay PickTheGame directly.</p>
+              </details>
             </div>
-            <p class="mt-2 text-slate-700">Choose one team per week—use each team once. Last player standing wins.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-200 p-6">
-            <h4 class="text-lg font-semibold">Spreads</h4>
-            <p class="mt-2 text-slate-700">Apply point spreads to level the field. Picks must beat the spread to count.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-200 p-6">
-            <h4 class="text-lg font-semibold">Total Points Tiebreaker</h4>
-            <p class="mt-2 text-slate-700">Guess total points of the final game of the week to break ties cleanly.</p>
-          </article>
+          </div>
+          <div>
+            <h3 class="text-2xl font-extrabold uppercase text-gold">Gameplay</h3>
+            <div class="mt-5 space-y-4">
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up">
+                <summary class="font-semibold">How does a pool work?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">Players submit picks in the app, reminders go out before deadlines, and the standings update automatically as games finish.</p>
+              </details>
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up" data-aos-delay="60">
+                <summary class="font-semibold">Can players change picks after submitting?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">That depends on the lock rules the organizer chooses. Pools can lock before the week starts, before Sunday games, or before each game.</p>
+              </details>
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up" data-aos-delay="120">
+                <summary class="font-semibold">Can one account join multiple pools?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">Yes. Players can move between pools from the same account without starting over.</p>
+              </details>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-extrabold uppercase text-gold">Admin</h3>
+            <div class="mt-5 space-y-4">
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up">
+                <summary class="font-semibold">How many people can join?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">Small family pools and large office groups both work. The platform is built to scale with the size of the season.</p>
+              </details>
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up" data-aos-delay="60">
+                <summary class="font-semibold">Can there be multiple admins?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">Yes. Organizers can promote other people to help manage invites, settings, and pool upkeep.</p>
+              </details>
+              <details class="border-b border-white/14 pb-4" data-aos="fade-up" data-aos-delay="120">
+                <summary class="font-semibold">How do invitations work?</summary>
+                <p class="mt-3 text-sm leading-7 text-white/74">Invite links, QR codes, and direct email invitations keep onboarding simple for the whole group.</p>
+              </details>
+            </div>
+          </div>
         </div>
-        <div class="mt-6 grid md:grid-cols-3 gap-6" data-aos="fade-up">
-          <article class="rounded-2xl border border-slate-200 p-6">
-            <h4 class="text-lg font-semibold">Skip First Week (Survivor)</h4>
-            <p class="mt-2 text-slate-700">Optional head start: begin survivor pools in Week 2.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-200 p-6">
-            <h4 class="text-lg font-semibold">Custom Scoring</h4>
-            <p class="mt-2 text-slate-700">Tailor scoring rules to your group’s style and preferences.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-200 p-6">
-            <h4 class="text-lg font-semibold">Notifications</h4>
-            <p class="mt-2 text-slate-700">Email reminders for pick deadlines and results.</p>
-          </article>
+
+        <div class="mt-12">
+          <a href="https://help.pickthegame.com" class="inline-flex rounded-full bg-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-900 btn-rise">Visit the Help Desk</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="bg-white">
-    <div class="mx-auto container-tight px-4 py-16">
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-7" data-aos="fade-up">
-          <h2 class="text-3xl font-extrabold tracking-tight">Who We Are</h2>
-          <p class="mt-4 text-slate-700">
-            Welcome to Pick the Game—the easiest way to manage your football pools and make the season more fun!
-            If you’ve ever found yourself buried in spreadsheets, chasing down picks, and just trying to keep
-            everything organized, we’re here to change that.
-          </p>
-          <p class="mt-4 text-slate-700">
-            The idea for Pick the Game came from a personal experience. My dad used to run our family football pool
-            using Excel, Filling out lines, emailing sheets, and chasing down everyone’s picks. As the pool grew,
-            it became more time-consuming than enjoyable. That’s when I decided there had to be a better way to
-            handle it and Pick the Game was born.
-          </p>
-          <p class="mt-4 text-slate-700">
-            What started as a simple website to collect picks has turned into a full-fledged platform designed
-            to make organizing your football pool easy, enjoyable, and stress-free. We take care of the logistics,
-            so you can focus on what really matters: the competition, the camaraderie, and, of course, the game.
-          </p>
-          <p class="mt-4 text-slate-700">
-            Whether you’re running a pool for family, friends, or coworkers, Pick the Game helps you keep
-            everything organized and on track. No spreadsheets required. It’s all about making football season
-            more fun, with less hassle.
-          </p>
-        </div>
-        <div class="lg:col-span-5">
-          <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-            <h3 class="text-lg font-semibold">Get in Touch</h3>
-            <p class="mt-3 text-slate-700">
-              Interested in working together? Fill out some info and we will be in touch shortly. We can’t wait
-              to hear from you!
-            </p>
+    <section id="download" class="border-y section-divider bg-white/65">
+      <div class="mx-auto container-tight px-4 py-16 sm:py-20">
+        <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-4xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Bring the pool to every kickoff.</h2>
+            <p class="mt-4 max-w-xl text-slate-700">Players can make picks, check standings, and stay on top of reminders from their phone, whether the pool lives in the office, the family group chat, or both.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://apps.apple.com/us/app/pick-the-game/id6741455121?itscg=30200&itsct=apps_box_badge&mttnsubad=6741455121" class="store-badge inline-block">
+                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us?releaseDate=1738713600" alt="Download on the App Store" class="h-12" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.pickthegame.core" target="_blank" rel="noreferrer" class="store-badge inline-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12" />
+              </a>
+            </div>
+          </div>
+          <div class="lg:justify-self-end" data-aos="zoom-in">
+            <img src="assets/app-store.png" alt="PickTheGame app screen showing pool activity on mobile." class="app-shot w-full max-w-sm rounded-[1.8rem] border border-brand-100 object-cover" />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQs Section with Categories and Friendly Tone -->
-<section id="faqs" class="bg-slate-50 border-y border-slate-200">
-  <div class="mx-auto container-tight px-4 py-16">
-    <h2 class="text-3xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
-
-    <!-- Pricing -->
-    <h3 class="text-2xl font-bold mt-10">Pricing</h3>
-    <div class="mt-4 grid md:grid-cols-2 gap-6">
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up">
-        <summary class="font-semibold cursor-pointer">How much does it cost to join a pool?</summary>
-        <p class="mt-2 text-slate-700">Most pools are just $1 per player for Pick’em, Confidence, or Survivor. Want to try Squares? That’s $10 per board. Super easy, right?</p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100">
-        <summary class="font-semibold cursor-pointer">When do I need to pay?</summary>
-        <p class="mt-2 text-slate-700">You usually pay by the start of week 3, and your pool admin will handle everything through the app. No awkward cash collection needed!</p>
-      </details>
-    </div>
-
-    <!-- Gameplay -->
-    <h3 class="text-2xl font-bold mt-10">Gameplay</h3>
-    <div class="mt-4 grid md:grid-cols-2 gap-6">
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up">
-        <summary class="font-semibold cursor-pointer">How does a pool actually work?</summary>
-        <p class="mt-2 text-slate-700">It’s simple. Everyone makes their picks right in the app, you get reminders before picks are due, and the platform keeps track of scores and standings automatically. No spreadsheets. No stress.</p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100">
-        <summary class="font-semibold cursor-pointer">Can I change my picks after submitting?</summary>
-        <p class="mt-2 text-slate-700">
-          It depends on what the pool admin sets. They can choose to close picks before the week starts, before Sunday games, or even before each individual game. So check the pool rules—they’ll let you know when you can make changes.
-        </p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="200">
-        <summary class="font-semibold cursor-pointer">Can I join more than one pool?</summary>
-        <p class="mt-2 text-slate-700">Absolutely! You can be in multiple pools with the same account. Switch between them easily whenever you want.</p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="300">
-        <summary class="font-semibold cursor-pointer">What if I pick the wrong team?</summary>
-        <p class="mt-2 text-slate-700">Don’t worry—everyone has bad weeks. The app tracks everything, so even if your picks flop, your standing is updated automatically. Just have fun!</p>
-      </details>
-    </div>
-
-    <!-- Admin & Account -->
-    <h3 class="text-2xl font-bold mt-10">Admin & Account</h3>
-    <div class="mt-4 grid md:grid-cols-2 gap-6">
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up">
-        <summary class="font-semibold cursor-pointer">How many people can I add to a pool?</summary>
-        <p class="mt-2 text-slate-700">As many as you want! Whether it’s a small family pool or a big office league, Pick the Game can handle it.</p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100">
-        <summary class="font-semibold cursor-pointer">Can I have multiple admins?</summary>
-        <p class="mt-2 text-slate-700">Yep! You can promote friends or colleagues to admin so they can help manage picks and keep everything running smoothly.</p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="200">
-        <summary class="font-semibold cursor-pointer">How do I invite people?</summary>
-        <p class="mt-2 text-slate-700">Super easy! Share an invite link, a QR code, or send them an email right from the app. No printing, no fuss.</p>
-      </details>
-      <details class="rounded-xl border border-slate-200 bg-white p-5" data-aos="fade-up" data-aos-delay="300">
-        <summary class="font-semibold cursor-pointer">Can friends from other cities join?</summary>
-        <p class="mt-2 text-slate-700">Absolutely! Pick the Game works anywhere, so long-distance friends or family can join in the fun too.</p>
-      </details>
-    </div>
-
-    <!-- Help Desk CTA -->
-    <div class="mt-12 text-center">
-      <p class="text-slate-600 mb-4">Still have questions?</p>
-      <a href="https://help.pickthegame.com"
-        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition">
-        Visit the Full Help Desk
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- App Download Section with Official Badges -->
-<section id="download" class="bg-white border-y border-slate-200">
-  <div class="mx-auto container-tight px-4 py-16">
-    <div class="grid lg:grid-cols-2 gap-10 items-center">
-
-      <!-- Text Content -->
-      <div data-aos="fade-up">
-        <h2 class="text-3xl font-extrabold tracking-tight">Get the Pick the Game App</h2>
-        <p class="mt-4 text-slate-700">Take your pools on the go! Make picks, track standings, and get notifications right from your phone. Available for both iOS and Android.</p>
-        <div class="mt-6 flex flex-wrap gap-4">
-          <!-- Apple App Store Badge --> 
-          <a href="https://apps.apple.com/us/app/pick-the-game/id6741455121?itscg=30200&itsct=apps_box_badge&mttnsubad=6741455121" class="inline-block">
-            <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us?releaseDate=1738713600" alt="Download on the App Store" class="h-12" />
-          </a>
-
-          <!-- Google Play Store Badge -->
-          <a href="https://play.google.com/store/apps/details?id=com.pickthegame.core" target="_blank" class="inline-block">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
-          </a>
+    <section id="contact" class="scroll-mt-20">
+      <div class="mx-auto container-tight px-4 py-16 sm:py-20">
+        <h2 class="text-4xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Talk to the team.</h2>
+        <p class="mt-3 max-w-xl text-slate-700">Questions about setup, pricing, or how to run your group? Send a note and we will get back to you.</p>
+        <form class="mt-8 grid gap-4 md:grid-cols-2" id="contactForm">
+          <div>
+            <label class="block text-sm font-semibold uppercase tracking-[0.08em] text-slate-600">First Name</label>
+            <input type="text" name="firstName" class="mt-2 w-full rounded-2xl border border-slate-300 bg-white/85 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" required />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold uppercase tracking-[0.08em] text-slate-600">Last Name</label>
+            <input type="text" name="lastName" class="mt-2 w-full rounded-2xl border border-slate-300 bg-white/85 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" required />
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold uppercase tracking-[0.08em] text-slate-600">Email</label>
+            <input type="email" name="email" class="mt-2 w-full rounded-2xl border border-slate-300 bg-white/85 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold uppercase tracking-[0.08em] text-slate-600">Message</label>
+            <textarea rows="5" name="message" class="mt-2 w-full rounded-2xl border border-slate-300 bg-white/85 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Tell us about your pool or ask anything."></textarea>
+          </div>
+          <div style="display:none">
+            <input type="text" name="company" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="startedAt" id="startedAt">
+          <div class="md:col-span-2">
+            <button id="contactSubmitBtn" type="submit" class="inline-flex rounded-full bg-brand px-6 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-white shadow-soft btn-rise">Send Message</button>
+          </div>
+        </form>
+        <div id="confirmationMessage" class="mt-4 hidden rounded-2xl border border-brand-100 bg-brand-50 px-4 py-3 text-sm font-medium text-brand-700">
+          Thanks! Your message was sent. We will get back to you shortly.
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Image / App Screenshot -->
-      <div class="relative" data-aos="zoom-in">
-        <div class="aspect-[3/4] rounded-2xl bg-gradient-to-br from-brand-50 to-slate-50 border border-slate-200 shadow-soft p-4 flex items-center justify-center">
-          <img src="assets/apple-store.png" alt="Pick the Game App Screenshot" class="rounded-xl object-cover">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Contact -->
-  <section id="contact" class="scroll-mt-20">
-    <div class="mx-auto container-tight px-4 py-16">
-      <h2 class="text-3xl font-extrabold tracking-tight">Contact Us</h2>
-      <p class="mt-2 text-slate-700">Questions? Send a message and we’ll get back to you shortly.</p>
-      <form class="mt-6 grid gap-4 md:grid-cols-2" id="contactForm">
-        <div>
-          <label class="block text-sm font-medium">First Name</label>
-          <input type="text" name="firstName" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" required />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Last Name</label>
-          <input type="text" name="lastName" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" required />
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium">Email</label>
-          <input type="email" name="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" />
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium">Message</label>
-          <textarea rows="5" name="message" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Tell us about your group or ask anything…"></textarea>
-        </div>
-
-        <!-- Extra -->
-        <div style="display:none">
-          <input type="text" name="company" tabindex="-1" autocomplete="off">
-        </div>
-        <!-- Timing -->
-        <input type="hidden" name="startedAt" id="startedAt">
-
-        <div class="md:col-span-2">
-          <button type="submit" class="inline-flex items-center rounded-xl bg-brand-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-brand-700">Send message</button>
-        </div>
-      </form>
-      <!-- Confirmation message -->
-      <div id="confirmationMessage" class="mt-4 hidden text-green-600 font-medium">
-        Thanks! Your message was sent.
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Footer (unchanged) -->
-  <footer class="border-t border-slate-200 bg-white">
+  <footer class="border-t section-divider bg-brand-900 text-white">
     <div class="mx-auto container-tight px-4 py-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-        <p>&copy; <span id="year"></span> Pick the Game</p>
+      <div class="flex flex-col items-center justify-between gap-4 text-sm text-white/68 sm:flex-row">
+        <p>&copy; <span id="year"></span> PickTheGame</p>
         <div class="flex items-center gap-4">
-          <a class="hover:underline" href="terms-of-service.html">Terms of Service</a>
-          <a class="hover:underline" href="privacy-policy.html">Privacy Policy</a>
+          <a class="hover:text-gold" href="terms-of-service.html">Terms of Service</a>
+          <a class="hover:text-gold" href="privacy-policy.html">Privacy Policy</a>
         </div>
       </div>
-      <p class="mt-3 text-xs text-slate-500 leading-relaxed">
-        Disclaimer: Pick the Game is not a gambling app and is for entertainment purposes only. Pick the Game is not affiliated with the NFL, UFL, or any college football organization.
-      </p>
+      <p class="mt-3 text-xs leading-relaxed text-white/52">Disclaimer: PickTheGame is not a gambling app and is for entertainment purposes only. PickTheGame is not affiliated with the NFL, UFL, or any college football organization.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Set timestamp when page loads
-    document.getElementById("startedAt").value = Date.now();
+    document.getElementById('startedAt').value = Date.now();
 
-    const form = document.getElementById("contactForm");
-    const messageDiv = document.getElementById("confirmationMessage");
+    const form = document.getElementById('contactForm');
+    const messageDiv = document.getElementById('confirmationMessage');
+    const submitBtn = document.getElementById('contactSubmitBtn');
+    let isSubmitting = false;
+    let lastSubmittedAt = 0;
+    const SUBMIT_DEBOUNCE_MS = 1800;
 
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault(); // prevent normal form submission
+    const setSubmitState = (submitting) => {
+      if (!submitBtn) return;
+      submitBtn.disabled = submitting;
+      submitBtn.textContent = submitting ? 'Sending...' : 'Send Message';
+      submitBtn.classList.toggle('opacity-70', submitting);
+      submitBtn.classList.toggle('cursor-not-allowed', submitting);
+    };
 
-      // Gather form data
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const now = Date.now();
+      if (isSubmitting || now - lastSubmittedAt < SUBMIT_DEBOUNCE_MS) {
+        return;
+      }
+
+      isSubmitting = true;
+      setSubmitState(true);
+      messageDiv.classList.add('hidden');
+
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
 
       try {
-        const response = await fetch("https://zsdnhkk0u9.execute-api.us-east-1.amazonaws.com/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
+        const response = await fetch('https://zsdnhkk0u9.execute-api.us-east-1.amazonaws.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
 
         if (response.ok) {
-          messageDiv.classList.remove("hidden");
+          lastSubmittedAt = Date.now();
+          messageDiv.classList.remove('hidden');
           form.reset();
-          document.getElementById("startedAt").value = Date.now();
+          document.getElementById('startedAt').value = Date.now();
+          messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
-          alert("Something went wrong. Please try again later.");
+          alert('Something went wrong. Please try again later.');
         }
       } catch (err) {
-        alert("Network error. Please try again later.");
+        alert('Network error. Please try again later.');
+      } finally {
+        isSubmitting = false;
+        setSubmitState(false);
       }
     });
   </script>
@@ -529,15 +682,30 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
-    if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    const siteHeader = document.getElementById('siteHeader');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    }
+    const syncHeader = () => {
+      if (!siteHeader) return;
+      if (window.scrollY > 12) {
+        siteHeader.classList.remove('bg-[rgba(248,249,254,0.82)]', 'shadow-[0_10px_30px_rgba(19,26,63,0.08)]', 'border-[rgba(32,43,95,0.10)]');
+        siteHeader.classList.add('bg-[rgba(248,249,254,0.96)]', 'shadow-[0_12px_34px_rgba(19,26,63,0.16)]', 'border-[rgba(32,43,95,0.16)]');
+      } else {
+        siteHeader.classList.remove('bg-[rgba(248,249,254,0.96)]', 'shadow-[0_12px_34px_rgba(19,26,63,0.16)]', 'border-[rgba(32,43,95,0.16)]');
+        siteHeader.classList.add('bg-[rgba(248,249,254,0.82)]', 'shadow-[0_10px_30px_rgba(19,26,63,0.08)]', 'border-[rgba(32,43,95,0.10)]');
+      }
+    };
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
   </script>
-  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 800, // animation duration in ms
+      duration: 850,
       easing: 'ease-out',
-      once: true,    // animate only once
+      once: true,
+      offset: 20
     });
   </script>
 </body>

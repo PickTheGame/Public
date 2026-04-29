@@ -162,6 +162,27 @@
     .app-shot {
       box-shadow: 0 28px 60px rgba(7, 18, 32, 0.22);
     }
+    .testimonial-band {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(238, 240, 248, 0.92)),
+        radial-gradient(circle at top left, rgba(239, 183, 30, 0.12), transparent 30%);
+    }
+    .testimonial-card {
+      height: 100%;
+      border: 1px solid rgba(32, 43, 95, 0.1);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 46px rgba(19, 26, 63, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(239, 183, 30, 0.45);
+      box-shadow: 0 22px 56px rgba(19, 26, 63, 0.12);
+    }
+    .rating-stars {
+      color: var(--brand-gold);
+      letter-spacing: 0.18em;
+    }
     .hero-stage {
       position: relative;
       display: flex;
@@ -491,6 +512,59 @@
           <div class="lg:justify-self-end" data-aos="zoom-in">
             <img src="assets/app-light-matrix.png" alt="PickTheGame matrix view comparing pool picks across the week." class="app-shot w-full max-w-2xl rounded-[1.6rem] border border-brand-100 object-cover" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="border-y section-divider testimonial-band">
+      <div class="mx-auto container-tight px-4 py-16 sm:py-20">
+        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p class="display-face text-[0.85rem] font-bold uppercase tracking-[0.28em] text-brand-500">Trustpilot Reviews</p>
+            <h2 class="mt-3 text-4xl font-extrabold uppercase tracking-[0.03em] text-brand-800">Pool organizers say the season feels easier here.</h2>
+            <p class="mt-4 max-w-xl text-slate-700">Feedback pulled from <a href="https://www.trustpilot.com/review/pickthegame.com" class="font-semibold text-brand-700 underline decoration-brand-200 underline-offset-4">PickTheGame on Trustpilot</a>. As of April 29, 2026, the profile shows a 4.2/5 TrustScore from 6 reviews.</p>
+          </div>
+          <div class="grid gap-4 rounded-[1.75rem] border border-brand-100 bg-white/80 p-6 shadow-soft sm:grid-cols-3">
+            <div>
+              <p class="display-face text-sm font-bold uppercase tracking-[0.18em] text-slate-500">TrustScore</p>
+              <p class="mt-2 text-4xl font-extrabold text-brand-800">4.2/5</p>
+            </div>
+            <div>
+              <p class="display-face text-sm font-bold uppercase tracking-[0.18em] text-slate-500">Review Mix</p>
+              <p class="mt-2 text-lg font-bold text-brand-800">100% 5-star</p>
+            </div>
+            <div>
+              <p class="display-face text-sm font-bold uppercase tracking-[0.18em] text-slate-500">Latest Review</p>
+              <p class="mt-2 text-lg font-bold text-brand-800">February 18, 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <article class="testimonial-card rounded-[1.5rem] p-6" data-aos="fade-up">
+            <p class="rating-stars text-sm font-extrabold uppercase">5 stars</p>
+            <h3 class="mt-4 text-2xl font-extrabold uppercase text-brand-800">"Easy, no hassle"</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">"37 members. Easy, no hassle architecture. Pleasant reminders keep the pool running all season long!"</p>
+            <p class="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Ken | February 18, 2026</p>
+          </article>
+          <article class="testimonial-card rounded-[1.5rem] p-6" data-aos="fade-up" data-aos-delay="60">
+            <p class="rating-stars text-sm font-extrabold uppercase">5 stars</p>
+            <h3 class="mt-4 text-2xl font-extrabold uppercase text-brand-800">"Best looking interface"</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">"One of the easiest and best looking ones I've used. All the players in my team really liked the interface as well."</p>
+            <p class="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Scott | February 11, 2026</p>
+          </article>
+          <article class="testimonial-card rounded-[1.5rem] p-6" data-aos="fade-up" data-aos-delay="120">
+            <p class="rating-stars text-sm font-extrabold uppercase">5 stars</p>
+            <h3 class="mt-4 text-2xl font-extrabold uppercase text-brand-800">"Super easy to use"</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">"Ran a 14 person pick'em pool using Pick the Game and it was super easy. The design is clean and simple, so everyone figured it out right away."</p>
+            <p class="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Colin Walker | December 31, 2025</p>
+          </article>
+          <article class="testimonial-card rounded-[1.5rem] p-6" data-aos="fade-up" data-aos-delay="180">
+            <p class="rating-stars text-sm font-extrabold uppercase">5 stars</p>
+            <h3 class="mt-4 text-2xl font-extrabold uppercase text-brand-800">"Everything in one place"</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">"Easy to use everything you need in one place."</p>
+            <p class="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Donnell Thompson | February 11, 2026</p>
+          </article>
         </div>
       </div>
     </section>

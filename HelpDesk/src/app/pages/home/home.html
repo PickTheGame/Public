@@ -1,0 +1,67 @@
+<div class="mx-auto w-[min(1160px,calc(100%-2rem))] py-12 sm:py-16">
+  @if (vm(); as vm) {
+    <section class="mb-10 border-b border-primary-500/10 pb-10">
+      <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-primary-500">PickTheGame support</p>
+      <h1 class="mt-2 font-display text-[clamp(3rem,7vw,5rem)] font-extrabold uppercase leading-[0.92] tracking-[0.02em] text-primary-900">Help Desk</h1>
+      <p class="mt-4 max-w-3xl text-base leading-8 text-ink/75 sm:text-lg">
+        Search quick answers for pool setup, picks, deadlines, scoring, standings, squares, and commissioner tools.
+      </p>
+    </section>
+
+    <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+      <aside class="space-y-5">
+        <categories
+          [categories]="vm.categories"
+          [selectedCategory]="selectedCategory()"
+          [totalCount]="vm.totalCount"
+          [countBySlug]="vm.countBySlug"
+          (onCategorySelect)="selectedCategory.set($event)"
+        />
+
+        <div class="hidden sm:block">
+          <tags
+            [tags]="vm.tags"
+            [selectedTag]="selectedTag()"
+            (onTagChange)="selectedTag.set($event)"
+          />
+        </div>
+      </aside>
+
+      <main class="space-y-4">
+        <query
+          [query]="query()"
+          (onQueryChange)="query.set($event)"
+        />
+
+        <div class="rounded-[1.25rem] border border-primary-500/10 bg-white/90 p-4 shadow-[0_18px_46px_rgba(19,26,63,0.08)]">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div class="text-sm text-ink/70">
+              Showing <span class="font-extrabold text-primary-900">{{ vm.filtered.length }}</span> of
+              <span class="font-extrabold text-primary-900">{{ vm.totalCount }}</span> answers
+            </div>
+
+            <button
+              type="button"
+              class="inline-flex min-h-10 items-center justify-center rounded-full border border-primary-500/15 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.12em] text-primary-700 transition hover:-translate-y-0.5 hover:border-secondary-500/40 hover:bg-primary-50"
+              (click)="collapseAll()"
+            >
+              Collapse all
+            </button>
+          </div>
+        </div>
+
+        @if (vm.filtered.length === 0) {
+          <div class="rounded-[1.25rem] border border-primary-500/10 bg-white/90 p-6 text-sm leading-7 text-ink/70 shadow-[0_18px_46px_rgba(19,26,63,0.08)]">
+            No results. Try a different search, category, or tag.
+          </div>
+        }
+
+        @for (faq of vm.filtered; track faq.id) {
+          <faq-item [faq]="faq" />
+        }
+      </main>
+    </div>
+  } @else {
+    <div class="rounded-[1.25rem] border border-primary-500/10 bg-white/90 p-6 text-sm text-ink/70 shadow-[0_18px_46px_rgba(19,26,63,0.08)]">Loading FAQ...</div>
+  }
+</div>

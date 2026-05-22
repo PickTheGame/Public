@@ -1,0 +1,44 @@
+<div class="rounded-[1.25rem] border border-primary-500/10 bg-white/90 p-4 shadow-[0_18px_46px_rgba(19,26,63,0.08)]">
+  <div class="mb-3 flex items-center justify-between gap-3">
+    <span class="text-xs font-extrabold uppercase tracking-[0.16em] text-primary-500">Tags</span>
+    @if (selectedTag() !== 'all') {
+      <button
+        type="button"
+        class="text-xs font-bold text-primary-600 underline decoration-secondary-500/50 underline-offset-4 transition hover:text-secondary-700"
+        (click)="onTagChange.emit('all')"
+      >
+        Clear
+      </button>
+    }
+  </div>
+
+  <div class="flex flex-wrap gap-2">
+    <button
+      type="button"
+      class="rounded-full border px-3 py-1.5 text-xs font-bold transition"
+      [ngClass]="
+        selectedTag() === 'all'
+          ? 'border-primary-900 bg-primary-900 text-white'
+          : 'border-primary-500/15 bg-white text-primary-800 hover:border-secondary-500/50 hover:bg-secondary-100/60'
+      "
+      (click)="onTagChange.emit('all')"
+    >
+      All
+    </button>
+
+    @for (t of tags(); track t) {
+      <button
+        type="button"
+        class="rounded-full border px-3 py-1.5 text-xs font-bold transition"
+        [ngClass]="
+          selectedTag() === t
+            ? 'border-primary-900 bg-primary-900 text-white'
+            : 'border-primary-500/15 bg-white text-primary-800 hover:border-secondary-500/50 hover:bg-secondary-100/60'
+        "
+        (click)="onTagChange.emit(t)"
+      >
+        {{ t }}
+      </button>
+    }
+  </div>
+</div>

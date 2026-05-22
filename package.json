@@ -1,0 +1,9 @@
+{
+  "name": "pick-the-game-public",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:help",
+    "build:help": "npm --prefix HelpDesk run build:public"
+  }
+}

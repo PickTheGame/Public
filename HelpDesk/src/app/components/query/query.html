@@ -1,0 +1,10 @@
+<div class="rounded-[1.25rem] border border-primary-500/10 bg-white/90 p-4 shadow-[0_18px_46px_rgba(19,26,63,0.08)]">
+  <label class="mb-2 block text-xs font-extrabold uppercase tracking-[0.16em] text-primary-500">Search</label>
+  <input
+    type="search"
+    class="w-full rounded-2xl border border-primary-500/15 bg-primary-50/70 px-4 py-3 text-sm font-semibold text-primary-900 outline-none transition placeholder:text-primary-900/45 focus:border-secondary-500/60 focus:bg-white focus:ring-4 focus:ring-secondary-100/80"
+    [value]="query()"
+    (input)="onQueryChange.emit(($any($event.target).value || '').toString())"
+    placeholder="Search questions..."
+  />
+</div>

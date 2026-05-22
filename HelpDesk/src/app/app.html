@@ -1,0 +1,36 @@
+<div class="min-h-screen bg-background text-ink">
+  @if (showHeader()) {
+    <header class="sticky top-0 z-40 border-b border-primary-500/10 bg-cream/90 text-primary-900 shadow-[0_10px_30px_rgba(19,26,63,0.08)] backdrop-blur">
+      <div class="mx-auto flex min-h-[4.5rem] w-[min(1160px,calc(100%-2rem))] items-center justify-between gap-4">
+        <a href="/" class="inline-flex items-center gap-3" aria-label="PickTheGame home">
+          <img src="/assets/logo-wide.png" alt="PickTheGame logo" class="h-10 w-auto" />
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm font-bold md:flex" aria-label="Primary navigation">
+          <a href="/#services" class="text-primary-900/80 transition hover:text-secondary-500">Pool Types</a>
+          <a href="/#about" class="text-primary-900/80 transition hover:text-secondary-500">About</a>
+          <a href="/news/" class="text-primary-900/80 transition hover:text-secondary-500">News</a>
+          <a href="/help/" class="text-secondary-700">Help Desk</a>
+          <a href="/#contact" class="text-primary-900/80 transition hover:text-secondary-500">Contact</a>
+        </nav>
+
+        <a href="https://pools.pickthegame.com" class="inline-flex min-h-11 items-center justify-center rounded-full border border-primary-900/15 bg-white/80 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.12em] text-primary-700 transition hover:-translate-y-0.5 hover:border-secondary-500/40 hover:bg-white">
+          Login
+        </a>
+      </div>
+    </header>
+  }
+
+  <router-outlet />
+
+  <footer class="border-t border-primary-500/10 bg-primary-900 text-white">
+    <div class="mx-auto flex w-[min(1160px,calc(100%-2rem))] flex-col gap-3 py-5 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>© PickTheGame</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/privacy-policy.html" class="text-white/85 transition hover:text-secondary-300">Privacy</a>
+        <a href="/terms-of-service.html" class="text-white/85 transition hover:text-secondary-300">Terms</a>
+        <a href="/#contact" class="text-white/85 transition hover:text-secondary-300">Contact</a>
+      </div>
+    </div>
+  </footer>
+</div>

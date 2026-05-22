@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    color: #0d1b2a;
+    background:
+      radial-gradient(circle at top left, rgba(239, 183, 30, 0.14), transparent 26%),
+      radial-gradient(circle at top right, rgba(94, 106, 160, 0.14), transparent 34%),
+      #f8f9fe;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background:
+      radial-gradient(circle at top left, rgba(239, 183, 30, 0.14), transparent 26%),
+      radial-gradient(circle at top right, rgba(94, 106, 160, 0.14), transparent 34%),
+      #f8f9fe;
+  }
+
+  .bg-surface {
+    @apply bg-white;
+  }
+}

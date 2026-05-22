@@ -34,3 +34,4 @@ describe('App', () => {
     expect(compiled.querySelector('header')).toBeFalsy();
   });
 });
+

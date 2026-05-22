@@ -11,9 +11,10 @@ export class App {
   protected readonly title = signal('HelpDesk');
   protected readonly showHeader = computed(() => {
     if (typeof window === 'undefined') {
-      return true;
+      return false;
     }
 
-    return new URLSearchParams(window.location.search).get('fromApp') !== 'true';
+    return new URLSearchParams(window.location.search).get('fromApp')?.toLowerCase() !== 'true';
   });
 }
+

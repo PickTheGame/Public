@@ -1,0 +1,790 @@
+{
+  "generatedAt": "2026-05-22T15:32:04.661Z",
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "slug": "commissioners",
+      "title": "Commissioner FAQ",
+      "category": "commissioners",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management"
+      ],
+      "sourceFile": "src/assets/faq/commissioner.md"
+    },
+    {
+      "slug": "future-features",
+      "title": "Future Features FAQ",
+      "category": "future",
+      "tags": [
+        "roadmap",
+        "college-football"
+      ],
+      "sourceFile": "src/assets/faq/future-features.md"
+    },
+    {
+      "slug": "general",
+      "title": "General FAQ",
+      "category": "general",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "sourceFile": "src/assets/faq/general.md"
+    },
+    {
+      "slug": "picks-deadlines",
+      "title": "Pick and Deadlines",
+      "category": "Picks",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "sourceFile": "src/assets/faq/picks-and-deadlines.md"
+    },
+    {
+      "slug": "platform-technical",
+      "title": "Platform & Technical FAQ",
+      "category": "technical",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "sms"
+      ],
+      "sourceFile": "src/assets/faq/platform-tech.md"
+    },
+    {
+      "slug": "pool-settings",
+      "title": "Pool Settings FAQ",
+      "category": "pool-settings",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission"
+      ],
+      "sourceFile": "src/assets/faq/pool-settings.md"
+    },
+    {
+      "slug": "scoring-standings",
+      "title": "Scoring & Standings FAQ",
+      "category": "scoring",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results"
+      ],
+      "sourceFile": "src/assets/faq/scoring-and-standings.md"
+    },
+    {
+      "slug": "season-game-rules",
+      "title": "Season & Game Rules FAQ",
+      "category": "season",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason"
+      ],
+      "sourceFile": "src/assets/faq/season-game-rules.md"
+    },
+    {
+      "slug": "super-bowl-squares",
+      "title": "Super Bowl Squares FAQ",
+      "category": "squares",
+      "tags": [
+        "squares",
+        "superbowl",
+        "grid"
+      ],
+      "sourceFile": "src/assets/faq/squares.md"
+    },
+    {
+      "slug": "tiebreakers",
+      "title": "Tiebreakers FAQ",
+      "category": "tiebreakers",
+      "tags": [
+        "tiebreaker",
+        "scoring",
+        "rules"
+      ],
+      "sourceFile": "src/assets/faq/tiebreakers.md"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "commissioners::can-a-commissioner-edit-someone-else-s-picks",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can a commissioner edit someone else’s picks?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management"
+      ],
+      "answerMd": "Yes. Commissioners can edit a player’s picks.\n\nThe player will receive an email notification when changes are made."
+    },
+    {
+      "id": "commissioners::can-a-commissioner-lock-or-remove-a-player",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can a commissioner lock or remove a player?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management"
+      ],
+      "answerMd": "Yes. Commissioners can remove a player at any time during the season."
+    },
+    {
+      "id": "commissioners::can-commissioner-duties-be-transferred",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can commissioner duties be transferred?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management"
+      ],
+      "answerMd": "Yes. A commissioner can promote any player to commissioner status.\n\nMultiple commissioners are allowed per pool."
+    },
+    {
+      "id": "commissioners::can-commissioners-customize-pool-rules-mid-season",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can commissioners customize pool rules mid-season?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management"
+      ],
+      "answerMd": "Yes. Commissioners can modify pool rules at any time, provided no games have started for that week.\n\nOnce picks are locked for the week, the rules are locked as well."
+    },
+    {
+      "id": "commissioners::what-powers-does-a-commissioner-have",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "What powers does a commissioner have?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management"
+      ],
+      "answerMd": "Commissioners have full control over their pool. They can:\n\n- Add players  \n- Modify gameplay settings  \n- View pick submission status  \n- Submit picks on behalf of players  \n- Edit player picks  \n- Send pool-wide updates  \n- Remove players"
+    },
+    {
+      "id": "future-features::will-you-offer-college-football-pools",
+      "slug": "future-features",
+      "category": "future",
+      "pageTitle": "Future Features FAQ",
+      "question": "Will you offer college football pools?",
+      "tags": [
+        "roadmap",
+        "college-football"
+      ],
+      "answerMd": "College football formats are under consideration. Many commissioners have requested them, and they are on the roadmap for potential future seasons."
+    },
+    {
+      "id": "general::can-i-create-a-private-pool",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Can I create a private pool?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. All pools are private.\n\nYou control access by sharing your custom invite link with the people you want to join."
+    },
+    {
+      "id": "general::can-i-customize-scoring-rules",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Can I customize scoring rules?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. Custom scoring options are available upon request. Contact us to tailor your pool settings."
+    },
+    {
+      "id": "general::can-i-duplicate-a-pool-from-last-season",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Can I duplicate a pool from last season?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "There’s no need to duplicate your pool.\n\nSimply log in each season and continue running your existing pool."
+    },
+    {
+      "id": "general::can-i-edit-pool-settings-after-the-season-starts",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Can I edit pool settings after the season starts?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. Commissioners can update pool settings — including pool type — even after the season begins."
+    },
+    {
+      "id": "general::can-i-see-weekly-standings-throughout-the-season",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Can I see weekly standings throughout the season?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. Pool commissioners and members can view both:\n\n- Weekly results  \n- Cumulative season standings  \n\nThis allows you to track performance week-by-week as well as overall rankings."
+    },
+    {
+      "id": "general::can-one-person-join-multiple-pools",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Can one person join multiple pools?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. One login can participate in multiple pools.\n\nSwitch between them anytime using the pool dropdown in the main menu."
+    },
+    {
+      "id": "general::do-you-offer-playoff-pools",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Do you offer playoff pools?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. In addition to regular-season pools, we offer postseason formats including playoff Pick’em and Super Bowl Squares. You can create or join them from your dashboard when postseason contests are open."
+    },
+    {
+      "id": "general::is-there-a-limit-to-how-many-people-can-join-a-pool",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Is there a limit to how many people can join a pool?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "No. We support pools of all sizes — from small groups to large organizations."
+    },
+    {
+      "id": "general::what-if-the-commissioner-forgets-to-set-up-the-pool-before-week-1",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "What if the commissioner forgets to set up the pool before Week 1?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "No problem. You can start a pool at any time during the season and begin play in any week."
+    },
+    {
+      "id": "general::what-types-of-pools-do-you-offer",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "What types of pools do you offer?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "We offer multiple pool formats to fit any group:\n\n- **Pick’Em** — Pick the winner of each game.\n- **Confidence** — Pick winners and rank them for weighted points.\n- **Survivor** — Choose one winning team each week. Lose and you're eliminated.\n- **Squares** — A grid-based format, ideal for championship games."
+    },
+    {
+      "id": "general::what-s-the-difference-between-confidence-and-pick-em-pools",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "What’s the difference between Confidence and Pick’Em pools?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "In **Confidence Pools**, you pick winners and rank them. Higher-ranked picks earn more points if correct.\n\nIn **Pick’Em**, you simply select the winner of each game. All correct picks are worth the same value."
+    },
+    {
+      "id": "general::will-playoff-picks-count-toward-season-standings",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "Will playoff picks count toward season standings?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools"
+      ],
+      "answerMd": "Yes. If your pool is configured for season-long standings, playoff results will continue to accumulate into the year-to-date totals for all players."
+    },
+    {
+      "id": "picks-deadlines::are-thursday-games-included-in-the-weekly-deadline",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "Are Thursday games included in the weekly deadline?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "answerMd": "They can be. It depends on how your pool’s submission deadline is configured.\n\nIf the deadline is set before all games, Thursday games are included. If not, they may lock individually at kickoff."
+    },
+    {
+      "id": "picks-deadlines::can-commissioners-adjust-deadlines",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "Can commissioners adjust deadlines?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "answerMd": "Yes. Commissioners can modify the submission cutoff at any time by going to:\n\n**Pool Settings → Submission Schedule**"
+    },
+    {
+      "id": "picks-deadlines::can-i-change-my-picks-after-submitting-them",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "Can I change my picks after submitting them?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "answerMd": "Yes. You may update your picks as often as you'd like until the submission deadline.\n\nOnce the cutoff passes, picks are locked."
+    },
+    {
+      "id": "picks-deadlines::what-happens-if-a-game-is-postponed-or-canceled",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "What happens if a game is postponed or canceled?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "answerMd": "If a game is canceled, it does not count as a win or loss.\n\nIf a game is postponed and later rescheduled, picks will stand and scoring will update once the game is officially completed."
+    },
+    {
+      "id": "picks-deadlines::what-happens-if-i-forget-to-make-my-picks",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "What happens if I forget to make my picks?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "answerMd": "Late picks are handled on a pool-by-pool basis.\n\nIf the pool allows it, commissioners may enter late picks on behalf of a player."
+    },
+    {
+      "id": "picks-deadlines::when-are-picks-due-each-week",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "When are picks due each week?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions"
+      ],
+      "answerMd": "---\n\n\nDeadlines are configurable by pool. Picks can be due:\n\n- Before all games begin  \n- Before Sunday games (NFL)  \n- Before Saturday games (College)  \n- Before each individual game starts  \n\nYour commissioner selects the submission format during setup."
+    },
+    {
+      "id": "pool-settings::can-submission-schedules-be-changed-during-the-season",
+      "slug": "pool-settings",
+      "category": "pool-settings",
+      "pageTitle": "Pool Settings FAQ",
+      "question": "Can submission schedules be changed during the season?",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission"
+      ],
+      "answerMd": "Yes. Commissioners can modify submission timing anytime:\n\n**Pool Settings → Submission Schedule**\n\nOptions include:\n\n- Before all games  \n- Before Sunday games  \n- Before each game"
+    },
+    {
+      "id": "pool-settings::my-pool-switched-to-confidence-picks-can-i-change-it-back-to-pick-em",
+      "slug": "pool-settings",
+      "category": "pool-settings",
+      "pageTitle": "Pool Settings FAQ",
+      "question": "My pool switched to Confidence picks — can I change it back to Pick’em?",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission"
+      ],
+      "answerMd": "Pool type (Pick’em vs Confidence) is set in pool settings.  \nIf the option is locked after creation, contact support and it can be adjusted for you."
+    },
+    {
+      "id": "scoring-standings::are-ties-in-games-counted-as-wins-or-losses",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "Are ties in games counted as wins or losses?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results"
+      ],
+      "answerMd": "A tied game counts as a loss for pick scoring purposes."
+    },
+    {
+      "id": "scoring-standings::can-i-export-standings-to-csv-or-excel",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "Can I export standings to CSV or Excel?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results"
+      ],
+      "answerMd": "Yes. All tables can be exported as a CSV file for use in Excel or other spreadsheet software."
+    },
+    {
+      "id": "scoring-standings::can-i-view-past-weeks-picks",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "Can I view past weeks’ picks?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results"
+      ],
+      "answerMd": "Yes. All previous weeks can be viewed by visiting the **Matrix Page** and selecting a week from the **Previous Week** dropdown."
+    },
+    {
+      "id": "scoring-standings::how-are-points-calculated-in-confidence-pools",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "How are points calculated in Confidence pools?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results"
+      ],
+      "answerMd": "In Confidence Pools, players rank their picks. The higher a team is ranked, the more points it is worth.\n\nIf the team wins, the player earns the assigned points. If the team loses, they earn zero points for that pick.\n\n**Example:**\n\nIf a player ranks:\n- Chiefs as **16**\n- Eagles as **15**\n- Bills as **14**\n\nAnd the Chiefs and Bills win, but the Eagles lose:\n\nThe player earns:\n- 16 points (Chiefs)\n- 14 points (Bills)\n- 0 points (Eagles)\n\nTotal = **30 points** for the week."
+    },
+    {
+      "id": "scoring-standings::what-happens-if-two-players-finish-with-the-same-record",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "What happens if two players finish with the same record?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results"
+      ],
+      "answerMd": "If two players finish with the same record, it is recorded as a tie in the system.\n\nEach pool determines its own tiebreaker rules or payout structure."
+    },
+    {
+      "id": "season-game-rules::are-preseason-games-included",
+      "slug": "season-game-rules",
+      "category": "season",
+      "pageTitle": "Season & Game Rules FAQ",
+      "question": "Are preseason games included?",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason"
+      ],
+      "answerMd": "No. Preseason games are not included in pool play."
+    },
+    {
+      "id": "season-game-rules::how-are-overtime-games-handled",
+      "slug": "season-game-rules",
+      "category": "season",
+      "pageTitle": "Season & Game Rules FAQ",
+      "question": "How are overtime games handled?",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason"
+      ],
+      "answerMd": "Overtime games are not treated differently.\n\nThe final score — including overtime — determines the winning team."
+    },
+    {
+      "id": "season-game-rules::what-happens-if-a-game-ends-in-a-tie",
+      "slug": "season-game-rules",
+      "category": "season",
+      "pageTitle": "Season & Game Rules FAQ",
+      "question": "What happens if a game ends in a tie?",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason"
+      ],
+      "answerMd": "Games that end in a tie are counted as a loss for pick scoring purposes."
+    },
+    {
+      "id": "season-game-rules::what-leagues-do-you-support",
+      "slug": "season-game-rules",
+      "category": "season",
+      "pageTitle": "Season & Game Rules FAQ",
+      "question": "What leagues do you support?",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason"
+      ],
+      "answerMd": "We currently support:\n\n- NFL  \n- College Football"
+    },
+    {
+      "id": "season-game-rules::what-time-zone-are-deadlines-based-on",
+      "slug": "season-game-rules",
+      "category": "season",
+      "pageTitle": "Season & Game Rules FAQ",
+      "question": "What time zone are deadlines based on?",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason"
+      ],
+      "answerMd": "Deadlines are not based on a specific time zone.\n\nPicks lock based on each game’s official kickoff time."
+    },
+    {
+      "id": "super-bowl-squares::when-are-square-numbers-assigned",
+      "slug": "super-bowl-squares",
+      "category": "squares",
+      "pageTitle": "Super Bowl Squares FAQ",
+      "question": "When are square numbers assigned?",
+      "tags": [
+        "squares",
+        "superbowl",
+        "grid"
+      ],
+      "answerMd": "Numbers are randomly assigned once the grid is fully filled.  \nThis typically occurs shortly before the game to ensure fairness."
+    },
+    {
+      "id": "platform-technical::can-i-receive-email-or-sms-reminders",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Can I receive email or SMS reminders?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "sms"
+      ],
+      "answerMd": "Yes. Email notifications are enabled by default.\n\nSMS reminders are currently in development and will be available soon."
+    },
+    {
+      "id": "platform-technical::is-the-platform-mobile-friendly",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Is the platform mobile-friendly?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "sms"
+      ],
+      "answerMd": "Yes. The platform is built mobile-first and works seamlessly on phones, tablets, and desktops."
+    },
+    {
+      "id": "platform-technical::is-there-a-mobile-app",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Is there a mobile app?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "sms"
+      ],
+      "answerMd": "Yes. “Pick the Game” is available on both iOS and Android.\n\nYou can download it from the Apple App Store or Google Play Store."
+    },
+    {
+      "id": "platform-technical::what-browsers-are-supported",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "What browsers are supported?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "sms"
+      ],
+      "answerMd": "We officially support the latest versions of:\n\n- Chrome  \n- Firefox  \n- Safari"
+    },
+    {
+      "id": "platform-technical::why-didn-t-i-receive-a-pick-reminder-email",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Why didn’t I receive a pick reminder email?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "sms"
+      ],
+      "answerMd": "First, confirm that notifications are enabled in your account settings.\n\nThen check your spam or junk folder. If you’re still not receiving emails, contact support for assistance."
+    },
+    {
+      "id": "tiebreakers::can-everyone-in-my-pool-see-tiebreaker-results-in-standings",
+      "slug": "tiebreakers",
+      "category": "tiebreakers",
+      "pageTitle": "Tiebreakers FAQ",
+      "question": "Can everyone in my pool see tiebreaker results in standings?",
+      "tags": [
+        "tiebreaker",
+        "scoring",
+        "rules"
+      ],
+      "answerMd": "Yes. Commissioners can enable tiebreaker columns to be visible to all members in the standings view."
+    },
+    {
+      "id": "tiebreakers::can-tiebreaker-points-be-hidden-until-the-game-starts",
+      "slug": "tiebreakers",
+      "category": "tiebreakers",
+      "pageTitle": "Tiebreakers FAQ",
+      "question": "Can tiebreaker points be hidden until the game starts?",
+      "tags": [
+        "tiebreaker",
+        "scoring",
+        "rules"
+      ],
+      "answerMd": "Currently, tiebreaker selections are visible once submitted. Some commissioners prefer hiding them to prevent late adjustments in tied scenarios. This is a known request and may be added as a future option."
+    },
+    {
+      "id": "tiebreakers::how-is-the-tiebreaker-calculated",
+      "slug": "tiebreakers",
+      "category": "tiebreakers",
+      "pageTitle": "Tiebreakers FAQ",
+      "question": "How is the tiebreaker calculated?",
+      "tags": [
+        "tiebreaker",
+        "scoring",
+        "rules"
+      ],
+      "answerMd": "The tiebreaker is based on **closest to the actual points scored**, regardless of whether the guess is over or under.  \nThe difference from the actual score is what matters.\n\nExample:\n\n| Guess | Actual | Difference |\n|-------------|--------------|-----------|\n| 40 | 44 | 4 | \n| 48 | 44 | 4 | \n\nBoth are equally close."
+    }
+  ]
+}

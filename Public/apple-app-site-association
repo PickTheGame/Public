@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "5H9R49ZCA7.com.pickthegame.core",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

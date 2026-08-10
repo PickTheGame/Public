@@ -9,31 +9,39 @@ tags:
   - overtime
   - ties
   - preseason
+  - game-selection
 ---
 
-# Season & Game Rules FAQ — Pick the Game Pools
+# Season & Game Rules FAQ - Pick the Game Pools
 
 ### What leagues do you support?
 **Tags:** leagues, nfl, college
 
 We currently support:
 
-- NFL  
-- College Football  
+- NFL
+- College Football
+
+### Can my pool include only some games in a week?
+**Tags:** game-selection, weekly, rules
+
+Yes. Commissioners can choose which games count for the current week.
+
+Only selected games appear for picks and scoring. Selected games lock when the weekly edit window closes.
 
 ### What time zone are deadlines based on?
 **Tags:** deadlines, kickoff, timing
 
 Deadlines are not based on a specific time zone.
 
-Picks lock based on each game’s official kickoff time.
+Picks lock based on each game's official kickoff time.
 
 ### How are overtime games handled?
 **Tags:** overtime, scoring, rules
 
 Overtime games are not treated differently.
 
-The final score — including overtime — determines the winning team.
+The final score - including overtime - determines the winning team.
 
 ### What happens if a game ends in a tie?
 **Tags:** ties, scoring, rules

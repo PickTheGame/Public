@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T17:17:16.438Z",
+  "generatedAt": "2026-08-10T03:19:19.034Z",
   "schemaVersion": 1,
   "categories": [
     {
@@ -11,7 +11,9 @@
         "admin",
         "settings",
         "permissions",
-        "management"
+        "management",
+        "game-selection",
+        "standings"
       ],
       "sourceFile": "src/assets/faq/commissioner.md"
     },
@@ -21,7 +23,8 @@
       "category": "future",
       "tags": [
         "roadmap",
-        "college-football"
+        "college-football",
+        "notifications"
       ],
       "sourceFile": "src/assets/faq/future-features.md"
     },
@@ -33,7 +36,8 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
       "sourceFile": "src/assets/faq/general.md"
     },
@@ -45,7 +49,8 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
       "sourceFile": "src/assets/faq/picks-and-deadlines.md"
     },
@@ -59,7 +64,7 @@
         "browser",
         "notifications",
         "email",
-        "sms"
+        "push"
       ],
       "sourceFile": "src/assets/faq/platform-tech.md"
     },
@@ -71,7 +76,9 @@
         "settings",
         "confidence",
         "pickem",
-        "submission"
+        "submission",
+        "survivor",
+        "standings"
       ],
       "sourceFile": "src/assets/faq/pool-settings.md"
     },
@@ -85,7 +92,8 @@
         "points",
         "ties",
         "confidence",
-        "results"
+        "results",
+        "scenario"
       ],
       "sourceFile": "src/assets/faq/scoring-and-standings.md"
     },
@@ -99,7 +107,8 @@
         "deadlines",
         "overtime",
         "ties",
-        "preseason"
+        "preseason",
+        "game-selection"
       ],
       "sourceFile": "src/assets/faq/season-game-rules.md"
     },
@@ -132,15 +141,17 @@
       "slug": "commissioners",
       "category": "commissioners",
       "pageTitle": "Commissioner FAQ",
-      "question": "Can a commissioner edit someone else’s picks?",
+      "question": "Can a commissioner edit someone else's picks?",
       "tags": [
         "commissioner",
         "admin",
         "settings",
         "permissions",
-        "management"
+        "management",
+        "game-selection",
+        "standings"
       ],
-      "answerMd": "Yes. Commissioners can edit a player’s picks.\n\nThe player will receive an email notification when changes are made."
+      "answerMd": "Yes. Commissioners can edit a player's picks.\n\nThe player will receive an email notification when changes are made."
     },
     {
       "id": "commissioners::can-a-commissioner-lock-or-remove-a-player",
@@ -153,7 +164,9 @@
         "admin",
         "settings",
         "permissions",
-        "management"
+        "management",
+        "game-selection",
+        "standings"
       ],
       "answerMd": "Yes. Commissioners can remove a player at any time during the season."
     },
@@ -168,9 +181,45 @@
         "admin",
         "settings",
         "permissions",
-        "management"
+        "management",
+        "game-selection",
+        "standings"
       ],
       "answerMd": "Yes. A commissioner can promote any player to commissioner status.\n\nMultiple commissioners are allowed per pool."
+    },
+    {
+      "id": "commissioners::can-commissioners-choose-which-games-count-for-the-current-week",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can commissioners choose which games count for the current week?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management",
+        "game-selection",
+        "standings"
+      ],
+      "answerMd": "Yes. Go to:\n\n**Pool Settings -> Week Settings -> Game Selection**\n\nCommissioners can select all games, clear the week, search by team, and choose the exact games that count for the current week."
+    },
+    {
+      "id": "commissioners::can-commissioners-control-standings-columns",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can commissioners control standings columns?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management",
+        "game-selection",
+        "standings"
+      ],
+      "answerMd": "Yes. Go to:\n\n**Pool Settings -> Standings Columns**\n\nCommissioners can show or hide total correct picks, lowest week, adjusted totals, confidence point totals, lowest confidence point week, and cumulative tiebreaker margin. Confidence point columns only appear for Confidence pools."
     },
     {
       "id": "commissioners::can-commissioners-customize-pool-rules-mid-season",
@@ -183,9 +232,11 @@
         "admin",
         "settings",
         "permissions",
-        "management"
+        "management",
+        "game-selection",
+        "standings"
       ],
-      "answerMd": "Yes. Commissioners can modify pool rules at any time, provided no games have started for that week.\n\nOnce picks are locked for the week, the rules are locked as well."
+      "answerMd": "Yes. Commissioners can modify many pool rules during the season, including game type, submission schedule, survivor settings, and standings columns.\n\nWeekly game selection can be changed only while that week's edit window is open. Once the weekly edit window closes, selected games are locked."
     },
     {
       "id": "commissioners::what-powers-does-a-commissioner-have",
@@ -198,9 +249,24 @@
         "admin",
         "settings",
         "permissions",
-        "management"
+        "management",
+        "game-selection",
+        "standings"
       ],
-      "answerMd": "Commissioners have full control over their pool. They can:\n\n- Add players  \n- Modify gameplay settings  \n- View pick submission status  \n- Submit picks on behalf of players  \n- Edit player picks  \n- Send pool-wide updates  \n- Remove players"
+      "answerMd": "Commissioners have full control over their pool. They can:\n\n- Add players\n- Modify gameplay settings\n- Choose which games count for a week\n- Configure standings columns\n- View pick submission status\n- Submit picks on behalf of players\n- Edit player picks\n- Send pool-wide updates\n- Remove players"
+    },
+    {
+      "id": "future-features::will-sms-reminders-be-available",
+      "slug": "future-features",
+      "category": "future",
+      "pageTitle": "Future Features FAQ",
+      "question": "Will SMS reminders be available?",
+      "tags": [
+        "roadmap",
+        "college-football",
+        "notifications"
+      ],
+      "answerMd": "SMS reminders are not currently available.\n\nPick due reminders use email and app push notifications when enabled in account settings."
     },
     {
       "id": "future-features::will-you-offer-college-football-pools",
@@ -210,9 +276,10 @@
       "question": "Will you offer college football pools?",
       "tags": [
         "roadmap",
-        "college-football"
+        "college-football",
+        "notifications"
       ],
-      "answerMd": "College football formats are under consideration. Many commissioners have requested them, and they are on the roadmap for potential future seasons."
+      "answerMd": "Yes. College football pools are supported.\n\nCommissioners can create pools for NFL or College Football, and college teams are grouped by conference in the app."
     },
     {
       "id": "general::can-i-create-a-private-pool",
@@ -224,7 +291,8 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
       "answerMd": "Yes. All pools are private.\n\nYou control access by sharing your custom invite link with the people you want to join."
     },
@@ -238,9 +306,10 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "Yes. Custom scoring options are available upon request. Contact us to tailor your pool settings."
+      "answerMd": "Yes. Commissioners can manage common options in pool and game settings, including game type, weekly game selection, submission schedule, survivor entry rules, and standings columns.\n\nIf your pool needs a rule that is not available in settings, contact support."
     },
     {
       "id": "general::can-i-duplicate-a-pool-from-last-season",
@@ -252,9 +321,10 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "There’s no need to duplicate your pool.\n\nSimply log in each season and continue running your existing pool."
+      "answerMd": "There's no need to duplicate your pool.\n\nSimply log in each season and continue running your existing pool."
     },
     {
       "id": "general::can-i-edit-pool-settings-after-the-season-starts",
@@ -266,9 +336,10 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "Yes. Commissioners can update pool settings — including pool type — even after the season begins."
+      "answerMd": "Yes. Commissioners can update pool settings during the season.\n\nSome weekly settings, such as which games count for the current week, lock once the weekly edit window closes."
     },
     {
       "id": "general::can-i-see-weekly-standings-throughout-the-season",
@@ -280,9 +351,10 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "Yes. Pool commissioners and members can view both:\n\n- Weekly results  \n- Cumulative season standings  \n\nThis allows you to track performance week-by-week as well as overall rankings."
+      "answerMd": "Yes. Pool commissioners and members can view both:\n\n- Weekly results\n- Cumulative season standings\n\nThis allows you to track performance week-by-week as well as overall rankings."
     },
     {
       "id": "general::can-one-person-join-multiple-pools",
@@ -294,7 +366,8 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
       "answerMd": "Yes. One login can participate in multiple pools.\n\nSwitch between them anytime using the pool dropdown in the main menu."
     },
@@ -308,9 +381,10 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "Yes. In addition to regular-season pools, we offer postseason formats including playoff Pick’em and Super Bowl Squares. You can create or join them from your dashboard when postseason contests are open."
+      "answerMd": "Yes. In addition to regular-season pools, we offer postseason formats including playoff Pick'em and Super Bowl Squares. You can create or join them from your dashboard when postseason contests are open."
     },
     {
       "id": "general::is-there-a-limit-to-how-many-people-can-join-a-pool",
@@ -322,9 +396,10 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "No. We support pools of all sizes — from small groups to large organizations."
+      "answerMd": "No. We support pools of all sizes - from small groups to large organizations."
     },
     {
       "id": "general::what-if-the-commissioner-forgets-to-set-up-the-pool-before-week-1",
@@ -336,9 +411,25 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
       "answerMd": "No problem. You can start a pool at any time during the season and begin play in any week."
+    },
+    {
+      "id": "general::what-is-coach-ai",
+      "slug": "general",
+      "category": "general",
+      "pageTitle": "General FAQ",
+      "question": "What is Coach AI?",
+      "tags": [
+        "playoff",
+        "standings",
+        "season",
+        "pools",
+        "coach-ai"
+      ],
+      "answerMd": "Coach AI is an in-app pool assistant. You can ask questions about your pool, such as who still needs to make picks, current standings, pick history, square results, survivor status, or where to find a setting.\n\nCoach AI answers using current pool data and may include tables or navigation shortcuts when helpful."
     },
     {
       "id": "general::what-types-of-pools-do-you-offer",
@@ -350,23 +441,25 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "We offer multiple pool formats to fit any group:\n\n- **Pick’Em** — Pick the winner of each game.\n- **Confidence** — Pick winners and rank them for weighted points.\n- **Survivor** — Choose one winning team each week. Lose and you're eliminated.\n- **Squares** — A grid-based format, ideal for championship games."
+      "answerMd": "We offer multiple pool formats to fit any group:\n\n- **Pick'Em** - Pick the winner of each game.\n- **Confidence** - Pick winners and rank them for weighted points.\n- **Survivor** - Choose one winning team each week. Pools can allow multiple survivor entries.\n- **Squares** - A grid-based format, ideal for championship games."
     },
     {
       "id": "general::what-s-the-difference-between-confidence-and-pick-em-pools",
       "slug": "general",
       "category": "general",
       "pageTitle": "General FAQ",
-      "question": "What’s the difference between Confidence and Pick’Em pools?",
+      "question": "What's the difference between Confidence and Pick'Em pools?",
       "tags": [
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
-      "answerMd": "In **Confidence Pools**, you pick winners and rank them. Higher-ranked picks earn more points if correct.\n\nIn **Pick’Em**, you simply select the winner of each game. All correct picks are worth the same value."
+      "answerMd": "In **Confidence Pools**, you pick winners and rank them. Higher-ranked picks earn more points if correct.\n\nIn **Pick'Em**, you simply select the winner of each game. All correct picks are worth the same value."
     },
     {
       "id": "general::will-playoff-picks-count-toward-season-standings",
@@ -378,7 +471,8 @@
         "playoff",
         "standings",
         "season",
-        "pools"
+        "pools",
+        "coach-ai"
       ],
       "answerMd": "Yes. If your pool is configured for season-long standings, playoff results will continue to accumulate into the year-to-date totals for all players."
     },
@@ -392,9 +486,10 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
-      "answerMd": "They can be. It depends on how your pool’s submission deadline is configured.\n\nIf the deadline is set before all games, Thursday games are included. If not, they may lock individually at kickoff."
+      "answerMd": "They can be. It depends on how your pool's submission deadline is configured.\n\nIf the deadline is set before all games, Thursday games are included. If not, they may lock individually at kickoff."
     },
     {
       "id": "picks-deadlines::can-commissioners-adjust-deadlines",
@@ -406,9 +501,25 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
-      "answerMd": "Yes. Commissioners can modify the submission cutoff at any time by going to:\n\n**Pool Settings → Submission Schedule**"
+      "answerMd": "Yes. Commissioners can modify the submission cutoff at any time by going to:\n\n**Pool Settings -> Submission Schedule**"
+    },
+    {
+      "id": "picks-deadlines::can-commissioners-choose-which-games-i-pick-each-week",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "Can commissioners choose which games I pick each week?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions",
+        "survivor"
+      ],
+      "answerMd": "Yes. Commissioners can choose which games count for the current week in **Game Selection**. Only selected games appear for pool picks and scoring.\n\nGame selection locks once the weekly edit window closes."
     },
     {
       "id": "picks-deadlines::can-i-change-my-picks-after-submitting-them",
@@ -420,9 +531,25 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
       "answerMd": "Yes. You may update your picks as often as you'd like until the submission deadline.\n\nOnce the cutoff passes, picks are locked."
+    },
+    {
+      "id": "picks-deadlines::can-i-make-more-than-one-survivor-pick",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "Can I make more than one Survivor pick?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions",
+        "survivor"
+      ],
+      "answerMd": "It depends on your pool settings. Commissioners can allow extra Survivor entries before your first Survivor submission.\n\nEach Survivor entry is tracked independently, with its own previous picks and eligibility."
     },
     {
       "id": "picks-deadlines::what-happens-if-a-game-is-postponed-or-canceled",
@@ -434,7 +561,8 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
       "answerMd": "If a game is canceled, it does not count as a win or loss.\n\nIf a game is postponed and later rescheduled, picks will stand and scoring will update once the game is officially completed."
     },
@@ -448,7 +576,8 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
       "answerMd": "Late picks are handled on a pool-by-pool basis.\n\nIf the pool allows it, commissioners may enter late picks on behalf of a player."
     },
@@ -462,9 +591,58 @@
         "picks",
         "deadlines",
         "cutoffs",
-        "submissions"
+        "submissions",
+        "survivor"
       ],
-      "answerMd": "---\n\n\nDeadlines are configurable by pool. Picks can be due:\n\n- Before all games begin  \n- Before Sunday games (NFL)  \n- Before Saturday games (College)  \n- Before each individual game starts  \n\nYour commissioner selects the submission format during setup."
+      "answerMd": "Deadlines are configurable by pool. Picks can be due:\n\n- Before all games begin\n- Before Sunday games\n- Before each individual game starts\n\nYour commissioner selects the submission format during setup."
+    },
+    {
+      "id": "pool-settings::can-i-allow-multiple-survivor-entries",
+      "slug": "pool-settings",
+      "category": "pool-settings",
+      "pageTitle": "Pool Settings FAQ",
+      "question": "Can I allow multiple Survivor entries?",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission",
+        "survivor",
+        "standings"
+      ],
+      "answerMd": "Yes. Commissioners can open **Survivor Settings** and set how many extra Survivor entries players may add before their first Survivor submission.\n\nEach entry is tracked as a separate Survivor series."
+    },
+    {
+      "id": "pool-settings::can-i-choose-which-games-count-for-a-week",
+      "slug": "pool-settings",
+      "category": "pool-settings",
+      "pageTitle": "Pool Settings FAQ",
+      "question": "Can I choose which games count for a week?",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission",
+        "survivor",
+        "standings"
+      ],
+      "answerMd": "Yes. Commissioners can use **Game Selection** to select the games that count for the current week.\n\nThe page includes search, select all, and clear all controls. Game selection can be edited only while the weekly edit window is open."
+    },
+    {
+      "id": "pool-settings::can-i-customize-what-appears-on-standings",
+      "slug": "pool-settings",
+      "category": "pool-settings",
+      "pageTitle": "Pool Settings FAQ",
+      "question": "Can I customize what appears on standings?",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission",
+        "survivor",
+        "standings"
+      ],
+      "answerMd": "Yes. Commissioners can open **Standings Columns** and show or hide optional standings stats, including season totals, lowest week, adjusted totals, confidence point totals, and tiebreaker margin."
     },
     {
       "id": "pool-settings::can-submission-schedules-be-changed-during-the-season",
@@ -476,23 +654,27 @@
         "settings",
         "confidence",
         "pickem",
-        "submission"
+        "submission",
+        "survivor",
+        "standings"
       ],
-      "answerMd": "Yes. Commissioners can modify submission timing anytime:\n\n**Pool Settings → Submission Schedule**\n\nOptions include:\n\n- Before all games  \n- Before Sunday games  \n- Before each game"
+      "answerMd": "Yes. Commissioners can modify submission timing anytime:\n\n**Pool Settings -> Submission Schedule**\n\nOptions include:\n\n- Before all games\n- Before Sunday games\n- Before each game"
     },
     {
       "id": "pool-settings::my-pool-switched-to-confidence-picks-can-i-change-it-back-to-pick-em",
       "slug": "pool-settings",
       "category": "pool-settings",
       "pageTitle": "Pool Settings FAQ",
-      "question": "My pool switched to Confidence picks — can I change it back to Pick’em?",
+      "question": "My pool switched to Confidence picks - can I change it back to Pick'em?",
       "tags": [
         "settings",
         "confidence",
         "pickem",
-        "submission"
+        "submission",
+        "survivor",
+        "standings"
       ],
-      "answerMd": "Pool type (Pick’em vs Confidence) is set in pool settings.  \nIf the option is locked after creation, contact support and it can be adjusted for you."
+      "answerMd": "Pool type is set in pool settings. Commissioners can use **Game Type** to switch between Pick'em and Confidence for upcoming weeks when available.\n\nIf the option is locked for your pool, contact support and it can be adjusted for you."
     },
     {
       "id": "scoring-standings::are-ties-in-games-counted-as-wins-or-losses",
@@ -506,7 +688,8 @@
         "points",
         "ties",
         "confidence",
-        "results"
+        "results",
+        "scenario"
       ],
       "answerMd": "A tied game counts as a loss for pick scoring purposes."
     },
@@ -522,25 +705,61 @@
         "points",
         "ties",
         "confidence",
-        "results"
+        "results",
+        "scenario"
       ],
       "answerMd": "Yes. All tables can be exported as a CSV file for use in Excel or other spreadsheet software."
     },
     {
-      "id": "scoring-standings::can-i-view-past-weeks-picks",
+      "id": "scoring-standings::can-i-preview-projected-standings-before-all-games-are-final",
       "slug": "scoring-standings",
       "category": "scoring",
       "pageTitle": "Scoring & Standings FAQ",
-      "question": "Can I view past weeks’ picks?",
+      "question": "Can I preview projected standings before all games are final?",
       "tags": [
         "scoring",
         "standings",
         "points",
         "ties",
         "confidence",
-        "results"
+        "results",
+        "scenario"
       ],
-      "answerMd": "Yes. All previous weeks can be viewed by visiting the **Matrix Page** and selecting a week from the **Previous Week** dropdown."
+      "answerMd": "Yes. On the **Matrix** page, use **Scenario mode** to choose winners for unfinished games and preview projected standings.\n\nScenario mode shows movement from your current rank to the projected rank and identifies the projected leader."
+    },
+    {
+      "id": "scoring-standings::can-i-view-past-weeks-picks",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "Can I view past weeks' picks?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results",
+        "scenario"
+      ],
+      "answerMd": "Yes. Past weeks can be viewed from the **Matrix** page by selecting a season and week."
+    },
+    {
+      "id": "scoring-standings::can-standings-columns-be-customized",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "Can standings columns be customized?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results",
+        "scenario"
+      ],
+      "answerMd": "Yes. Commissioners can choose which optional standings columns are visible to pool members.\n\nAvailable columns include total correct picks, lowest weekly correct-pick count, adjusted correct picks, confidence point totals, lowest confidence point week, and cumulative tiebreaker margin."
     },
     {
       "id": "scoring-standings::how-are-points-calculated-in-confidence-pools",
@@ -554,7 +773,8 @@
         "points",
         "ties",
         "confidence",
-        "results"
+        "results",
+        "scenario"
       ],
       "answerMd": "In Confidence Pools, players rank their picks. The higher a team is ranked, the more points it is worth.\n\nIf the team wins, the player earns the assigned points. If the team loses, they earn zero points for that pick.\n\n**Example:**\n\nIf a player ranks:\n- Chiefs as **16**\n- Eagles as **15**\n- Bills as **14**\n\nAnd the Chiefs and Bills win, but the Eagles lose:\n\nThe player earns:\n- 16 points (Chiefs)\n- 14 points (Bills)\n- 0 points (Eagles)\n\nTotal = **30 points** for the week."
     },
@@ -570,7 +790,8 @@
         "points",
         "ties",
         "confidence",
-        "results"
+        "results",
+        "scenario"
       ],
       "answerMd": "If two players finish with the same record, it is recorded as a tie in the system.\n\nEach pool determines its own tiebreaker rules or payout structure."
     },
@@ -586,9 +807,27 @@
         "deadlines",
         "overtime",
         "ties",
-        "preseason"
+        "preseason",
+        "game-selection"
       ],
       "answerMd": "No. Preseason games are not included in pool play."
+    },
+    {
+      "id": "season-game-rules::can-my-pool-include-only-some-games-in-a-week",
+      "slug": "season-game-rules",
+      "category": "season",
+      "pageTitle": "Season & Game Rules FAQ",
+      "question": "Can my pool include only some games in a week?",
+      "tags": [
+        "season",
+        "leagues",
+        "deadlines",
+        "overtime",
+        "ties",
+        "preseason",
+        "game-selection"
+      ],
+      "answerMd": "Yes. Commissioners can choose which games count for the current week.\n\nOnly selected games appear for picks and scoring. Selected games lock when the weekly edit window closes."
     },
     {
       "id": "season-game-rules::how-are-overtime-games-handled",
@@ -602,9 +841,10 @@
         "deadlines",
         "overtime",
         "ties",
-        "preseason"
+        "preseason",
+        "game-selection"
       ],
-      "answerMd": "Overtime games are not treated differently.\n\nThe final score — including overtime — determines the winning team."
+      "answerMd": "Overtime games are not treated differently.\n\nThe final score - including overtime - determines the winning team."
     },
     {
       "id": "season-game-rules::what-happens-if-a-game-ends-in-a-tie",
@@ -618,7 +858,8 @@
         "deadlines",
         "overtime",
         "ties",
-        "preseason"
+        "preseason",
+        "game-selection"
       ],
       "answerMd": "Games that end in a tie are counted as a loss for pick scoring purposes."
     },
@@ -634,9 +875,10 @@
         "deadlines",
         "overtime",
         "ties",
-        "preseason"
+        "preseason",
+        "game-selection"
       ],
-      "answerMd": "We currently support:\n\n- NFL  \n- College Football"
+      "answerMd": "We currently support:\n\n- NFL\n- College Football"
     },
     {
       "id": "season-game-rules::what-time-zone-are-deadlines-based-on",
@@ -650,9 +892,10 @@
         "deadlines",
         "overtime",
         "ties",
-        "preseason"
+        "preseason",
+        "game-selection"
       ],
-      "answerMd": "Deadlines are not based on a specific time zone.\n\nPicks lock based on each game’s official kickoff time."
+      "answerMd": "Deadlines are not based on a specific time zone.\n\nPicks lock based on each game's official kickoff time."
     },
     {
       "id": "super-bowl-squares::when-are-square-numbers-assigned",
@@ -679,9 +922,9 @@
         "browser",
         "notifications",
         "email",
-        "sms"
+        "push"
       ],
-      "answerMd": "Yes. Email notifications are enabled by default.\n\nSMS reminders are currently in development and will be available soon."
+      "answerMd": "Yes. You can manage notification preferences in **Account Settings**.\n\nAvailable options include pick-submission confirmation emails, pick due reminders by email and app push notification, and pool-message push notifications. Commissioners can also choose to receive emailed copies of player pick submissions.\n\nSMS reminders are not currently available."
     },
     {
       "id": "platform-technical::is-the-platform-mobile-friendly",
@@ -695,9 +938,9 @@
         "browser",
         "notifications",
         "email",
-        "sms"
+        "push"
       ],
-      "answerMd": "Yes. The platform is built mobile-first and works seamlessly on phones, tablets, and desktops."
+      "answerMd": "Yes. The platform is built mobile-first and works on phones, tablets, and desktops."
     },
     {
       "id": "platform-technical::is-there-a-mobile-app",
@@ -711,9 +954,9 @@
         "browser",
         "notifications",
         "email",
-        "sms"
+        "push"
       ],
-      "answerMd": "Yes. “Pick the Game” is available on both iOS and Android.\n\nYou can download it from the Apple App Store or Google Play Store."
+      "answerMd": "Yes. Pick the Game supports the mobile app experience and the web app works on mobile browsers."
     },
     {
       "id": "platform-technical::what-browsers-are-supported",
@@ -727,25 +970,25 @@
         "browser",
         "notifications",
         "email",
-        "sms"
+        "push"
       ],
-      "answerMd": "We officially support the latest versions of:\n\n- Chrome  \n- Firefox  \n- Safari"
+      "answerMd": "We officially support the latest versions of:\n\n- Chrome\n- Firefox\n- Safari"
     },
     {
       "id": "platform-technical::why-didn-t-i-receive-a-pick-reminder-email",
       "slug": "platform-technical",
       "category": "technical",
       "pageTitle": "Platform & Technical FAQ",
-      "question": "Why didn’t I receive a pick reminder email?",
+      "question": "Why didn't I receive a pick reminder email?",
       "tags": [
         "mobile",
         "app",
         "browser",
         "notifications",
         "email",
-        "sms"
+        "push"
       ],
-      "answerMd": "First, confirm that notifications are enabled in your account settings.\n\nThen check your spam or junk folder. If you’re still not receiving emails, contact support for assistance."
+      "answerMd": "First, confirm that pick due notifications are enabled in **Account Settings**.\n\nThen check your spam or junk folder. If you're still not receiving emails, contact support for assistance."
     },
     {
       "id": "tiebreakers::can-everyone-in-my-pool-see-tiebreaker-results-in-standings",

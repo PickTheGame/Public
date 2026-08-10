@@ -9,9 +9,10 @@ tags:
   - ties
   - confidence
   - results
+  - scenario
 ---
 
-# Scoring & Standings FAQ — Pick the Game Pools
+# Scoring & Standings FAQ - Pick the Game Pools
 
 ### What happens if two players finish with the same record?
 **Tags:** ties, standings, results
@@ -48,10 +49,24 @@ The player earns:
 
 Total = **30 points** for the week.
 
-### Can I view past weeks’ picks?
+### Can I view past weeks' picks?
 **Tags:** history, previous weeks, matrix
 
-Yes. All previous weeks can be viewed by visiting the **Matrix Page** and selecting a week from the **Previous Week** dropdown.
+Yes. Past weeks can be viewed from the **Matrix** page by selecting a season and week.
+
+### Can I preview projected standings before all games are final?
+**Tags:** scenario, standings, matrix, projections
+
+Yes. On the **Matrix** page, use **Scenario mode** to choose winners for unfinished games and preview projected standings.
+
+Scenario mode shows movement from your current rank to the projected rank and identifies the projected leader.
+
+### Can standings columns be customized?
+**Tags:** standings, columns, commissioner, settings
+
+Yes. Commissioners can choose which optional standings columns are visible to pool members.
+
+Available columns include total correct picks, lowest weekly correct-pick count, adjusted correct picks, confidence point totals, lowest confidence point week, and cumulative tiebreaker margin.
 
 ### Can I export standings to CSV or Excel?
 **Tags:** export, csv, standings

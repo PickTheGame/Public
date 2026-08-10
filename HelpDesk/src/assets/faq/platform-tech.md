@@ -8,42 +8,42 @@ tags:
   - browser
   - notifications
   - email
-  - sms
+  - push
 ---
 
-# Platform & Technical FAQ — Pick the Game Pools
+# Platform & Technical FAQ - Pick the Game Pools
 
 ### Is there a mobile app?
 **Tags:** mobile app, ios, android
 
-Yes. “Pick the Game” is available on both iOS and Android.
-
-You can download it from the Apple App Store or Google Play Store.
+Yes. Pick the Game supports the mobile app experience and the web app works on mobile browsers.
 
 ### Is the platform mobile-friendly?
 **Tags:** mobile, responsive, usability
 
-Yes. The platform is built mobile-first and works seamlessly on phones, tablets, and desktops.
+Yes. The platform is built mobile-first and works on phones, tablets, and desktops.
 
 ### What browsers are supported?
 **Tags:** browsers, compatibility
 
 We officially support the latest versions of:
 
-- Chrome  
-- Firefox  
-- Safari  
+- Chrome
+- Firefox
+- Safari
 
 ### Can I receive email or SMS reminders?
-**Tags:** notifications, email, sms
+**Tags:** notifications, email, push
 
-Yes. Email notifications are enabled by default.
+Yes. You can manage notification preferences in **Account Settings**.
 
-SMS reminders are currently in development and will be available soon.
+Available options include pick-submission confirmation emails, pick due reminders by email and app push notification, and pool-message push notifications. Commissioners can also choose to receive emailed copies of player pick submissions.
 
-### Why didn’t I receive a pick reminder email?
+SMS reminders are not currently available.
+
+### Why didn't I receive a pick reminder email?
 **Tags:** email issues, notifications, support
 
-First, confirm that notifications are enabled in your account settings.
+First, confirm that pick due notifications are enabled in **Account Settings**.
 
-Then check your spam or junk folder. If you’re still not receiving emails, contact support for assistance.
+Then check your spam or junk folder. If you're still not receiving emails, contact support for assistance.

@@ -47,10 +47,10 @@ When adding a new post:
 
 ## Canonical URLs
 
-Existing article pages use canonical URLs in this form:
+Article pages use canonical URLs in this form:
 
 ```html
-<link rel="canonical" href="https://pickthegame.github.io/Public/news/<slug>/" />
+<link rel="canonical" href="https://www.pickthegame.com/news/<slug>/" />
 ```
 
 The sitemap uses production URLs in this form:
@@ -69,4 +69,3 @@ After adding a post:
 - Confirm the news index links to `<slug>/`.
 - Confirm `Public/sitemap.xml` parses as valid XML.
 - Review `git diff -- Public/news/index.html Public/news/<slug>/index.html Public/sitemap.xml AGENTS.md`.
-

@@ -560,7 +560,16 @@
       .pool-card--quarter,
       .pool-card--half { grid-column: span 12; }
       .pool-card--tall { grid-row: auto; min-height: 15rem; }
-      .pool-card { min-height: 15rem; }
+      .pool-card {
+        min-height: 17rem;
+        padding-bottom: 6rem;
+      }
+      .pool-card-arrow {
+        right: 1.5rem;
+        bottom: 1.5rem;
+        width: 2.75rem;
+        height: 2.75rem;
+      }
       .section-heading { font-size: clamp(2.75rem, 13vw, 4.4rem); }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -1008,7 +1017,7 @@
           { scale: 0.84, opacity: 0.24 },
           { scale: 1, opacity: 1, ease: 'none', scrollTrigger: { trigger: panel, start: 'top 82%', end: 'center 48%', scrub: true } }
         );
-        gsap.to(panel, { opacity: 0.28, ease: 'none', scrollTrigger: { trigger: panel, start: 'center 28%', end: 'bottom 8%', scrub: true } });
+        gsap.to(panel, { opacity: 0.28, ease: 'none', scrollTrigger: { trigger: panel, start: 'bottom 42%', end: 'bottom 8%', scrub: true } });
       });
     }
   </script>

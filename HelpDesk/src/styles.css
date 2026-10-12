@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Geist Variable';
+  src: url('/assets/fonts/geist-latin-wght-normal.woff2') format('woff2-variations');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,7 +17,7 @@
 
   body {
     margin: 0;
-    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    font-family: 'Geist Variable', 'Segoe UI', sans-serif;
     color: #0d1b2a;
     background:
       radial-gradient(circle at top left, rgba(239, 183, 30, 0.14), transparent 26%),
@@ -21,8 +29,16 @@
   h2,
   h3,
   h4 {
-    font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-    letter-spacing: 0.02em;
+    font-family: 'Geist Variable', 'Segoe UI', sans-serif;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

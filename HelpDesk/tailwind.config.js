@@ -36,8 +36,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Manrope', 'Segoe UI', 'sans-serif'],
-        display: ['Barlow Condensed', 'Arial Narrow', 'sans-serif'],
+        sans: ['Geist Variable', 'Segoe UI', 'sans-serif'],
+        display: ['Geist Variable', 'Segoe UI', 'sans-serif'],
       },
       fontSize: {
         tiny: '0.688rem',

@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run build:help",
-    "build:help": "npm --prefix HelpDesk run build:public"
+    "build": "npm run build:home && npm run build:help",
+    "build:home": "tailwindcss -c home.tailwind.config.js -i home.tailwind.css -o Public/assets/home.css --minify",
+    "build:help": "npm --prefix HelpDesk run build:public",
+    "test": "npm --prefix HelpDesk test",
+    "validate": "node tools/validate-site.mjs",
+    "check": "npm test && npm run build && npm run validate"
+  },
+  "devDependencies": {
+    "@fontsource-variable/geist": "^5.3.0",
+    "gsap": "^3.15.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.17"
   }
 }

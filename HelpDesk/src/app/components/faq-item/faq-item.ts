@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, effect, input, model, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { MarkdownComponent, provideMarkdown } from 'ngx-markdown';
 
 @Component({
@@ -13,7 +13,7 @@ import { MarkdownComponent, provideMarkdown } from 'ngx-markdown';
 })
 export class FaqItemComponent {
 
-  faq = input.required<{question: string, pageTitle: string, tags: string[], answerMd: string }>();
+  faq = input.required<{id: string, question: string, pageTitle: string, tags: string[], answerMd: string }>();
   isOpened = signal<boolean>(false);
 
   public closeAll(){

@@ -19,10 +19,6 @@
   <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg" />
   <link rel="shortcut icon" href="../assets/favicons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/site.css" />
 
   <script type="application/ld+json">
@@ -60,15 +56,22 @@
       ]
     }
   </script>
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="News & Updates | PickTheGame" />
+  <meta property="og:description" content="Product news, feature announcements, and release notes for PickTheGame." />
+  <meta property="og:url" content="https://www.pickthegame.com/news/" />
+  <meta property="og:image" content="https://www.pickthegame.com/assets/hero-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
     <div class="container-tight">
       <div class="site-header__row">
         <a href="../" class="site-logo" aria-label="PickTheGame home">
-          <img src="../assets/logo-wide.png" alt="PickTheGame logo" />
+          <img decoding="async" width="369" height="116" src="../assets/logo-wide.png" alt="PickTheGame logo" />
         </a>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Primary navigation">
           <a href="../#services">Pool Types</a>
           <a href="../#about">About</a>
           <a href="../#faqs">FAQs</a>
@@ -90,8 +93,24 @@
     </div>
   </section>
 
-  <main class="section-block">
+  <main id="main-content" class="section-block">
     <div class="container-tight news-grid">
+      <article class="news-card">
+        <div class="news-card__body">
+          <p class="news-card__date">October 11, 2026</p>
+          <h2>Meet Coach AI: Your Personal Football Pool Assistant</h2>
+          <p>Ask questions, analyze performance, complete picks, and manage pools with a conversational assistant grounded in your actual PickTheGame data.</p>
+          <div class="chip-row">
+            <span class="chip">New Feature</span>
+            <span class="chip">Coach AI</span>
+            <span class="chip">Pool Assistant</span>
+          </div>
+          <p>
+            <a href="meet-coach-ai/" class="btn btn-primary" style="margin-top: 1.35rem;">Read Update</a>
+          </p>
+        </div>
+      </article>
+
       <article class="news-card">
         <div class="news-card__body">
           <p class="news-card__date">August 21, 2026</p>

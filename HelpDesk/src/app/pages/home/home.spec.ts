@@ -23,11 +23,12 @@ describe('HomeComponent', () => {
   it('filters visible answers from search input', () => {
     const root = fixture.nativeElement as HTMLElement;
     const input = root.querySelector('input[type="search"]') as HTMLInputElement;
-    input.value = 'Coach AI';
+    const totalCount = fixture.componentInstance.vm()?.totalCount;
+    input.value = 'across all pools you can access';
     input.dispatchEvent(new Event('input'));
     fixture.detectChanges();
     const countText = root.textContent ?? '';
-    expect(countText).toContain('Showing 1 of 57 answers');
+    expect(countText).toContain(`Showing 1 of ${totalCount} answers`);
     expect(countText).toContain('What is Coach AI?');
   });
 });

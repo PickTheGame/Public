@@ -17,9 +17,9 @@ tags:
 
 Deadlines are configurable by pool. Picks can be due:
 
-- Before all games begin
-- Before Sunday games
-- Before each individual game starts
+- Before the first game of the week (usually Thursday night)
+- Before the first game on the league's main day (usually Saturday for College Football and Sunday for NFL)
+- At each individual game's scheduled kickoff
 
 Your commissioner selects the submission format during setup.
 
@@ -33,9 +33,9 @@ Once the cutoff passes, picks are locked.
 ### What happens if I forget to make my picks?
 **Tags:** late picks, commissioner, rules
 
-Late picks are handled on a pool-by-pool basis.
+Late-pick policy is determined by each pool's rules.
 
-If the pool allows it, commissioners may enter late picks on behalf of a player.
+Commissioners can submit picks on behalf of a player. Those submissions are recorded in the pool's audit log, and the player receives an email when pick-submission notifications are enabled.
 
 ### Are Thursday games included in the weekly deadline?
 **Tags:** thursday, deadlines, nfl
@@ -64,6 +64,13 @@ Game selection locks once the weekly edit window closes.
 It depends on your pool settings. Commissioners can allow extra Survivor entries before your first Survivor submission.
 
 Each Survivor entry is tracked independently, with its own previous picks and eligibility.
+
+### Can an eliminated Survivor entry be brought back?
+**Tags:** survivor, buy-back, commissioner, entries
+
+Yes, when the entry is eligible and the current week's picks are still open. Survivor buy-backs are commissioner-managed from **Submission Status** while entering picks on behalf of the player.
+
+After a buy-back, that entry resumes as a new buy-in for the current week while keeping its series history.
 
 ### What happens if a game is postponed or canceled?
 **Tags:** postponed, canceled, scoring

@@ -32,9 +32,9 @@ Only selected games appear for picks and scoring. Selected games lock when the w
 ### What time zone are deadlines based on?
 **Tags:** deadlines, kickoff, timing
 
-Deadlines are not based on a specific time zone.
+Game times are displayed in your local time zone, but the deadline is not tied to a fixed clock time in one time zone.
 
-Picks lock based on each game's official kickoff time.
+Picks lock according to the pool's submission schedule and the games' official kickoff times.
 
 ### How are overtime games handled?
 **Tags:** overtime, scoring, rules

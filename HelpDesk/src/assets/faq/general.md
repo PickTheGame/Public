@@ -42,6 +42,8 @@ We offer multiple pool formats to fit any group:
 - **Survivor** - Choose one winning team each week. Pools can allow multiple survivor entries.
 - **Squares** - A grid-based format, ideal for championship games.
 
+Pick'Em and Confidence can also be combined with Survivor in the same pool. Pick'Em and Confidence pools may optionally use point spreads and a total-points tiebreaker.
+
 ### What's the difference between Confidence and Pick'Em pools?
 **Tags:** confidence, pickem, scoring, formats
 
@@ -97,6 +99,6 @@ No problem. You can start a pool at any time during the season and begin play in
 ### What is Coach AI?
 **Tags:** coach-ai, help, assistant, pool
 
-Coach AI is an in-app pool assistant. You can ask questions about your pool, such as who still needs to make picks, current standings, pick history, square results, survivor status, or where to find a setting.
+Coach AI is an in-app pool assistant that can work across all pools you can access. You can ask about missing picks, deadlines, current and past standings, player comparisons, pick history, square results, Survivor status, weekly recaps, or where to find a setting.
 
-Coach AI answers using current pool data and may include tables or navigation shortcuts when helpful.
+Coach AI answers using current pool data and may include tables or navigation shortcuts when helpful. It can also submit your picks when you give a complete instruction. Commissioners can use it for supported administrative tasks such as updating settings, sending missing-pick reminders, and submitting picks for a player. Coach AI asks for confirmation before changing pool settings or sending reminders.

@@ -29,9 +29,9 @@ Yes. Commissioners can modify submission timing anytime:
 
 Options include:
 
-- Before all games
-- Before Sunday games
-- Before each game
+- Before the first game of the week
+- Before the first game on the league's main day (usually Saturday for College Football and Sunday for NFL)
+- Before each game's scheduled kickoff
 
 ### Can I choose which games count for a week?
 **Tags:** game-selection, weekly, settings
@@ -46,6 +46,11 @@ The page includes search, select all, and clear all controls. Game selection can
 Yes. Commissioners can open **Survivor Settings** and set how many extra Survivor entries players may add before their first Survivor submission.
 
 Each entry is tracked as a separate Survivor series.
+
+### Can I stop new players from joining my pool?
+**Tags:** pool-lock, members, joining, settings
+
+Yes. Commissioners can turn on **Lock Pool** from the main **Pool Settings** page. Locking a pool stops new players from joining; it does not remove current members or prevent them from making picks.
 
 ### Can I customize what appears on standings?
 **Tags:** standings, columns, settings

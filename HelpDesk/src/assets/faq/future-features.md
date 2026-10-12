@@ -1,14 +1,14 @@
 ---
-title: Future Features FAQ
-slug: future-features
-category: future
+title: Feature Availability FAQ
+slug: feature-availability
+category: availability
 tags:
   - roadmap
   - college-football
   - notifications
 ---
 
-# Future Features FAQ - Pick the Game Pools
+# Feature Availability FAQ - Pick the Game Pools
 
 ### Will you offer college football pools?
 **Tags:** college-football, leagues

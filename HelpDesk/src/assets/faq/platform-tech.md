@@ -16,7 +16,7 @@ tags:
 ### Is there a mobile app?
 **Tags:** mobile app, ios, android
 
-Yes. Pick the Game supports the mobile app experience and the web app works on mobile browsers.
+Yes. Pick the Game supports a native mobile app experience, and the responsive web app also works in mobile browsers.
 
 ### Is the platform mobile-friendly?
 **Tags:** mobile, responsive, usability
@@ -29,6 +29,7 @@ Yes. The platform is built mobile-first and works on phones, tablets, and deskto
 We officially support the latest versions of:
 
 - Chrome
+- Edge
 - Firefox
 - Safari
 
@@ -47,3 +48,8 @@ SMS reminders are not currently available.
 First, confirm that pick due notifications are enabled in **Account Settings**.
 
 Then check your spam or junk folder. If you're still not receiving emails, contact support for assistance.
+
+### Where can I see past notifications?
+**Tags:** notifications, history, unread, account
+
+Open **Account Settings** and select **View notification history**. The Notifications page shows messages sent to you, lets you open the related pool when available, and lets you mark one or all notifications as read.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T01:53:34.279Z",
+  "generatedAt": "2026-10-12T10:18:37.976Z",
   "schemaVersion": 1,
   "categories": [
     {
@@ -18,9 +18,9 @@
       "sourceFile": "src/assets/faq/commissioner.md"
     },
     {
-      "slug": "future-features",
-      "title": "Future Features FAQ",
-      "category": "future",
+      "slug": "feature-availability",
+      "title": "Feature Availability FAQ",
+      "category": "availability",
       "tags": [
         "roadmap",
         "college-football",
@@ -137,6 +137,32 @@
   ],
   "faqs": [
     {
+      "id": "feature-availability::will-sms-reminders-be-available",
+      "slug": "feature-availability",
+      "category": "availability",
+      "pageTitle": "Feature Availability FAQ",
+      "question": "Will SMS reminders be available?",
+      "tags": [
+        "roadmap",
+        "college-football",
+        "notifications"
+      ],
+      "answerMd": "SMS reminders are not currently available.\n\nPick due reminders use email and app push notifications when enabled in account settings."
+    },
+    {
+      "id": "feature-availability::will-you-offer-college-football-pools",
+      "slug": "feature-availability",
+      "category": "availability",
+      "pageTitle": "Feature Availability FAQ",
+      "question": "Will you offer college football pools?",
+      "tags": [
+        "roadmap",
+        "college-football",
+        "notifications"
+      ],
+      "answerMd": "Yes. College football pools are supported.\n\nCommissioners can create pools for NFL or College Football, and college teams are grouped by conference in the app."
+    },
+    {
       "id": "commissioners::can-a-commissioner-edit-someone-else-s-picks",
       "slug": "commissioners",
       "category": "commissioners",
@@ -154,11 +180,11 @@
       "answerMd": "Yes. Commissioners can edit a player's picks.\n\nThe player will receive an email notification when changes are made."
     },
     {
-      "id": "commissioners::can-a-commissioner-lock-or-remove-a-player",
+      "id": "commissioners::can-a-commissioner-remove-a-player-or-lock-the-pool",
       "slug": "commissioners",
       "category": "commissioners",
       "pageTitle": "Commissioner FAQ",
-      "question": "Can a commissioner lock or remove a player?",
+      "question": "Can a commissioner remove a player or lock the pool?",
       "tags": [
         "commissioner",
         "admin",
@@ -168,7 +194,24 @@
         "game-selection",
         "standings"
       ],
-      "answerMd": "Yes. Commissioners can remove a player at any time during the season."
+      "answerMd": "Commissioners can remove a player at any time during the season.\n\nThe **Lock Pool** setting is different: it stops new players from joining, but it does not lock an existing player's account or picks."
+    },
+    {
+      "id": "commissioners::can-a-commissioner-send-reminders-to-players-with-missing-picks",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can a commissioner send reminders to players with missing picks?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management",
+        "game-selection",
+        "standings"
+      ],
+      "answerMd": "Yes. A commissioner can ask **Coach AI** who has incomplete picks and have it preview the reminder recipients. Coach AI asks for confirmation before sending the reminders."
     },
     {
       "id": "commissioners::can-commissioner-duties-be-transferred",
@@ -239,6 +282,23 @@
       "answerMd": "Yes. Commissioners can modify many pool rules during the season, including game type, submission schedule, survivor settings, and standings columns.\n\nWeekly game selection can be changed only while that week's edit window is open. Once the weekly edit window closes, selected games are locked."
     },
     {
+      "id": "commissioners::can-commissioners-see-a-history-of-pool-changes",
+      "slug": "commissioners",
+      "category": "commissioners",
+      "pageTitle": "Commissioner FAQ",
+      "question": "Can commissioners see a history of pool changes?",
+      "tags": [
+        "commissioner",
+        "admin",
+        "settings",
+        "permissions",
+        "management",
+        "game-selection",
+        "standings"
+      ],
+      "answerMd": "Yes. Go to:\n\n**Pool Settings -> Audit Logs**\n\nThe audit log records activity such as player submissions, commissioner submissions on behalf of players, pool setting changes, and week starts. The table can also be downloaded as a CSV file."
+    },
+    {
       "id": "commissioners::what-powers-does-a-commissioner-have",
       "slug": "commissioners",
       "category": "commissioners",
@@ -253,33 +313,7 @@
         "game-selection",
         "standings"
       ],
-      "answerMd": "Commissioners have full control over their pool. They can:\n\n- Add players\n- Modify gameplay settings\n- Choose which games count for a week\n- Configure standings columns\n- View pick submission status\n- Submit picks on behalf of players\n- Edit player picks\n- Send pool-wide updates\n- Remove players"
-    },
-    {
-      "id": "future-features::will-sms-reminders-be-available",
-      "slug": "future-features",
-      "category": "future",
-      "pageTitle": "Future Features FAQ",
-      "question": "Will SMS reminders be available?",
-      "tags": [
-        "roadmap",
-        "college-football",
-        "notifications"
-      ],
-      "answerMd": "SMS reminders are not currently available.\n\nPick due reminders use email and app push notifications when enabled in account settings."
-    },
-    {
-      "id": "future-features::will-you-offer-college-football-pools",
-      "slug": "future-features",
-      "category": "future",
-      "pageTitle": "Future Features FAQ",
-      "question": "Will you offer college football pools?",
-      "tags": [
-        "roadmap",
-        "college-football",
-        "notifications"
-      ],
-      "answerMd": "Yes. College football pools are supported.\n\nCommissioners can create pools for NFL or College Football, and college teams are grouped by conference in the app."
+      "answerMd": "Commissioners have full control over their pool. They can:\n\n- Add players\n- Approve pending join requests and stop new players from joining by locking the pool\n- Modify gameplay settings\n- Choose which games count for a week\n- Configure standings columns\n- View pick submission status\n- Submit picks on behalf of players\n- Edit player picks\n- Send pool-wide updates\n- Review audit logs for submissions and settings changes\n- Manage eligible Survivor buy-backs\n- Remove players"
     },
     {
       "id": "general::can-i-create-a-private-pool",
@@ -429,7 +463,7 @@
         "pools",
         "coach-ai"
       ],
-      "answerMd": "Coach AI is an in-app pool assistant. You can ask questions about your pool, such as who still needs to make picks, current standings, pick history, square results, survivor status, or where to find a setting.\n\nCoach AI answers using current pool data and may include tables or navigation shortcuts when helpful."
+      "answerMd": "Coach AI is an in-app pool assistant that can work across all pools you can access. You can ask about missing picks, deadlines, current and past standings, player comparisons, pick history, square results, Survivor status, weekly recaps, or where to find a setting.\n\nCoach AI answers using current pool data and may include tables or navigation shortcuts when helpful. It can also submit your picks when you give a complete instruction. Commissioners can use it for supported administrative tasks such as updating settings, sending missing-pick reminders, and submitting picks for a player. Coach AI asks for confirmation before changing pool settings or sending reminders."
     },
     {
       "id": "general::what-types-of-pools-do-you-offer",
@@ -444,7 +478,7 @@
         "pools",
         "coach-ai"
       ],
-      "answerMd": "We offer multiple pool formats to fit any group:\n\n- **Pick'Em** - Pick the winner of each game.\n- **Confidence** - Pick winners and rank them for weighted points.\n- **Survivor** - Choose one winning team each week. Pools can allow multiple survivor entries.\n- **Squares** - A grid-based format, ideal for championship games."
+      "answerMd": "We offer multiple pool formats to fit any group:\n\n- **Pick'Em** - Pick the winner of each game.\n- **Confidence** - Pick winners and rank them for weighted points.\n- **Survivor** - Choose one winning team each week. Pools can allow multiple survivor entries.\n- **Squares** - A grid-based format, ideal for championship games.\n\nPick'Em and Confidence can also be combined with Survivor in the same pool. Pick'Em and Confidence pools may optionally use point spreads and a total-points tiebreaker."
     },
     {
       "id": "general::what-s-the-difference-between-confidence-and-pick-em-pools",
@@ -490,6 +524,21 @@
         "survivor"
       ],
       "answerMd": "They can be. It depends on how your pool's submission deadline is configured.\n\nIf the deadline is set before all games, Thursday games are included. If not, they may lock individually at kickoff."
+    },
+    {
+      "id": "picks-deadlines::can-an-eliminated-survivor-entry-be-brought-back",
+      "slug": "picks-deadlines",
+      "category": "Picks",
+      "pageTitle": "Pick and Deadlines",
+      "question": "Can an eliminated Survivor entry be brought back?",
+      "tags": [
+        "picks",
+        "deadlines",
+        "cutoffs",
+        "submissions",
+        "survivor"
+      ],
+      "answerMd": "Yes, when the entry is eligible and the current week's picks are still open. Survivor buy-backs are commissioner-managed from **Submission Status** while entering picks on behalf of the player.\n\nAfter a buy-back, that entry resumes as a new buy-in for the current week while keeping its series history."
     },
     {
       "id": "picks-deadlines::can-commissioners-adjust-deadlines",
@@ -579,7 +628,7 @@
         "submissions",
         "survivor"
       ],
-      "answerMd": "Late picks are handled on a pool-by-pool basis.\n\nIf the pool allows it, commissioners may enter late picks on behalf of a player."
+      "answerMd": "Late-pick policy is determined by each pool's rules.\n\nCommissioners can submit picks on behalf of a player. Those submissions are recorded in the pool's audit log, and the player receives an email when pick-submission notifications are enabled."
     },
     {
       "id": "picks-deadlines::when-are-picks-due-each-week",
@@ -594,7 +643,7 @@
         "submissions",
         "survivor"
       ],
-      "answerMd": "Deadlines are configurable by pool. Picks can be due:\n\n- Before all games begin\n- Before Sunday games\n- Before each individual game starts\n\nYour commissioner selects the submission format during setup."
+      "answerMd": "Deadlines are configurable by pool. Picks can be due:\n\n- Before the first game of the week (usually Thursday night)\n- Before the first game on the league's main day (usually Saturday for College Football and Sunday for NFL)\n- At each individual game's scheduled kickoff\n\nYour commissioner selects the submission format during setup."
     },
     {
       "id": "pool-settings::can-i-allow-multiple-survivor-entries",
@@ -645,6 +694,22 @@
       "answerMd": "Yes. Commissioners can open **Standings Columns** and show or hide optional standings stats, including season totals, lowest week, adjusted totals, confidence point totals, and tiebreaker margin."
     },
     {
+      "id": "pool-settings::can-i-stop-new-players-from-joining-my-pool",
+      "slug": "pool-settings",
+      "category": "pool-settings",
+      "pageTitle": "Pool Settings FAQ",
+      "question": "Can I stop new players from joining my pool?",
+      "tags": [
+        "settings",
+        "confidence",
+        "pickem",
+        "submission",
+        "survivor",
+        "standings"
+      ],
+      "answerMd": "Yes. Commissioners can turn on **Lock Pool** from the main **Pool Settings** page. Locking a pool stops new players from joining; it does not remove current members or prevent them from making picks."
+    },
+    {
       "id": "pool-settings::can-submission-schedules-be-changed-during-the-season",
       "slug": "pool-settings",
       "category": "pool-settings",
@@ -658,7 +723,7 @@
         "survivor",
         "standings"
       ],
-      "answerMd": "Yes. Commissioners can modify submission timing anytime:\n\n**Pool Settings -> Submission Schedule**\n\nOptions include:\n\n- Before all games\n- Before Sunday games\n- Before each game"
+      "answerMd": "Yes. Commissioners can modify submission timing anytime:\n\n**Pool Settings -> Submission Schedule**\n\nOptions include:\n\n- Before the first game of the week\n- Before the first game on the league's main day (usually Saturday for College Football and Sunday for NFL)\n- Before each game's scheduled kickoff"
     },
     {
       "id": "pool-settings::my-pool-switched-to-confidence-picks-can-i-change-it-back-to-pick-em",
@@ -708,7 +773,7 @@
         "results",
         "scenario"
       ],
-      "answerMd": "Yes. All tables can be exported as a CSV file for use in Excel or other spreadsheet software."
+      "answerMd": "Yes. Standings, winners, Survivor history, matrices, and other tables that show a **Download CSV** action can be exported for use in Excel or other spreadsheet software."
     },
     {
       "id": "scoring-standings::can-i-preview-projected-standings-before-all-games-are-final",
@@ -794,6 +859,23 @@
         "scenario"
       ],
       "answerMd": "If two players finish with the same record, it is recorded as a tie in the system.\n\nEach pool determines its own tiebreaker rules or payout structure."
+    },
+    {
+      "id": "scoring-standings::where-can-i-see-the-weekly-recap",
+      "slug": "scoring-standings",
+      "category": "scoring",
+      "pageTitle": "Scoring & Standings FAQ",
+      "question": "Where can I see the weekly recap?",
+      "tags": [
+        "scoring",
+        "standings",
+        "points",
+        "ties",
+        "confidence",
+        "results",
+        "scenario"
+      ],
+      "answerMd": "After a week is completed, its generated recap appears on the pool home page as **View Week [number] recap**. Expand the card to see a summary of the recorded results, including the week's winner and notable standings information."
     },
     {
       "id": "season-game-rules::are-preseason-games-included",
@@ -895,7 +977,20 @@
         "preseason",
         "game-selection"
       ],
-      "answerMd": "Deadlines are not based on a specific time zone.\n\nPicks lock based on each game's official kickoff time."
+      "answerMd": "Game times are displayed in your local time zone, but the deadline is not tied to a fixed clock time in one time zone.\n\nPicks lock according to the pool's submission schedule and the games' official kickoff times."
+    },
+    {
+      "id": "super-bowl-squares::what-squares-options-can-a-commissioner-configure",
+      "slug": "super-bowl-squares",
+      "category": "squares",
+      "pageTitle": "Super Bowl Squares FAQ",
+      "question": "What Squares options can a commissioner configure?",
+      "tags": [
+        "squares",
+        "superbowl",
+        "grid"
+      ],
+      "answerMd": "Commissioners can configure:\n\n- A standard 10x10 grid or a smaller 5x5 grid\n- The maximum number of squares one player may select\n- Random or fixed row and column numbers\n- Whether random numbers reshuffle for each quarter\n- Winners at the final score only, at halftime and the final, or after every quarter\n\nSquares settings cannot be changed after the associated game has started."
     },
     {
       "id": "super-bowl-squares::when-are-square-numbers-assigned",
@@ -908,7 +1003,7 @@
         "superbowl",
         "grid"
       ],
-      "answerMd": "Numbers are randomly assigned once the grid is fully filled.  \nThis typically occurs shortly before the game to ensure fairness."
+      "answerMd": "If **Use Random Numbers** is enabled, the row and column numbers are assigned when the grid fills or the associated game starts, whichever happens first.\n\nIf random numbers are disabled, the grid uses fixed number order."
     },
     {
       "id": "platform-technical::can-i-receive-email-or-sms-reminders",
@@ -956,7 +1051,7 @@
         "email",
         "push"
       ],
-      "answerMd": "Yes. Pick the Game supports the mobile app experience and the web app works on mobile browsers."
+      "answerMd": "Yes. Pick the Game supports a native mobile app experience, and the responsive web app also works in mobile browsers."
     },
     {
       "id": "platform-technical::what-browsers-are-supported",
@@ -972,7 +1067,23 @@
         "email",
         "push"
       ],
-      "answerMd": "We officially support the latest versions of:\n\n- Chrome\n- Firefox\n- Safari"
+      "answerMd": "We officially support the latest versions of:\n\n- Chrome\n- Edge\n- Firefox\n- Safari"
+    },
+    {
+      "id": "platform-technical::where-can-i-see-past-notifications",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Where can I see past notifications?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Open **Account Settings** and select **View notification history**. The Notifications page shows messages sent to you, lets you open the related pool when available, and lets you mark one or all notifications as read."
     },
     {
       "id": "platform-technical::why-didn-t-i-receive-a-pick-reminder-email",
@@ -1014,7 +1125,7 @@
         "scoring",
         "rules"
       ],
-      "answerMd": "Currently, tiebreaker selections are visible once submitted. Some commissioners prefer hiding them to prevent late adjustments in tied scenarios. This is a known request and may be added as a future option."
+      "answerMd": "Yes. Tiebreaker guesses remain hidden in the Matrix while any game pick is still editable under the pool's submission schedule. They become visible after all picks are locked."
     },
     {
       "id": "tiebreakers::how-is-the-tiebreaker-calculated",

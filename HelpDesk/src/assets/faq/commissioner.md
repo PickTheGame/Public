@@ -20,6 +20,7 @@ tags:
 Commissioners have full control over their pool. They can:
 
 - Add players
+- Approve pending join requests and stop new players from joining by locking the pool
 - Modify gameplay settings
 - Choose which games count for a week
 - Configure standings columns
@@ -27,6 +28,8 @@ Commissioners have full control over their pool. They can:
 - Submit picks on behalf of players
 - Edit player picks
 - Send pool-wide updates
+- Review audit logs for submissions and settings changes
+- Manage eligible Survivor buy-backs
 - Remove players
 
 ### Can a commissioner edit someone else's picks?
@@ -36,10 +39,12 @@ Yes. Commissioners can edit a player's picks.
 
 The player will receive an email notification when changes are made.
 
-### Can a commissioner lock or remove a player?
-**Tags:** remove player, management, permissions
+### Can a commissioner remove a player or lock the pool?
+**Tags:** remove player, lock pool, management, permissions
 
-Yes. Commissioners can remove a player at any time during the season.
+Commissioners can remove a player at any time during the season.
+
+The **Lock Pool** setting is different: it stops new players from joining, but it does not lock an existing player's account or picks.
 
 ### Can commissioner duties be transferred?
 **Tags:** transfer, roles, admin
@@ -72,3 +77,17 @@ Yes. Go to:
 **Pool Settings -> Standings Columns**
 
 Commissioners can show or hide total correct picks, lowest week, adjusted totals, confidence point totals, lowest confidence point week, and cumulative tiebreaker margin. Confidence point columns only appear for Confidence pools.
+
+### Can commissioners see a history of pool changes?
+**Tags:** audit, history, submissions, settings
+
+Yes. Go to:
+
+**Pool Settings -> Audit Logs**
+
+The audit log records activity such as player submissions, commissioner submissions on behalf of players, pool setting changes, and week starts. The table can also be downloaded as a CSV file.
+
+### Can a commissioner send reminders to players with missing picks?
+**Tags:** reminders, missing picks, coach-ai, notifications
+
+Yes. A commissioner can ask **Coach AI** who has incomplete picks and have it preview the reminder recipients. Coach AI asks for confirmation before sending the reminders.

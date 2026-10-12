@@ -388,16 +388,6 @@
       letter-spacing: -0.06em;
       text-wrap: balance;
     }
-    .inline-screen {
-      display: inline-block;
-      width: clamp(4rem, 8vw, 7rem);
-      height: 0.72em;
-      margin-inline: 0.08em;
-      border-radius: 999px;
-      background: url('assets/app-light-matrix.webp') center / cover;
-      box-shadow: inset 0 0 0 2px rgba(32, 43, 95, 0.14);
-      vertical-align: 0.02em;
-    }
     .pool-bento {
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -431,7 +421,7 @@
     .pool-card:hover .pool-card-arrow { transform: translate(0.35rem, -0.35rem); }
     .journey {
       position: relative;
-      background: var(--brand-900);
+      background: var(--brand-field);
       color: #fff;
     }
     .journey-layout { display: grid; gap: 5rem; grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1.22fr); }
@@ -631,7 +621,7 @@
 
     <section id="services" class="scroll-mt-20">
       <div class="mx-auto container-tight px-4 py-28 sm:py-40">
-        <h2 class="section-heading font-extrabold uppercase text-brand-800">Choose how <span class="inline-screen" aria-hidden="true"></span> your group plays.</h2>
+        <h2 class="section-heading font-extrabold uppercase text-brand-800">Choose how your group plays.</h2>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700">Four familiar formats, one calm commissioner experience. Every grid cell is intentional and every option stays easy to explain.</p>
         <div class="pool-bento mt-14">
           <article class="pool-card pool-card--tall pool-card--dark">

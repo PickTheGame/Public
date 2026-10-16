@@ -59,12 +59,12 @@
     <div class="container-article legal-card">
       <p class="legal-kicker">Legal</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Last Updated:</strong> January 30, 2025</p>
+      <p><strong>Last Updated:</strong> October 15, 2026</p>
 
       <p>This Privacy Notice for <strong>Pick the Game LLC</strong> ("we," "us," or "our") describes how and why we may access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:</p>
 
       <ul>
-        <li>Visit our website at <strong>http://www.pickthegame.com</strong></li>
+        <li>Visit our public website at <strong>https://www.pickthegame.com</strong> or use our player web application</li>
         <li>Download or use our mobile application <strong>Pick the Game</strong></li>
         <li>Engage with us in sales, marketing, events, or other related ways</li>
       </ul>
@@ -73,11 +73,12 @@
 
       <h2>Summary of Key Points</h2>
       <ul>
-        <li>We collect information you provide and limited information automatically.</li>
-        <li>We do not process sensitive personal information.</li>
-        <li>We do not collect information from third parties.</li>
-        <li>We use your data to operate, improve, and secure our Services.</li>
-        <li>You may have privacy rights depending on your location.</li>
+        <li>We collect account, pool participation, support, and usage information to provide our Services.</li>
+        <li>We may receive information from sign-in providers and people who invite you to a pool.</li>
+        <li>Coach, our AI assistant, processes questions and relevant account or pool information to respond and carry out supported requests.</li>
+        <li>SMS notifications are optional. We do not sell or share SMS opt-in data or consent for third-party marketing or messaging programs.</li>
+        <li>We manage inactive-account cleanup manually, subject to the 18-month retention limit described below.</li>
+        <li>You and, where applicable, your parent or guardian may contact us about access, correction, or deletion of personal information.</li>
       </ul>
 
       <h2>Table of Contents</h2>
@@ -95,30 +96,38 @@
         <li>Policy Updates</li>
         <li>Contact Information</li>
         <li>Access, Update, or Delete Your Data</li>
+        <li>SMS Messaging and Mobile Information</li>
+        <li>Coach AI</li>
       </ol>
 
       <h2>1. What Information Do We Collect?</h2>
       <h3>Personal Information You Provide</h3>
       <p>We collect personal information that you voluntarily provide, including:</p>
       <ul>
-        <li>Name</li>
-        <li>Email address</li>
-        <li>Password</li>
+        <li>Name, email address, username, nickname, and profile image</li>
+        <li>Account credentials, sign-in information, time zone, and notification preferences</li>
+        <li>Pool memberships, selections, submissions, results, standings, and administrative actions</li>
+        <li>Invitations, feedback, support requests, and messages you send to us or Coach</li>
+        <li>Mobile phone number, SMS consent records, and messages you send to us if you use our text messaging features</li>
       </ul>
 
-      <p><strong>Sensitive Information:</strong> We do not collect or process sensitive personal data.</p>
+      <p><strong>Credentials and Sensitive Information:</strong> For password-based accounts, we store a password hash rather than your plain-text password. Sensitive information such as government identification numbers, financial account credentials, and health information is not needed for normal use of the Services. Please do not include it in pool names, profile images, support requests, or messages to Coach. Information you choose to submit in free text or images may be processed as part of the feature you use.</p>
+
+      <h3>Information From Sign-In Providers and Pool Administrators</h3>
+      <p>If you choose Google or Apple sign-in, we receive information such as a provider identifier, email address, email verification status, and name, depending on what the provider makes available. We use this information to create, authenticate, or link your account. These providers also process information under their own privacy policies.</p>
+      <p>A pool administrator or another user may provide your email address to invite you to a pool or manage your participation. This can occur before you create an account. Contact us if you received an invitation in error or want to request removal of your invitation information.</p>
 
       <h3>Payment Data</h3>
-      <p>Payments are processed by <strong>Stripe</strong>. We do not store payment card details. See Stripe's Privacy Policy at <a href="https://stripe.com/privacy" target="_blank" rel="noopener">https://stripe.com/privacy</a>.</p>
+      <p>Payments for our platform services are processed by <strong>Stripe</strong>. We retain payment references, amounts, timestamps, and related pool or season records to administer charges and support billing inquiries. We do not store full payment card details. See Stripe's Privacy Policy at <a href="https://stripe.com/privacy" target="_blank" rel="noopener">https://stripe.com/privacy</a>.</p>
 
       <h3>Application &amp; Device Data</h3>
-      <p>If you use our mobile application, we may collect device and usage information including IP address, device identifiers, operating system, app features accessed, and diagnostics.</p>
+      <p>When you use our website or applications, we may collect IP address, browser and operating system information, device identifiers, time zone, pages or features accessed, interaction timestamps, and diagnostics. If you enable push notifications, we also process the push token needed to send notifications to your device.</p>
 
       <h3>Push Notifications</h3>
-      <p>You may opt out of push notifications through your device settings.</p>
+      <p>You may manage available notification preferences in the app and turn off push notifications through your device settings. Turning off push notifications does not automatically unsubscribe you from email or SMS messages.</p>
 
       <h3>Information Collected Automatically</h3>
-      <p>We collect log data, usage data, device information, and approximate location data to maintain security and performance.</p>
+      <p>We collect log, usage, and device information to operate, secure, troubleshoot, and improve the Services. IP addresses may indicate an approximate location; this does not mean we require precise device location for normal pool participation.</p>
 
       <h3>Google API Use</h3>
       <p>Our use of Google APIs complies with the Google API Services User Data Policy, including Limited Use requirements.</p>
@@ -127,6 +136,8 @@
       <ul>
         <li>Account creation and authentication</li>
         <li>Service delivery and customer support</li>
+        <li>Pool invitations, membership administration, selections, scoring, and historical results</li>
+        <li>Coach responses and supported actions you request, as described in Section 15</li>
         <li>Administrative communications</li>
         <li>Payments and order management</li>
         <li>Marketing communications (opt-out available)</li>
@@ -134,25 +145,35 @@
       </ul>
 
       <h2>3. When and With Whom Do We Share Personal Information?</h2>
-      <p>We may share information with trusted service providers, including:</p>
+      <p>We use service providers to host, deliver, support, and improve the Services. Depending on the feature, these include:</p>
       <ul>
-        <li>Amazon Web Services (hosting)</li>
-        <li>Google Analytics (analytics)</li>
-        <li>Squarespace (website hosting)</li>
+        <li>Amazon Web Services for hosting, storage, and notification infrastructure</li>
+        <li>Stripe for platform payments</li>
+        <li>Google Analytics for website and app usage analytics</li>
+        <li>Expo for delivery of mobile push notifications</li>
+        <li>OpenAI for Coach AI processing</li>
+        <li>Messaging and support providers used for the communications features you choose</li>
       </ul>
+      <p>We also make information available to pool administrators and other participants as needed for pool features, permissions, and visibility settings. This may include your name or nickname, profile image, membership, selections, results, and standings. A private pool is not a promise that your information is visible only to you. Do not include private information in a pool name, profile image, or other content that participants can see.</p>
+      <p>We may disclose information when required by applicable law or valid legal process, or as necessary to investigate abuse, protect rights, and secure the Services.</p>
       <p>We may also share information during mergers, acquisitions, or asset sales.</p>
+      <p>The sharing described above excludes SMS opt-in data and consent. We do not sell, rent, or share mobile phone numbers, SMS opt-in data, or consent with third parties or affiliates for their marketing, promotional purposes, or independent messaging programs. Limited processing by providers that operate our messaging services on our behalf is described in Section 14.</p>
 
       <h2>4. Cookies and Tracking Technologies</h2>
-      <p>We use cookies and similar technologies to operate and analyze our Services. You may control cookies via your browser settings.</p>
+      <p>We and providers such as Google Analytics use cookies and similar technologies to operate the Services, maintain sign-in state or preferences, and understand how pages and features are used. Analytics may include page views, sign-in events, pool creation or joining, and selection submissions.</p>
+      <p>You can manage cookies and site storage through your browser settings. Blocking them may affect sign-in or other features. Browser controls do not necessarily prevent every form of usage measurement. If you have questions about analytics or privacy choices available to you, contact us at the address below.</p>
 
       <h2>5. How Long Do We Keep Your Information?</h2>
-      <p>We retain personal information only as long as necessary to fulfill the purposes outlined in this policy or as required by law. Inactive account data is retained for no longer than <strong>18 months</strong>.</p>
+      <p>We retain personal information only as long as necessary to fulfill the purposes outlined in this policy or as required by law. Inactive account data is retained for no longer than <strong>18 months</strong>. We administer this retention limit through a <strong>manual review and cleanup process</strong>.</p>
+      <p>Retention needs vary for account information, pool history, Coach conversations, support requests, payment records, logs, and messaging consent or opt-out records. We retain records required by law or needed to honor an opt-out for the applicable purpose, and do not use an opt-out record to resume messages without renewed consent. You may request deletion before the inactive-account retention period expires.</p>
 
       <h2>6. How Do We Keep Your Information Safe?</h2>
-      <p>We use reasonable administrative, technical, and physical safeguards. However, no system is completely secure.</p>
+      <p>We use administrative, technical, and physical safeguards intended to protect personal information. However, no system or method of transmission is completely secure. Keep your credentials private and contact us if you believe your account or information has been compromised.</p>
 
       <h2>7. Do We Collect Information From Minors?</h2>
-      <p>We do not knowingly collect information from individuals under 18 years of age.</p>
+      <p>PickTheGame is a general-audience service intended for people <strong>13 years of age and older</strong>. It is not directed to children under 13. Children under 13 should not create an account or submit personal information through the Services.</p>
+      <p>We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information, contact <a href="mailto:privacy@pickthegame.com">privacy@pickthegame.com</a> so we can investigate and take appropriate steps to remove the information and prevent further collection, subject to applicable law.</p>
+      <p>Parents or guardians may contact us about a minor's information or request assistance with access, correction, or deletion. We may verify the requester's identity and authority before providing access or making changes. Users aged 13 to 17 may have additional protections under applicable law; eligibility to use the Services does not waive those protections.</p>
 
       <h2>8. What Are Your Privacy Rights?</h2>
       <p>Depending on your location, you may have the right to:</p>
@@ -163,21 +184,44 @@
         <li>Withdraw consent</li>
         <li>Opt out of marketing communications</li>
       </ul>
+      <p>You may update available profile and notification settings in the app. To make another privacy request, email <a href="mailto:privacy@pickthegame.com">privacy@pickthegame.com</a>. We may ask for information reasonably necessary to verify your identity or authority before disclosing or changing account information. Rights, exceptions, response requirements, and any appeal process depend on the law that applies to your request.</p>
+      <p>Use an unsubscribe link in an email to stop that email program, your device settings to disable push delivery, and the SMS instructions in Section 14 to stop text messages. These choices are separate. Necessary account or security communications may be treated differently from optional communications.</p>
 
       <h2>9. Do-Not-Track Signals</h2>
       <p>We do not currently respond to browser Do-Not-Track signals due to lack of a uniform standard.</p>
 
       <h2>10. U.S. State Privacy Rights</h2>
-      <p>Residents of certain U.S. states may have additional rights under applicable privacy laws, including access, deletion, correction, and opt-out rights.</p>
+      <p>Residents of certain U.S. states may have additional rights under applicable privacy laws, including access, deletion, correction, portability, and rights concerning certain data uses. Whether a particular law applies depends on its scope and eligibility requirements. Contact us to exercise a right or ask about the handling of your request.</p>
+      <p>Our Services are operated from the United States, and we and our providers may process information in the United States or other locations where they operate. Accessing the Services from another country does not waive rights that apply to you under that country's law.</p>
 
       <h2>11. Updates to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. The revised date will be indicated at the top of this page.</p>
+      <p>We may update this Privacy Policy from time to time. The revised date will be indicated at the top of this page. For changes requiring additional notice or consent under applicable law, we will provide that notice or obtain that consent before applying the change.</p>
 
       <h2>12. Contact Information</h2>
       <p><strong>Pick the Game LLC</strong><br />107 E Market St.<br />Leesburg, VA 20176<br />United States<br />Email: <a href="mailto:privacy@pickthegame.com">privacy@pickthegame.com</a></p>
 
       <h2>13. Access, Update, or Delete Your Data</h2>
-      <p>If you would like to request access, correction, or deletion of your data, contact us using the email address above.</p>
+      <p>You can use the account-deletion option in the app or contact <a href="mailto:privacy@pickthegame.com">privacy@pickthegame.com</a> to request access, correction, or deletion. If you do not have an account, you may still contact us about information supplied in an invitation or support request.</p>
+      <p>Account deletion removes or clears certain account and sign-in information, but does not automatically erase every past pool record, uploaded file, conversation, or backup copy. Historical participation and results may remain in pool records. Contact us about a request covering those records so we can assess and address it, including any applicable legal obligations or retention exceptions.</p>
+
+      <h2>14. SMS Messaging and Mobile Information</h2>
+      <p>This section applies if SMS messaging is made available to you and you choose to use it. It does not enroll you in text messages or mean that SMS is available for every account.</p>
+      <h3>Information We Collect and How We Use It</h3>
+      <p>If you opt in to text messages from Pick the Game LLC, we collect your mobile phone number and records of your consent, including when and how you opted in or out. We may also process message content and delivery information to send the notifications you requested, respond to your messages, provide support, and maintain your messaging preferences.</p>
+      <p>If you choose to exchange text messages with Coach, our AI assistant, we may process your questions, conversation history, and relevant account or pool information to generate responses. Messaging and AI service providers may process the information needed to deliver these features on our behalf. Please do not send passwords, payment card details, or other sensitive information by text.</p>
+
+      <h3>Protection of Mobile Information and Consent</h3>
+      <p>SMS opt-in data and consent are not sold, rented, or shared with third parties or affiliates for marketing, promotional purposes, or their own messaging programs. We use this information only to operate the messaging program you agreed to receive and to maintain consent and opt-out records.</p>
+      <p>We may provide the minimum information necessary to messaging delivery, hosting, and support providers acting on our behalf solely to operate these services. This processing does not authorize those providers to use your mobile information or consent for their own marketing or messaging programs.</p>
+
+      <h3>Your Messaging Choices</h3>
+      <p>Providing a phone number or accepting our Terms of Service or Privacy Policy does not, by itself, enroll you in SMS notifications. SMS consent is optional and is not a condition of purchasing or using our Services. Message frequency varies, and message and data rates may apply.</p>
+      <p>You may opt out of SMS messages at any time by replying <strong>STOP</strong>. You may receive a final confirmation of your opt-out; further program messages will stop unless you opt in again. Reply <strong>HELP</strong> for assistance or contact <a href="mailto:admin@pickthegame.com">admin@pickthegame.com</a>. We retain records needed to honor your opt-out and applicable recordkeeping obligations in accordance with Section 5.</p>
+
+      <h2>15. Coach AI</h2>
+      <p>Coach is an AI assistant available through supported app features and, where offered, messaging channels. To answer your questions or carry out supported requests, Coach processes your messages, conversation context, and relevant account or pool information available under your permissions. Supported actions may include submitting selections, changing pool settings, or sending reminders when you request an action and meet its authorization requirements.</p>
+      <p>We store Coach questions and responses with associated account, pool, and timestamp information. Our AI provider processes the information supplied to it to generate responses. We use conversation information to provide the feature, investigate problems, and support the Services, subject to the retention and privacy-request provisions above.</p>
+      <p>Coach responses can be inaccurate. Review important information and the results of actions, and contact support if something is wrong. Do not submit passwords, payment card details, or information you do not have permission to share. Our AI provider's processing and retention of information are governed by the applicable service agreements and privacy requirements.</p>
     </div>
   </main>
 

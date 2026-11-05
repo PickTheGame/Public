@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T10:18:37.976Z",
+  "generatedAt": "2026-11-05T22:11:29.880Z",
   "schemaVersion": 1,
   "categories": [
     {
@@ -1022,6 +1022,22 @@
       "answerMd": "Yes. You can manage notification preferences in **Account Settings**.\n\nAvailable options include pick-submission confirmation emails, pick due reminders by email and app push notification, and pool-message push notifications. Commissioners can also choose to receive emailed copies of player pick submissions.\n\nSMS reminders are not currently available."
     },
     {
+      "id": "platform-technical::how-can-i-download-or-install-the-pick-the-game-app",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "How can I download or install the Pick the Game app?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Download the native Pick the Game app from your device's store:\n\n- **iPhone or iPad:** [Download on the App Store](https://apps.apple.com/us/app/pick-the-game/id6741455121).\n- **Android:** [Get it on Google Play](https://play.google.com/store/apps/details?id=com.pickthegame.core).\n\nChoose the link for your device. You can sign in with your existing Pick the Game account."
+    },
+    {
       "id": "platform-technical::is-the-platform-mobile-friendly",
       "slug": "platform-technical",
       "category": "technical",
@@ -1051,7 +1067,7 @@
         "email",
         "push"
       ],
-      "answerMd": "Yes. Pick the Game supports a native mobile app experience, and the responsive web app also works in mobile browsers."
+      "answerMd": "Yes. Pick the Game has native apps for iPhone, iPad, and Android. See **How can I download or install the Pick the Game app?** above for the store links. The responsive web app also works in mobile browsers."
     },
     {
       "id": "platform-technical::what-browsers-are-supported",

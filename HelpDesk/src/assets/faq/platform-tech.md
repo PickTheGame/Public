@@ -13,10 +13,20 @@ tags:
 
 # Platform & Technical FAQ - Pick the Game Pools
 
-### Is there a mobile app?
-**Tags:** mobile app, ios, android
+### How can I download or install the Pick the Game app?
+**Tags:** download, downloads, install, installation, mobile app, ios, iphone, ipad, apple, app store, android, google play
 
-Yes. Pick the Game supports a native mobile app experience, and the responsive web app also works in mobile browsers.
+Download the native Pick the Game app from your device's store:
+
+- **iPhone or iPad:** [Download on the App Store](https://apps.apple.com/us/app/pick-the-game/id6741455121).
+- **Android:** [Get it on Google Play](https://play.google.com/store/apps/details?id=com.pickthegame.core).
+
+Choose the link for your device. You can sign in with your existing Pick the Game account.
+
+### Is there a mobile app?
+**Tags:** mobile app, ios, iphone, ipad, android
+
+Yes. Pick the Game has native apps for iPhone, iPad, and Android. See **How can I download or install the Pick the Game app?** above for the store links. The responsive web app also works in mobile browsers.
 
 ### Is the platform mobile-friendly?
 **Tags:** mobile, responsive, usability

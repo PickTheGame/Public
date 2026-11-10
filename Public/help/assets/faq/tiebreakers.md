@@ -26,9 +26,9 @@ Example:
 Both are equally close.
 
 ### Can tiebreaker points be hidden until the game starts?
-**Tags:** tiebreaker, visibility, feature-request
+**Tags:** tiebreaker, visibility, picks
 
-Currently, tiebreaker selections are visible once submitted. Some commissioners prefer hiding them to prevent late adjustments in tied scenarios. This is a known request and may be added as a future option.
+Yes. Tiebreaker guesses remain hidden in the Matrix while any game pick is still editable under the pool's submission schedule. They become visible after all picks are locked.
 
 ### Can everyone in my pool see tiebreaker results in standings?
 **Tags:** tiebreaker, standings, visibility

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T22:11:29.880Z",
+  "generatedAt": "2026-11-10T04:07:17.986Z",
   "schemaVersion": 1,
   "categories": [
     {
@@ -137,17 +137,17 @@
   ],
   "faqs": [
     {
-      "id": "feature-availability::will-sms-reminders-be-available",
+      "id": "feature-availability::are-sms-reminders-available",
       "slug": "feature-availability",
       "category": "availability",
       "pageTitle": "Feature Availability FAQ",
-      "question": "Will SMS reminders be available?",
+      "question": "Are SMS reminders available?",
       "tags": [
         "roadmap",
         "college-football",
         "notifications"
       ],
-      "answerMd": "SMS reminders are not currently available.\n\nPick due reminders use email and app push notifications when enabled in account settings."
+      "answerMd": "Yes. Optional SMS pick reminders are available. Open **Account Settings**, choose **Text** under **Pick reminders** (or **Set up text reminders** if no phone is saved), complete the consent form, and verify your number with the six-digit code. Saving a phone number alone does not enroll you.\n\nYou can also reply to Coach AI by text to ask pool questions or submit picks. Email and app push reminders remain separate choices. Read the [SMS reminders release announcement](https://www.pickthegame.com/news/sms-text-reminders/) for an overview."
     },
     {
       "id": "feature-availability::will-you-offer-college-football-pools",
@@ -1019,7 +1019,39 @@
         "email",
         "push"
       ],
-      "answerMd": "Yes. You can manage notification preferences in **Account Settings**.\n\nAvailable options include pick-submission confirmation emails, pick due reminders by email and app push notification, and pool-message push notifications. Commissioners can also choose to receive emailed copies of player pick submissions.\n\nSMS reminders are not currently available."
+      "answerMd": "Yes. You can manage notification preferences in **Account Settings**.\n\nAvailable options include pick-submission confirmation emails, pick due reminders by email, app push notification, and optional SMS, and pool-message push notifications. Commissioners can also choose to receive emailed copies of player pick submissions.\n\nTo enable SMS, complete the consent and phone-verification flow in Account Settings. Text is currently available for pick reminders, not every notification category. See the [SMS release announcement](https://www.pickthegame.com/news/sms-text-reminders/) for the main features."
+    },
+    {
+      "id": "platform-technical::can-i-submit-picks-by-replying-to-a-text",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Can I submit picks by replying to a text?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Yes. Once enrolled in SMS, reply to Coach AI to ask pool questions or give a pick instruction, such as \"Pick all favorites in my office pool.\" Include the pool name when needed. Coach AI may ask for a tiebreaker or other missing information before it can finish.\n\nPool permissions, eligible teams, and game locks still apply. Check the app to confirm the saved selections. Text replies are concise; charts and interactive forms are available in the app. Learn more in [Meet Coach AI](https://www.pickthegame.com/news/meet-coach-ai/)."
+    },
+    {
+      "id": "platform-technical::does-a-text-reminder-extend-my-pick-deadline",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Does a text reminder extend my pick deadline?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "No. An SMS reminder does not change your pool's deadline or reopen locked games. Text messages can be delayed or fail to arrive. Check your pool in the app and confirm your picks are saved before the deadline."
     },
     {
       "id": "platform-technical::how-can-i-download-or-install-the-pick-the-game-app",
@@ -1036,6 +1068,38 @@
         "push"
       ],
       "answerMd": "Download the native Pick the Game app from your device's store:\n\n- **iPhone or iPad:** [Download on the App Store](https://apps.apple.com/us/app/pick-the-game/id6741455121).\n- **Android:** [Get it on Google Play](https://play.google.com/store/apps/details?id=com.pickthegame.core).\n\nChoose the link for your device. You can sign in with your existing Pick the Game account."
+    },
+    {
+      "id": "platform-technical::how-do-i-set-up-sms-text-reminders",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "How do I set up SMS text reminders?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Sign in and open **Account Settings**. If no phone is saved, choose **Set up text reminders**. Otherwise, open **Pick reminders** and choose **Text**. Enter your mobile number, consent to SMS, accept the Terms of Service and Privacy Policy, and enter the six-digit code sent to your phone.\n\nText reminders stay off until verification succeeds. Look for a welcome text from Coach AI at **+1 (866) 486-7901**. A saved phone number alone is not an SMS enrollment. Email and push preferences are separate."
+    },
+    {
+      "id": "platform-technical::how-do-i-stop-sms-reminders-or-get-help",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "How do I stop SMS reminders or get help?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Turn text reminders off in **Account Settings**, or reply **STOP** to opt out of SMS. Reply **HELP** for help, or email **admin@pickthegame.com**. SMS choices are separate from email and push preferences. To enroll again after replying STOP, first text **START** to **+1 (866) 486-7901**, then complete enrollment in Account Settings.\n\nMessage frequency varies, and message and data rates may apply. Read the [Terms of Service](https://www.pickthegame.com/terms-of-service.html) and [Privacy Policy](https://www.pickthegame.com/privacy-policy.html) for SMS program and mobile-information details."
     },
     {
       "id": "platform-technical::is-the-platform-mobile-friendly",
@@ -1086,6 +1150,22 @@
       "answerMd": "We officially support the latest versions of:\n\n- Chrome\n- Edge\n- Firefox\n- Safari"
     },
     {
+      "id": "platform-technical::what-happens-if-i-change-my-phone-number",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "What happens if I change my phone number?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Changing or removing your saved phone number revokes its SMS enrollment and turns off text reminders. To receive texts at a new number, complete consent and phone verification again in **Account Settings**. Saving the same number leaves the existing enrollment intact."
+    },
+    {
       "id": "platform-technical::where-can-i-see-past-notifications",
       "slug": "platform-technical",
       "category": "technical",
@@ -1100,6 +1180,22 @@
         "push"
       ],
       "answerMd": "Open **Account Settings** and select **View notification history**. The Notifications page shows messages sent to you, lets you open the related pool when available, and lets you mark one or all notifications as read."
+    },
+    {
+      "id": "platform-technical::why-did-my-sms-verification-code-not-arrive",
+      "slug": "platform-technical",
+      "category": "technical",
+      "pageTitle": "Platform & Technical FAQ",
+      "question": "Why did my SMS verification code not arrive?",
+      "tags": [
+        "mobile",
+        "app",
+        "browser",
+        "notifications",
+        "email",
+        "push"
+      ],
+      "answerMd": "Check the number in the enrollment form and your phone's signal and blocked-message settings. Codes expire after 10 minutes. You can request a new code after the one-minute resend cooldown; use the newest code. Requests are limited to five sends per hour per account or phone.\n\nIf you previously replied STOP, text **START** to **+1 (866) 486-7901** before trying enrollment again. Contact **admin@pickthegame.com** if the problem continues. SMS delivery can be delayed, and text reminders stay off until verification is complete."
     },
     {
       "id": "platform-technical::why-didn-t-i-receive-a-pick-reminder-email",

@@ -61,6 +61,11 @@ Yes. On the **Matrix** page, use **Scenario mode** to choose winners for unfinis
 
 Scenario mode shows movement from your current rank to the projected rank and identifies the projected leader.
 
+### Where can I see the weekly recap?
+**Tags:** recap, weekly, results, home
+
+After a week is completed, its generated recap appears on the pool home page as **View Week [number] recap**. Expand the card to see a summary of the recorded results, including the week's winner and notable standings information.
+
 ### Can standings columns be customized?
 **Tags:** standings, columns, commissioner, settings
 
@@ -71,4 +76,4 @@ Available columns include total correct picks, lowest weekly correct-pick count,
 ### Can I export standings to CSV or Excel?
 **Tags:** export, csv, standings
 
-Yes. All tables can be exported as a CSV file for use in Excel or other spreadsheet software.
+Yes. Standings, winners, Survivor history, matrices, and other tables that show a **Download CSV** action can be exported for use in Excel or other spreadsheet software.
